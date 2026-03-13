@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "contact": "Contact",
+    "cta": "Start Automating"
+  },
+  "hero": {
+    "badge": "Leading Automation Agency in Coimbatore",
+    "headline": {
+      "top": "Escape the Chaos of Manual Operations",
+      "main": "Run Your Business",
+      "highlight": "On Autopilot."
+    },
+    "subline": {
+      "main": "Automate your appointments, smart reminders, and customer follow-ups with high-performance systems.",
+      "secondary": "Scale your revenue without increasing your workload. We build the systems, you enjoy the growth."
+    },
+    "cta": {
+      "primary": "Claim Your Freedom",
+      "secondary": "Explore Solutions"
+    },
+    "trust": [
+      "3+ High-Scale Automations",
+      "7 Day Rapid Launch",
+      "₹0 Monthly Fees Forever"
+    ],
+    "beforeAfter": {
+      "header_before": "Old Slow Way",
+      "header_after": "Modern Workflow",
+      "rows": [
+        {
+          "before": "Messy Hand-written notes and lost paper records",
+          "after": "Centralized Cloud Storage with Instant Search"
+        },
+        {
+          "before": "Exhausting manual calls for every appointment",
+          "after": "Smart WhatsApp Flows that convert leads auto"
+        },
+        {
+          "before": "Losing revenue due to forgotten customer follow-ups",
+          "after": "Precision Tracking that never misses a single lead"
+        },
+        {
+          "before": "Manual accounting and error-prone reports",
+          "after": "Real-time Profit Dashboard with AI insights"
+        },
+        {
+          "before": "Running behind customers for pending payments",
+          "after": "Automatic Payment Reminders and Instant Receipts"
+        }
+      ],
+      "footer": "High-Performance Custom Systems",
+      "footer_sub": "Flat One-Time Investment · Lifetime Ownership"
+    }
+  }
+}

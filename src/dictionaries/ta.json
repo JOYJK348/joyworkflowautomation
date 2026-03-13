@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "முகப்பு",
+    "about": "பற்றி",
+    "services": "சேவைகள்",
+    "caseStudies": "Case Studies",
+    "contact": "தொடர்பு",
+    "cta": "தொடங்குங்கள்"
+  },
+  "hero": {
+    "badge": "Coimbatore-ன் முதல் Automation Agency",
+    "headline": {
+      "top": "Manual Work-ஆல Time போகுதா?",
+      "main": "Your Business",
+      "highlight": "Autopilot-ல்."
+    },
+    "subline": {
+      "main": "Appointment, Reminder, Follow-up-ன்னு எல்லாத்தையும் Automatic பண்ணுவோம்.",
+      "secondary": "நீங்கள் Business மட்டும் பாருங்கள். Rest-ஐ நாங்க Handle பண்றோம்."
+    },
+    "cta": {
+      "primary": "இப்போதே தொடங்குங்கள்",
+      "secondary": "எப்படி Work ஆகுது?"
+    },
+    "trust": [
+      "3+ Businesses Automated",
+      "7 Day Delivery",
+      "₹0 Hidden Charges"
+    ],
+    "beforeAfter": {
+      "header_before": "முன்பு",
+      "header_after": "பின்பு",
+      "rows": [
+        {
+          "before": "Notebook-ல கைகளால் Entry போடுவது & Records தேடுவது",
+          "after": "Automatic Google Sheets Sync & Simple Filter வசதி"
+        },
+        {
+          "before": "தினமும் ஒருவருக்கு Phone போட்டு Reminder சொல்வது",
+          "after": "WhatsApp Message தானாகவே Schedule ஆகி சென்றுவிடும்"
+        },
+        {
+          "before": "Customer வர மறந்துடுவாங்க, Appointment-யும் கிடையாது",
+          "after": "User-Friendly Booking Link & Confirmed Appoinments மட்டும்"
+        },
+        {
+          "before": "கணக்கு பார்க்க கஷ்டப்படணும், Error-கள் வர வாய்ப்பு அதிகம்",
+          "after": "Business Profit & Expenses Live-ஆக Dashboard-ல் தெரியும்"
+        },
+        {
+          "before": "Payment-க்காக கஸ்டமர்களிடம் தொடர்ந்து பேச வேண்டிய நிலை",
+          "after": "Automatic Payment Reminders & WhatsApp Receipts"
+        }
+      ],
+      "footer": "Custom Coded — No Monthly Subscription",
+      "footer_sub": "மாதம் மாதம் செலவு இல்லை · ஒரே முறை Pay"
+    }
+  }
+}
