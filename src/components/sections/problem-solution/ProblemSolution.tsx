@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState } from 'react';
 import styles from './ProblemSolution.module.css';
 
 /* ═══ Icons ═══ */
@@ -25,6 +28,7 @@ const Icons = {
 
 export default function ProblemSolution({ dict, lang }: { dict: any; lang: string }) {
   const { beforeAfter } = dict.hero;
+  const [activeTab, setActiveTab] = useState<'before' | 'after'>('after');
 
   return (
     <section className={styles.ps} id="problem-solution" data-lang={lang}>
@@ -43,11 +47,28 @@ export default function ProblemSolution({ dict, lang }: { dict: any; lang: strin
           </p>
         </div>
 
+        {/* Mobile Radio Button / Toggle */}
+        <div className={styles.mobile_toggle}>
+          <div className={`${styles.toggle_slider} ${activeTab === 'before' ? styles.isBefore : styles.isAfter}`} />
+          <button 
+            className={`${styles.toggle_btn} ${activeTab === 'before' ? styles.active : ''}`}
+            onClick={() => setActiveTab('before')}
+          >
+            {beforeAfter.header_before}
+          </button>
+          <button 
+            className={`${styles.toggle_btn} ${activeTab === 'after' ? styles.active : ''}`}
+            onClick={() => setActiveTab('after')}
+          >
+            {beforeAfter.header_after}
+          </button>
+        </div>
+
         {/* Comparison Board */}
         <div className={styles.board}>
           
           {/* LEFT: The Problem (Red Theme) */}
-          <div className={`${styles.column} ${styles.col__before}`}>
+          <div className={`${styles.column} ${styles.col__before} ${activeTab === 'before' ? styles.active : ''}`}>
             <div className={styles.col__header}>
               <div className={styles.col__title}>
                 <span className={styles.pulse_red}></span>
@@ -66,7 +87,7 @@ export default function ProblemSolution({ dict, lang }: { dict: any; lang: strin
           </div>
 
           {/* RIGHT: The Solution (Green Theme) */}
-          <div className={`${styles.column} ${styles.col__after}`}>
+          <div className={`${styles.column} ${styles.col__after} ${activeTab === 'after' ? styles.active : ''}`}>
             <div className={styles.col__header}>
               <div className={styles.col__title}>
                 <span className={styles.pulse_green}></span>

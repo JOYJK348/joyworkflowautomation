@@ -1,14 +1,6 @@
 .roi {
   width: 100%;
-  padding: 0rem 1rem 4rem; /* Removed top padding entirely */
-  background: var(--bg-page);
-  position: relative;
-  overflow: hidden;
-}
-
-.ps {
-  width: 100%;
-  padding: 3rem 1rem 1rem; /* Reduced bottom padding aggressively */
+  padding: 0rem 1rem 2rem; 
   background: var(--bg-page);
   position: relative;
   overflow: hidden;
@@ -57,7 +49,7 @@
   color: var(--ink-soft);
   padding: 0.8rem 1rem;
   border-radius: var(--r-pill);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s var(--spring);
@@ -106,7 +98,7 @@
 }
 
 .tier__description {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--ink-soft);
   text-align: center;
   max-width: 600px;
@@ -307,17 +299,17 @@
 }
 
 .loss__label {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #f87171;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .loss__amount {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 800;
   color: #fff;
   line-height: 1;
@@ -351,7 +343,7 @@
 }
 
 .time__label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--ink-soft);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -359,7 +351,7 @@
 }
 
 .time__amount {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #fff;
   font-variant-numeric: tabular-nums;
@@ -386,22 +378,22 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  padding: 1.15rem;
+  padding: 1rem;
   background: #fff;
   color: #000;
-  font-size: 1.1rem;
-  font-weight: 800; /* Made slightly bolder for premium feel */
-  border-radius: var(--r-pill);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px 0 rgba(255, 255, 255, 0.1);
-  word-break: keep-all;
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: 16px;
+  transition: all 0.4s var(--spring);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
   text-decoration: none;
 }
 
 .btn__cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px 0 rgba(255, 255, 255, 0.25);
-  background: #f8f9fa; /* Very subtle off-white on hover */
+  transform: translateY(-4px);
+  background: var(--emerald);
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(5, 150, 105, 0.3);
 }
 
 /* ═══ RESPONSIVE MOBILE FIXES ═══ */
@@ -454,11 +446,11 @@
   }
 
   .loss__amount {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .btn__cta {
-    padding: 1.15rem; /* Increased padding slightly for easier mobile tapping */
-    font-size: 1rem;
+    padding: 1rem; 
+    font-size: 0.95rem;
   }
 }

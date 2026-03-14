@@ -92,6 +92,57 @@
       "footer": "Custom Coded — No Monthly Subscription",
       "footer_sub": "Flat One-Time Investment · Lifetime Ownership"
     },
+    "services": {
+      "title": "What We Build",
+      "subtitle": "High-performance systems to eliminate manual work and scale your revenue.",
+      "cards": [
+        {
+          "id": "automation",
+          "tag": "Efficiency",
+          "title": "WhatsApp Business Automation",
+          "description": "24/7 auto-replies, appointment booking, and payment reminders.",
+          "features": [
+            "WhatsApp Business API Setup",
+            "Auto-Replies for Common Queries",
+            "Appointment Booking Automation",
+            "Automatic Payment Reminders",
+            "Lead Capture & Sync to Sheets"
+          ],
+          "price": "Starting from ₹12,000",
+          "cta": "Get Automation Plan"
+        },
+        {
+          "id": "website",
+          "tag": "Presence",
+          "title": "Smart Business Website",
+          "description": "Professional online presence + lead capture system.",
+          "features": [
+            "Mobile Responsive Design",
+            "Enquiry Form to Google Sheets",
+            "WhatsApp Click-to-Chat Button",
+            "Google Maps & SEO Integration",
+            "1 Month Technical Support"
+          ],
+          "price": "Starting from ₹6,000",
+          "cta": "Explore Features"
+        },
+        {
+          "id": "software",
+          "tag": "Analytics",
+          "title": "Business Live Dashboard",
+          "description": "Track your profit, stock, and revenue live from your phone.",
+          "features": [
+            "Custom Profit & Loss Dashboard",
+            "Live Inventory Monitoring",
+            "Revenue & Expense Tracking",
+            "Automated Low Stock Alerts",
+            "Daily/Monthly Business Reports"
+          ],
+          "price": "Custom Quote",
+          "cta": "Book Consultation"
+        }
+      ]
+    },
     "calculator": {
       "title": "Calculate Your Growth Loss",
       "subtitle": "Select your scale to see how manual work limits your progress.",
@@ -120,5 +171,70 @@
         "cta": "Book Free Strategy"
       }
     }
+  },
+  "footer": {
+    "agencyName": "Workflow Craft",
+    "tagline": "Building the future of business through intelligent automation and smart digital systems.",
+    "sections": {
+      "links": "Quick Links",
+      "services": "Our Services",
+      "contact": "Let's Connect"
+    },
+    "copyright": "© 2026 Workflow Craft. All Rights Reserved.",
+    "credit": "Crafted for high-performance businesses."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Clear answers to help you understand how automation transforms your business.",
+    "questions": [
+      {
+        "q": "What exactly is Business Automation?",
+        "a": "It's replacing manual, repetitive tasks (like booking appointments, sending reminders, or tracking stock) with smart software systems that work 24/7 without human intervention."
+      },
+      {
+        "q": "How long does it take to set up the system?",
+        "a": "Most projects, like WhatsApp automation or Smart Websites, are delivered and live within 7 to 10 working days."
+      },
+      {
+        "q": "Do I need technical knowledge to use these systems?",
+        "a": "Not at all. We design everything to be 'Owner-Friendly'. If you can use WhatsApp and a smartphone, you can manage our systems effortlessly."
+      },
+      {
+        "q": "Is my business data safe?",
+        "a": "Absolutely. We use industry-standard encryption and secure platforms like Google Cloud and official Meta APIs for WhatsApp to ensure your data stays 100% private and protected."
+      },
+      {
+        "q": "How much can I actually save with automation?",
+        "a": "On average, our clients save 15-20 hours of manual work every week and see a significant reduction in 'no-shows'—which directly translates to higher revenue."
+      },
+      {
+        "q": "Do you provide support after the project is live?",
+        "a": "Yes! We don't just build and leave. We provide ongoing technical support and maintenance packages to ensure your system always runs at peak performance."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Your Journey to Automation",
+    "subtitle": "A simple 3-step process to transform your manual business into a high-speed automated machine.",
+    "steps": [
+      {
+        "id": "audit",
+        "number": "01",
+        "title": "Workflow Audit",
+        "desc": "We identify your biggest time-wasters and manual bottlenecks through a deep-dive audit."
+      },
+      {
+        "id": "build",
+        "number": "02",
+        "title": "Custom Build",
+        "desc": "Our team builds your custom AI agents and automation workflows tailored to your niche."
+      },
+      {
+        "id": "scale",
+        "number": "03",
+        "title": "Scale & Grow",
+        "desc": "Go live with your systems. Watch your business scale while you focus on high-level growth."
+      }
+    ]
   }
 }

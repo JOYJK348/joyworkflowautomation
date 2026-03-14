@@ -1,6 +1,6 @@
 .ps {
   width: 100%;
-  padding: 3rem 1rem 0rem;
+  padding: 1.5rem 1rem 0rem;
   background: var(--bg-page);
   position: relative;
   overflow: hidden;
@@ -37,7 +37,12 @@
 .ps__header p {
   color: var(--ink-soft);
   font-size: 1.1rem;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
+}
+
+/* ═══ MOBILE TOGGLE ═══ */
+.mobile_toggle {
+  display: none; /* Desktop hidden */
 }
 
 /* ═══ BOARD (Desktop Layout) ═══ */
@@ -262,8 +267,65 @@
     gap: 1.5rem;
   }
 
+  .mobile_toggle {
+    display: flex;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    padding: 5px;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 340px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 0 auto 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .toggle_btn {
+    flex: 1;
+    height: 48px;
+    border-radius: 14px;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .toggle_btn.active {
+    color: #050505;
+  }
+
+  .toggle_slider {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(50% - 5px);
+    height: calc(100% - 10px);
+    background: #ffffff;
+    border-radius: 14px;
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+  }
+
+  .toggle_slider.isBefore {
+    transform: translateX(0);
+  }
+
+  .toggle_slider.isAfter {
+    transform: translateX(100%);
+  }
+
   .board {
     grid-template-columns: 1fr;
+    background: transparent;
+    border: none;
+    box-shadow: none;
   }
 
   /* Remove vertical divider */
@@ -271,19 +333,23 @@
     display: none;
   }
 
-  /* Redefine padding and gaps */
   .column {
-    padding: 1.5rem 1.25rem;
-    gap: 1.5rem;
-  }
-  
-  .list {
-    gap: 1rem;
+    padding: 0;
+    display: none; /* Hide both and show selectively via inline style or class */
   }
 
-  /* Add horizontal border between sections instead */
-  .col__before {
-    border-bottom: 2px dashed rgba(255, 255, 255, 0.05);
+  .column.active {
+    display: flex;
+    animation: fadeIn 0.4s ease-out;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 2rem 1.5rem;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 }
 

@@ -8,7 +8,7 @@
   min-height: 100dvh;
   display: flex;
   align-items: center;
-  padding: calc(var(--nav-h) + 2rem) 0 2rem;
+  padding: calc(var(--nav-h) + 2rem) 0 1rem;
   background: var(--bg-page);
   overflow: hidden;
 }
@@ -128,43 +128,50 @@
 }
 
 .hero__btn__primary {
-  padding: 1rem 2rem;
+  padding: 1.1rem 2.5rem;
   background: #fff;
   color: #000;
   font-weight: 800;
   font-size: 1.05rem;
-  border-radius: 12px;
+  border-radius: 16px;
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
-  transition: all 0.3s ease;
+  justify-content: center;
+  gap: 0.8rem;
+  box-shadow: 0 5px 25px rgba(255, 255, 255, 0.15);
+  transition: all 0.4s var(--spring);
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero__btn__primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  background: var(--coral);
+  color: #fff;
+  box-shadow: 0 15px 40px var(--coral-glow);
 }
 
 .hero__btn__secondary {
-  padding: 1rem 2rem;
+  padding: 1.1rem 2rem;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: #fff;
   font-weight: 700;
   font-size: 1.05rem;
-  border-radius: 12px;
+  border-radius: 16px;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.4s var(--spring);
   text-decoration: none;
 }
 
 .hero__btn__secondary:hover {
   background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .hero__trust {
