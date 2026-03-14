@@ -5,28 +5,65 @@
     "services": "சேவைகள்",
     "caseStudies": "Case Studies",
     "contact": "தொடர்பு",
-    "cta": "தொடங்குங்கள்"
+    "cta": "Free Audit"
   },
   "hero": {
-    "badge": "Coimbatore-ன் முதல் Automation Agency",
+    "badge": "Leading Automation Agency",
     "headline": {
-      "top": "Manual Work-ஆல Time போகுதா?",
-      "main": "Your Business",
-      "highlight": "Autopilot-ல்."
+      "top": "Manual Work\u2011ஐ நிறுத்துங்கள்.",
+      "main": "உங்கள் Business\u2011ஐ ",
+      "highlight": "Scale செய்யுங்கள்"
     },
     "subline": {
-      "main": "Appointment, Reminder, Follow-up-ன்னு எல்லாத்தையும் Automatic பண்ணுவோம்.",
-      "secondary": "நீங்கள் Business மட்டும் பாருங்கள். Rest-ஐ நாங்க Handle பண்றோம்."
+      "main": "Manual work குறையும். Time மிச்சமாகும்.",
+      "secondary": "Revenue தானா ஏறும்."
     },
     "cta": {
-      "primary": "இப்போதே தொடங்குங்கள்",
-      "secondary": "எப்படி Work ஆகுது?"
+      "primary": "Free Audit எடுங்கள்",
+      "secondary": "எப்படி வேலை செய்கிறது ↓"
+    },
+    "niches": {
+      "title": "யாருக்கெல்லாம் நாங்கள் தீர்வுகளை வழங்குகிறோம்?",
+      "list": [
+        "சலூன்கள் & ஸ்பா",
+        "பல் மருத்துவமனைகள்",
+        "ஜிம்கள் & பிட்னஸ்",
+        "கஃபே & உணவகங்கள்",
+        "டியூஷன் சென்டர்கள்",
+        "மருந்தகங்கள்",
+        "பைக் சர்வீஸ் சென்டர்கள்",
+        "பியூட்டி பார்லர்கள்",
+        "தையல் கடைகள்",
+        "ரியல் எஸ்டேட்",
+        "ஈவென்ட் பிளானர்கள்",
+        "புகைப்பட நிலையங்கள்",
+        "டிரைவிங் ஸ்கூல்கள்",
+        "கார் வாஷ் சென்டர்கள்",
+        "ஹார்டுவேர் கடைகள்"
+      ]
     },
     "trust": [
       "3+ Businesses Automated",
       "7 Day Delivery",
       "₹0 Hidden Charges"
     ],
+    "visual": {
+      "botTitle": "24/7 AI WhatsApp Bot",
+      "chatIn": "Appointment வேணும்.",
+      "chatOut": "Slot உறுதியானது! ✅",
+      "leadTitle": "Smart Lead Manager",
+      "leadJay": "Lead: Jay",
+      "leadPriya": "Booking: Priya",
+      "statusSaved": "Saved",
+      "statusConfirmed": "Confirmed",
+      "zeroLeadLabel": "100% Lead பாதுகாப்பு",
+      "expertiseTitle": "எங்களது திறன்கள்",
+      "erp": "ERP Systems",
+      "webMobile": "Web & Mobile App",
+      "aiChatbot": "AI Chatbots",
+      "billing": "Billing Software",
+      "more": "பல+"
+    },
     "beforeAfter": {
       "header_before": "முன்பு",
       "header_after": "பின்பு",
@@ -54,6 +91,34 @@
       ],
       "footer": "Custom Coded — No Monthly Subscription",
       "footer_sub": "மாதம் மாதம் செலவு இல்லை · ஒரே முறை Pay"
+    },
+    "calculator": {
+      "title": "உங்கள் வளர்ச்சியை தடுப்பது எது?",
+      "subtitle": "உங்கள் பிசினஸ் அளவைப் பொறுத்து நஷ்டத்தை துல்லியமாக கணக்கிடுங்கள்.",
+      "tiers": {
+        "early": "ஆரம்ப கட்டம் / சிறு தொழில்",
+        "earlyDesc": "சிறிய அளவிலான நஷ்டங்கள் உங்கள் வளர்ச்சியை மெதுவாக்கும்.",
+        "growing": "வளர்ந்து வரும் பிசினஸ்",
+        "growingDesc": "தினசரி வேலைப்பளு இப்போது உங்கள் லாபத்தை குறைக்கத் தொடங்குகிறது.",
+        "scale": "அதிக Turnover உள்ள நிறுவனம்",
+        "scaleDesc": "அதிகப்படியான நிர்வாகச் செலவுகள் உங்கள் முன்னேற்றத்தைத் தடுக்கிறது."
+      },
+      "inputs": {
+        "appointments": "ஒரு நாளைக்கு Appointments",
+        "noShow": "Miss ஆகுற Customers (%)",
+        "revenue": "சராசரி வருமானம் (₹)",
+        "adminTime": "நாளொன்றுக்கு Manual வேலை (mins)"
+      },
+      "results": {
+        "yearlyLoss": "வருடத்திற்கு இழக்கும் வருமானம்",
+        "monthlyLoss": "மாதத்திற்கு இழக்கும் வருமானம்",
+        "timeWastedYearly": "வீணாகும் மணிநேரங்கள் / வருடம்",
+        "timeWastedMonthly": "வீணாகும் மணிநேரங்கள் / மாதம்",
+        "toggleYearly": "வருடம்",
+        "toggleMonthly": "மாதம்",
+        "fixIt": "Automation மூலம் இதை சரி செய்யலாம்.",
+        "cta": "Free Audit முன்பதிவு"
+      }
     }
   }
 }

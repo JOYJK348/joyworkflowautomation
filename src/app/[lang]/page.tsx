@@ -1,4 +1,7 @@
 import HeroSection from "@/components/sections/hero/HeroSection";
+import ProblemSolution from "@/components/sections/problem-solution/ProblemSolution";
+import RoiCalculator from "@/components/sections/calculator/RoiCalculator";
+import NicheScroll from "@/components/sections/hero/NicheScroll";
 import { getDictionary } from "@/lib/get-dictionary";
 
 export default async function Home(props: {
@@ -10,7 +13,10 @@ export default async function Home(props: {
 
   return (
     <main>
-      <HeroSection dict={dict} />
+      <HeroSection dict={dict} lang={lang} />
+      <ProblemSolution dict={dict} lang={lang} />
+      <RoiCalculator dict={dict} lang={lang} />
+      <NicheScroll dict={dict} />
     </main>
   );
 }

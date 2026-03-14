@@ -1,0 +1,130 @@
+.container {
+  width: 100%;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  opacity: 0.6;
+}
+
+.wrapper {
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 15%,
+    #000 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 15%,
+    #000 85%,
+    transparent
+  );
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  gap: 3rem;
+  animation: scroll 40s linear infinite;
+  padding: 1rem 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  min-width: 180px;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--emerald);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+.image__wrap {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(16, 185, 129, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.niche_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.item:hover .niche_img {
+  transform: scale(1.15);
+}
+
+.name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 0;
+    gap: 1.25rem;
+  }
+  
+  .track {
+    gap: 1rem;
+    animation-duration: 25s; /* Slightly faster for mobile to keep engagement */
+  }
+  
+  .item {
+    padding: 1rem;
+    min-width: 140px;
+    gap: 0.6rem;
+    border-radius: 18px;
+  }
+  
+  .image__wrap {
+    width: 75px;
+    height: 75px;
+    border-width: 2px;
+  }
+  
+  .name {
+    font-size: 0.85rem;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 100px;
+  }
+}

@@ -25,11 +25,11 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
   const closeMenu = () => setMenuOpen(false);
 
   const NAV_LINKS = [
-    { label: nav.home,         href: `/${lang}` },
-    { label: nav.about,        href: `/${lang}/about` }, // keeping original hrefs but adding prefix
-    { label: nav.services,     href: `/${lang}/services` },
-    { label: nav.caseStudies,   href: `/${lang}/case-studies` },
-    { label: nav.contact,      href: `/${lang}/contact` },
+    { label: nav.home, href: `/${lang}` },
+    { label: nav.about, href: `/${lang}/about` }, // keeping original hrefs but adding prefix
+    { label: nav.services, href: `/${lang}/services` },
+    { label: nav.caseStudies, href: `/${lang}/case-studies` },
+    { label: nav.contact, href: `/${lang}/contact` },
   ];
 
   // Logic to toggle language
@@ -68,12 +68,12 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
           </nav>
 
           {/* CTA + LANG SWITCHER + HAMBURGER */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <div className={styles.nav__actions} style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             {/* Language Switcher */}
-            <Link 
+            <Link
               href={redirectedPathname(targetLang)}
-              className={styles.navbar__link}
-              style={{ fontWeight: 800, color: 'var(--coral)' }}
+              className={`${styles.navbar__link} ${styles.lang__switch}`}
+              scroll={false}
             >
               {lang === 'en' ? 'தமிழ்' : 'EN'}
             </Link>
@@ -83,8 +83,9 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
               className={styles.navbar__cta}
               id="nav-contact-btn"
             >
-              {nav.cta} →
+              {nav.cta}
             </Link>
+
             <button
               className={`${styles.navbar__hamburger} ${menuOpen ? styles.open : ''}`}
               onClick={() => setMenuOpen((v) => !v)}
@@ -117,13 +118,14 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
             {link.label}
           </Link>
         ))}
-        
+
         {/* Mobile Language SwitchER */}
-        <Link 
+        <Link
           href={redirectedPathname(targetLang)}
           className={styles.navbar__link}
           onClick={closeMenu}
-          style={{ fontWeight: 800, color: 'var(--coral)' }}
+          scroll={false}
+          style={{ color: 'var(--accent)' }}
         >
           {lang === 'en' ? 'தமிழ்-க்கு மாற்றவும்' : 'Switch to English'}
         </Link>
@@ -134,7 +136,7 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
           onClick={closeMenu}
           id="mobile-contact-btn"
         >
-          {nav.cta} →
+          {nav.cta}
         </Link>
       </nav>
     </>

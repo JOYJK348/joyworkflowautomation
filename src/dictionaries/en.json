@@ -5,28 +5,65 @@
     "services": "Services",
     "caseStudies": "Case Studies",
     "contact": "Contact",
-    "cta": "Start Automating"
+    "cta": "Free Audit"
   },
   "hero": {
-    "badge": "Leading Automation Agency in Coimbatore",
+    "badge": "Leading Automation Agency",
     "headline": {
-      "top": "Escape the Chaos of Manual Operations",
-      "main": "Run Your Business",
-      "highlight": "On Autopilot."
+      "top": "Stop Manual Work.",
+      "main": "Scale Your Business ",
+      "highlight": "With Automation."
     },
     "subline": {
-      "main": "Automate your appointments, smart reminders, and customer follow-ups with high-performance systems.",
-      "secondary": "Scale your revenue without increasing your workload. We build the systems, you enjoy the growth."
+      "main": "Stop wasting hours on manual tasks.",
+      "secondary": "Let smart systems do the heavy lifting for you."
     },
     "cta": {
-      "primary": "Claim Your Freedom",
-      "secondary": "Explore Solutions"
+      "primary": "Claim Free Audit",
+      "secondary": "How it works ↓"
+    },
+    "niches": {
+      "title": "We Automate Processes For",
+      "list": [
+        "Salons & Spas",
+        "Dental Clinics",
+        "Gyms & Fitness",
+        "Cafes & Restaurants",
+        "Tuition Centers",
+        "Pharmacies",
+        "Bike Service Centers",
+        "Beauty Parlours",
+        "Tailoring Shops",
+        "Real Estate",
+        "Event Planners",
+        "Photography Studios",
+        "Driving Schools",
+        "Car Wash Centers",
+        "Hardware Stores"
+      ]
     },
     "trust": [
       "3+ High-Scale Automations",
       "7 Day Rapid Launch",
       "₹0 Monthly Fees Forever"
     ],
+    "visual": {
+      "botTitle": "24/7 AI WhatsApp Bot",
+      "chatIn": "Hi, I need an appointment tomorrow.",
+      "chatOut": "Done! Your slot is confirmed for 10 AM. ✅",
+      "leadTitle": "Smart Lead Manager",
+      "leadJay": "Lead: Jay",
+      "leadPriya": "Booking: Priya",
+      "statusSaved": "Saved",
+      "statusConfirmed": "Confirmed",
+      "zeroLeadLabel": "Zero Lead Loss Guaranteed",
+      "expertiseTitle": "Our Expertise",
+      "erp": "ERP Systems",
+      "webMobile": "Web & Mobile App",
+      "aiChatbot": "AI Chatbots",
+      "billing": "Billing Software",
+      "more": "+ More"
+    },
     "beforeAfter": {
       "header_before": "Old Slow Way",
       "header_after": "Modern Workflow",
@@ -52,8 +89,36 @@
           "after": "Automatic Payment Reminders and Instant Receipts"
         }
       ],
-      "footer": "High-Performance Custom Systems",
+      "footer": "Custom Coded — No Monthly Subscription",
       "footer_sub": "Flat One-Time Investment · Lifetime Ownership"
+    },
+    "calculator": {
+      "title": "Calculate Your Growth Loss",
+      "subtitle": "Select your scale to see how manual work limits your progress.",
+      "tiers": {
+        "early": "Startup / Small Side-Hustle",
+        "earlyDesc": "Hidden leaks that slow down your initial growth.",
+        "growing": "Growing Business",
+        "growingDesc": "Daily operational friction that's starting to cost serious profit.",
+        "scale": "High-Volume Business",
+        "scaleDesc": "Massive manual overhead holding back your professional scaling."
+      },
+      "inputs": {
+        "appointments": "Daily Appointments / Leads",
+        "noShow": "Missed Customers (%)",
+        "revenue": "Avg Revenue per Client (₹)",
+        "adminTime": "Admin Time per Day (mins)"
+      },
+      "results": {
+        "yearlyLoss": "Yearly Lost Revenue",
+        "monthlyLoss": "Monthly Lost Revenue",
+        "timeWastedYearly": "Hours Wasted / Year",
+        "timeWastedMonthly": "Hours Wasted / Month",
+        "toggleYearly": "Yearly",
+        "toggleMonthly": "Monthly",
+        "fixIt": "Automation can recover this.",
+        "cta": "Book Free Strategy"
+      }
     }
   }
 }
