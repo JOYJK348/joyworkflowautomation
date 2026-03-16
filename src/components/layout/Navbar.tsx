@@ -67,20 +67,23 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
 
           {/* DESKTOP NAV */}
           <nav className={styles.navbar__links} role="navigation" aria-label="Main navigation">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={styles.navbar__link}
-                onClick={() => {
-                  if (pathname === link.href) {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`${styles.navbar__link} ${isActive ? styles.navbar__link_active : ''}`}
+                  onClick={() => {
+                    if (pathname === link.href) {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA + LANG SWITCHER + HAMBURGER */}
@@ -124,23 +127,26 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
       >
-        {NAV_LINKS.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={styles.navbar__link}
-            onClick={() => {
-              closeMenu();
-              if (pathname === link.href) {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              } else {
-                window.scrollTo({ top: 0, behavior: 'auto' });
-              }
-            }}
-          >
-            {link.label}
-          </Link>
-        ))}
+        {NAV_LINKS.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`${styles.navbar__link} ${isActive ? styles.navbar__link_active : ''}`}
+              onClick={() => {
+                closeMenu();
+                if (pathname === link.href) {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                  window.scrollTo({ top: 0, behavior: 'auto' });
+                }
+              }}
+            >
+              {link.label}
+            </Link>
+          );
+        })}
 
         {/* Mobile Language SwitchER */}
         <Link

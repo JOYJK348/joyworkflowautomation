@@ -1,14 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import styles from './IndustryGrid.module.css';
 
-export default function IndustryGrid({ dict }: { dict: any }) {
+function IndustryGridContent({ dict }: { dict: any }) {
   const { industryGrid } = dict.servicesPage;
   const [activeNiche, setActiveNiche] = useState<string | null>(null);
   const cardRef = React.useRef<HTMLDivElement>(null);
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const lastScrolledNiche = React.useRef<string | null>(null);
+  const searchParams = useSearchParams();
+  const nicheParam = searchParams.get('niche');
 
   const icons: Record<string, string> = {
     "Cafes & Restaurants": "🍳",
@@ -36,7 +39,10 @@ export default function IndustryGrid({ dict }: { dict: any }) {
 
   React.useEffect(() => {
     setMounted(true);
-  }, []);
+    if (nicheParam && industryGrid.solutions[nicheParam]) {
+      setActiveNiche(nicheParam);
+    }
+  }, [nicheParam, industryGrid.solutions]);
 
   React.useEffect(() => {
     // Only scroll if it's NOT the first mount (manual click)
@@ -166,5 +172,13 @@ export default function IndustryGrid({ dict }: { dict: any }) {
         )}
       </div>
     </section>
+  );
+}
+
+export default function IndustryGrid(props: { dict: any }) {
+  return (
+    <Suspense fallback={null}>
+      <IndustryGridContent {...props} />
+    </Suspense>
   );
 }

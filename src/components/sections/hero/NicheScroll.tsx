@@ -1,6 +1,8 @@
 'use client';
 
 import styles from './NicheScroll.module.css';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
 // Ultra-HD High-Contrast Unsplash IDs for maximum clarity (800px source)
 const FIXED_NICHE_IMAGES = [
@@ -24,6 +26,7 @@ const FIXED_NICHE_IMAGES = [
 ];
 
 export default function NicheScroll({ dict }: { dict: any }) {
+  const { lang } = useParams();
   const { title, list } = dict.hero.niches;
 
   // Duplicate list and fixed images to create seamless loop
@@ -37,7 +40,11 @@ export default function NicheScroll({ dict }: { dict: any }) {
           {displayList.map((niche: string, i: number) => {
             const imageIndex = i % 17;
             return (
-              <div key={`${niche}-${i}`} className={styles.item}>
+              <Link 
+                key={`${niche}-${i}`} 
+                href={`/${lang}/services?niche=${encodeURIComponent(niche)}`}
+                className={styles.item}
+              >
                 <div className={styles.image__wrap}>
                   <img 
                     src={FIXED_NICHE_IMAGES[imageIndex]} 
@@ -48,7 +55,7 @@ export default function NicheScroll({ dict }: { dict: any }) {
                   />
                 </div>
                 <span className={styles.name}>{niche}</span>
-              </div>
+              </Link>
             );
           })}
         </div>

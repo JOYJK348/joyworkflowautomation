@@ -80,6 +80,11 @@
   color: var(--accent);
 }
 
+.navbar__link_active {
+  color: var(--accent) !important;
+  font-weight: 800;
+}
+
 /* ─── CTA ─── */
 .navbar__cta {
   display: inline-flex;

@@ -40,7 +40,12 @@ const serviceIcons: Record<string, React.ReactNode> = {
 export default function Services({ dict }: { dict: any }) {
   const { services } = dict.hero;
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [mounted, setMounted] = React.useState(false);
   const scrollRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = e.currentTarget;
@@ -80,7 +85,7 @@ export default function Services({ dict }: { dict: any }) {
   return (
     <section className={styles.services} id="services">
       {/* Dynamic Background Particles */}
-      {[...Array(6)].map((_, i) => (
+      {mounted && [...Array(6)].map((_, i) => (
         <div 
           key={i} 
           className={styles.particle} 

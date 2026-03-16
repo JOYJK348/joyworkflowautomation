@@ -272,32 +272,40 @@
 
   .mobile_toggle {
     display: flex;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(12px);
-    padding: 5px;
-    border-radius: 18px;
-    width: 100%;
-    max-width: 340px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    padding: 6px;
+    border-radius: 20px;
+    width: calc(100% - 2rem);
+    max-width: 400px;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    margin: 0 auto 2.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 2rem;
+    box-shadow: 
+      0 15px 35px rgba(0, 0, 0, 0.3),
+      inset 0 0 1px 1px rgba(255, 255, 255, 0.05);
   }
 
   .toggle_btn {
     flex: 1;
-    height: 48px;
+    min-height: 44px;
+    padding: 0.75rem 0.5rem;
     border-radius: 14px;
     border: none;
     background: transparent;
     color: rgba(255, 255, 255, 0.5);
-    font-size: 0.75rem;
-    font-weight: 800;
+    font-size: clamp(0.6rem, 2.5vw, 0.72rem);
+    font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
     cursor: pointer;
     z-index: 2;
     transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
   }
 
   .toggle_btn.active {
@@ -306,22 +314,27 @@
 
   .toggle_slider {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: calc(50% - 5px);
-    height: calc(100% - 10px);
+    top: 6px;
+    left: 6px;
+    width: calc(50% - 6px);
+    height: calc(100% - 12px);
     background: #ffffff;
-    border-radius: 14px;
-    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: 16px;
+    transition: transform 0.5s var(--spring);
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+    z-index: 1;
   }
 
   .toggle_slider.isBefore {
     transform: translateX(0);
+    background: #ff4d4d;
+    box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4);
   }
 
   .toggle_slider.isAfter {
     transform: translateX(100%);
+    background: var(--emerald);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
   }
 
   .board {
