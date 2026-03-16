@@ -45,10 +45,25 @@ export default function Services({ dict }: { dict: any }) {
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
+    
+    // Mouse coords relative to card
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
+    
+    // 3D Tilt calculation
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -10; // Max 10deg tilt
+    const rotateY = ((x - centerX) / centerX) * 10;
+    
     card.style.setProperty('--mouse-x', `${x}px`);
     card.style.setProperty('--mouse-y', `${y}px`);
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    card.style.transform = `perspective(1000px) rotateX(0) rotateY(0)`;
   };
 
   const handleScroll = () => {
@@ -64,6 +79,20 @@ export default function Services({ dict }: { dict: any }) {
 
   return (
     <section className={styles.services} id="services">
+      {/* Dynamic Background Particles */}
+      {[...Array(6)].map((_, i) => (
+        <div 
+          key={i} 
+          className={styles.particle} 
+          style={{ 
+            left: `${Math.random() * 100}%`, 
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 10}s`,
+            animationDuration: `${15 + Math.random() * 15}s`
+          }} 
+        />
+      ))}
+
       <div className={`container ${styles.services__inner}`}>
         <div className={styles.header}>
           <h2 className="section-title">{services.title}</h2>
@@ -75,13 +104,25 @@ export default function Services({ dict }: { dict: any }) {
           ref={scrollRef}
           onScroll={handleScroll}
         >
-          {services.cards.map((card: any) => (
+          {services.cards.map((card: any, i: number) => (
             <div 
               key={card.id} 
               className={styles.card} 
               data-type={card.id}
               onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
             >
+
+              <div className={styles.meta}>
+                <span className={styles.coord}>X: 0{i + 1} / Y: 100%</span>
+                <span className={styles.status}>// ACTIVE_CORE</span>
+              </div>
+
+              {/* Decorative Data Stream */}
+              <div className={styles.card_data_stream}>
+                {`// SYSTEM_LOAD: OK\n// AUTH: GRANTED\n// BUILD: 2026.03.16\n// LOGIC: CUSTOM`}
+              </div>
+
               {/* Floating Decoration Icon */}
               <div className={styles.card__bg_icon} aria-hidden="true">
                 {serviceIcons[card.id]}
@@ -95,7 +136,7 @@ export default function Services({ dict }: { dict: any }) {
               </div>
 
               <h3 className={styles.title}>{card.title}</h3>
-              <p className={styles.description}>{card.description}</p>
+              <p className={styles.description} dangerouslySetInnerHTML={{ __html: card.desc }} />
 
               <ul className={styles.feature__list}>
                 {card.features.map((feature: string, i: number) => (
@@ -106,9 +147,16 @@ export default function Services({ dict }: { dict: any }) {
                 ))}
               </ul>
 
+              {/* Dimension Line Decor */}
+              <div className={styles.dimension__line}>
+                <div className={styles.dim__arrow}></div>
+                <div className={styles.dim__label}>{card.id.toUpperCase()}_LOGIC</div>
+                <div className={styles.dim__arrow}></div>
+              </div>
+
               <div className={styles.card__footer}>
                 <div className={styles.price__badge}>
-                   <span className={styles.price__label}>One-Time Investment</span>
+                   <span className={styles.price__label}>{card.priceLabel}</span>
                    <span className={styles.price__value}>{card.price}</span>
                 </div>
                 <button className={styles.cta}>

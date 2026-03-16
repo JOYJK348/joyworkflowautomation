@@ -1,0 +1,332 @@
+.section {
+  padding: 30px 0;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid__overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 77, 77, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* ─── Header Architecture ─── */
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.audit__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  background: rgba(255, 77, 77, 0.05);
+  border: 1px solid rgba(255, 77, 77, 0.2);
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.chip__dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.2); }
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+/* ─── Matrix Architecture ─── */
+.matrix__container {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* ─── Columns ─── */
+.column__legacy, .column__prime {
+  position: relative;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.column__legacy {
+  border-radius: 20px 0 0 20px;
+  opacity: 0.6;
+}
+
+.column__prime {
+  border-radius: 0 20px 20px 0;
+  border-color: rgba(16, 185, 129, 0.2);
+  background: rgba(16, 185, 129, 0.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.prime__aura {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ─── Column Headers ─── */
+.column__header {
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.column__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+}
+
+.column__title_prime {
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #fff 20%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.15em;
+}
+
+.prime__tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+/* ─── Comparison Items ─── */
+.item__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.legacy__item, .prime__item {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.item__meta, .prime__meta {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+  width: 40px;
+  padding-top: 0.5rem;
+}
+
+.prime__meta {
+  color: #10b981;
+  opacity: 0.6;
+}
+
+.item__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fail__icon {
+  color: var(--accent);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.item__desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--accent); /* Changed from muted to accent red */
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.prime__item_title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.check__icon {
+  width: 24px;
+  height: 24px;
+  background: #10b981;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 900;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+.prime__item_desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  background: linear-gradient(to right, #10b981, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  opacity: 1;
+}
+
+/* ─── Logic Hub ─── */
+.logic__hub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.vertical__line {
+  flex: 1;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.vs__badge {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  z-index: 5;
+}
+
+/* ─── Footer Accent ─── */
+.footer__accent {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer__line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 77, 77, 0.2);
+}
+
+.footer__text {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .matrix__container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .logic__hub {
+    display: none;
+  }
+  
+  .column__legacy, .column__prime {
+    border-radius: 20px;
+    padding: 2rem;
+  }
+  
+  .column__legacy {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+  
+  .matrix__container {
+    padding: 0 1rem;
+  }
+  
+  .footer__line {
+    display: none;
+  }
+  
+  .footer__accent {
+    justify-content: center;
+  }
+}

@@ -180,6 +180,7 @@ export default function HeroSection({ dict, lang }: { dict: any; lang: string })
                 <div className={styles.suite__item}>{Icons.layers} {hero.visual.erp}</div>
                 <div className={styles.suite__item}>{Icons.globe} {hero.visual.webMobile}</div>
                 <div className={styles.suite__item}>{Icons.bot} {hero.visual.aiChatbot}</div>
+                <div className={styles.suite__item}>{Icons.cap} {hero.visual.aiLms}</div>
                 <div className={styles.suite__item}>{Icons.receipt} {hero.visual.billing}</div>
                 <div className={styles.suite__item}>{hero.visual.more}</div>
               </div>

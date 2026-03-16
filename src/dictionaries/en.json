@@ -39,202 +39,935 @@
         "Photography Studios",
         "Driving Schools",
         "Car Wash Centers",
-        "Hardware Stores"
+        "Hardware Stores",
+        "Education Management",
+        "Fireworks Industry"
       ]
     },
     "trust": [
-      "3+ High-Scale Automations",
-      "7 Day Rapid Launch",
-      "₹0 Monthly Fees Forever"
+      {
+        "name": "Sarah J.",
+        "role": "Salon Owner",
+        "comment": "Reclaimed 15 hours/week."
+      },
+      {
+        "name": "Dr. Kumar",
+        "role": "Clinic Owner",
+        "comment": "No more double bookings."
+      }
     ],
     "visual": {
       "botTitle": "24/7 AI WhatsApp Bot",
-      "chatIn": "Hi, I need an appointment tomorrow.",
-      "chatOut": "Done! Your slot is confirmed for 10 AM. ✅",
+      "chatIn": "Hey, I need an appointment for tomorrow.",
+      "chatOut": "Sure! 10:00 AM is confirmed for you. ✅",
       "leadTitle": "Smart Lead Manager",
       "leadJay": "Lead: Jay",
       "leadPriya": "Booking: Priya",
-      "statusSaved": "Saved",
-      "statusConfirmed": "Confirmed",
-      "zeroLeadLabel": "Zero Lead Loss Guaranteed",
+      "statusSaved": "System Saved",
+      "statusConfirmed": "Auto Confirmed",
+      "zeroLeadLabel": "Zero Leads Slipped Through",
       "expertiseTitle": "Our Expertise",
       "erp": "ERP Systems",
       "webMobile": "Web & Mobile App",
       "aiChatbot": "AI Chatbots",
+      "aiLms": "AI Integrated LMS",
       "billing": "Billing Software",
       "more": "+ More"
     },
     "beforeAfter": {
-      "header_before": "Old Slow Way",
-      "header_after": "Modern Workflow",
+      "header_before": "Legacy Manual Systems",
+      "header_after": "Modern Automation Engine",
       "rows": [
         {
-          "before": "Messy Hand-written notes and lost paper records",
-          "after": "Centralized Cloud Storage with Instant Search"
+          "before": "Messy paper records & lost customer details",
+          "after": "Instant Search & Cloud Storage access"
         },
         {
-          "before": "Exhausting manual calls for every appointment",
-          "after": "Smart WhatsApp Flows that convert leads auto"
+          "before": "Hours spent on phone calls for every booking",
+          "after": "24/7 Smart WhatsApp Auto-Booking"
         },
         {
-          "before": "Losing revenue due to forgotten customer follow-ups",
-          "after": "Precision Tracking that never misses a single lead"
+          "before": "Revenue lost from never following up on leads",
+          "after": "Zero-Leakage Tracking & Auto Follow-ups"
         },
         {
-          "before": "Manual accounting and error-prone reports",
-          "after": "Real-time Profit Dashboard with AI insights"
+          "before": "Manual accounting & calculation errors",
+          "after": "Real-time Profit & Loss AI Dashboards"
         },
         {
-          "before": "Running behind customers for pending payments",
-          "after": "Automatic Payment Reminders and Instant Receipts"
+          "before": "Chasing customers repeatedly for old payments",
+          "after": "Automatic Payment Reminders & Receipts"
         }
       ],
-      "footer": "Custom Coded — No Monthly Subscription",
-      "footer_sub": "Flat One-Time Investment · Lifetime Ownership"
+      "footer": "Custom Coded — Zero Monthly Subscriptions",
+      "footer_sub": "One-Time Investment · Lifetime Ownership"
     },
     "services": {
-      "title": "What We Build",
-      "subtitle": "High-performance systems to eliminate manual work and scale your revenue.",
+      "title": "What We Build for You?",
+      "subtitle": "High-performance digital systems that eliminate manual bottlenecks and boost your profit.",
       "cards": [
         {
-          "id": "automation",
-          "tag": "Efficiency",
-          "title": "WhatsApp Business Automation",
-          "description": "24/7 auto-replies, appointment booking, and payment reminders.",
+          "id": "website",
+          "tag": "IDENTITY",
+          "title": "Smart Business Websites",
+          "desc": "Your own <span>digital asset</span>. Built once, owned <span>forever</span> with zero monthly maintenance or hosting fees. High <span>trust</span> for your brand.",
           "features": [
-            "WhatsApp Business API Setup",
-            "Auto-Replies for Common Queries",
-            "Appointment Booking Automation",
-            "Automatic Payment Reminders",
-            "Lead Capture & Sync to Sheets"
+            "Premium Portfolio Layouts",
+            "Speed-Optimized Architecture",
+            "High-Conversion Landing Pages",
+            "Dynamic SEO Foundation"
           ],
-          "price": "Starting from ₹12,000",
-          "cta": "Get Automation Plan"
+          "priceLabel": "One-Time Settlement",
+          "price": "Starting from ₹6,000",
+          "cta": "Build My Identity",
+          "link": "/services/websites"
         },
         {
-          "id": "website",
-          "tag": "Presence",
-          "title": "Smart Business Website",
-          "description": "Professional online presence + lead capture system.",
+          "id": "automation",
+          "tag": "EFFICIENCY",
+          "title": "Autonomous Outreach Systems",
+          "desc": "Official <span>API-Driven</span> workflows. Powerful <span>lead management</span> with a flexible monthly subscription for API & server maintenance.",
           "features": [
-            "Mobile Responsive Design",
-            "Enquiry Form to Google Sheets",
-            "WhatsApp Click-to-Chat Button",
-            "Google Maps & SEO Integration",
-            "1 Month Technical Support"
+            "Official API Architecture",
+            "Dynamic Lead Qualification",
+            "Conflict-Free Slot Booking",
+            "Integrated Payment Links"
           ],
-          "price": "Starting from ₹6,000",
-          "cta": "Explore Features"
+          "priceLabel": "Setup + API Subscription",
+          "price": "Starting from ₹15,000",
+          "cta": "Automate My Business",
+          "link": "/services/automation"
         },
         {
           "id": "software",
-          "tag": "Analytics",
-          "title": "Business Live Dashboard",
-          "description": "Track your profit, stock, and revenue live from your phone.",
+          "tag": "MANAGEMENT",
+          "title": "Customized Business Tools",
+          "desc": "Unlimited <span>possibilities</span>. We build 100% customized <span>logic</span>, dashboards, and <span>ERPs</span> specifically for any unique business need you have.",
           "features": [
-            "Custom Profit & Loss Dashboard",
-            "Live Inventory Monitoring",
-            "Revenue & Expense Tracking",
-            "Automated Low Stock Alerts",
-            "Daily/Monthly Business Reports"
+            "Real-time Inventory Audit",
+            "Staff Performance Tracking",
+            "Automated GST Billing",
+            "Advanced Growth Analytics"
           ],
-          "price": "Custom Quote",
-          "cta": "Book Consultation"
+          "priceLabel": "Tailored Investment",
+          "price": "Custom Pricing",
+          "cta": "Build My Idea",
+          "link": "/services/software"
         }
       ]
     },
     "calculator": {
-      "title": "Calculate Your Growth Loss",
-      "subtitle": "Select your scale to see how manual work limits your progress.",
+      "title": "Freedom Calculator",
+      "subtitle": "Calculate how many hours you lose to manual work every month.",
       "tiers": {
-        "early": "Startup / Small Side-Hustle",
-        "earlyDesc": "Hidden leaks that slow down your initial growth.",
-        "growing": "Growing Business",
-        "growingDesc": "Daily operational friction that's starting to cost serious profit.",
-        "scale": "High-Volume Business",
-        "scaleDesc": "Massive manual overhead holding back your professional scaling."
+        "early": "Early Stage",
+        "growing": "Growing",
+        "scale": "Scale-Up",
+        "earlyDesc": "Just getting started. Small client base, 1-2 staff members.",
+        "growingDesc": "Steady flow of clients. Managing 5-10 appointments per day.",
+        "scaleDesc": "High volume operations. 20+ bookings per day, multiple staff."
       },
       "inputs": {
-        "appointments": "Daily Appointments / Leads",
-        "noShow": "Missed Customers (%)",
-        "revenue": "Avg Revenue per Client (₹)",
-        "adminTime": "Admin Time per Day (mins)"
+        "appointments": "Daily Appointments",
+        "noShow": "No-Show Rate",
+        "revenue": "Avg. Revenue Per Booking (₹)",
+        "adminTime": "Daily Admin Time (mins)"
       },
       "results": {
-        "yearlyLoss": "Yearly Lost Revenue",
-        "monthlyLoss": "Monthly Lost Revenue",
-        "timeWastedYearly": "Hours Wasted / Year",
-        "timeWastedMonthly": "Hours Wasted / Month",
         "toggleYearly": "Yearly",
         "toggleMonthly": "Monthly",
-        "fixIt": "Automation can recover this.",
-        "cta": "Book Free Strategy"
+        "yearlyLoss": "Projected Yearly Revenue Loss",
+        "monthlyLoss": "Projected Monthly Revenue Loss",
+        "timeWastedYearly": "Hours Wasted on Admin (Yearly)",
+        "timeWastedMonthly": "Hours Wasted on Admin (Monthly)",
+        "fixIt": "This isn't inevitable. Every rupee and hour lost can be reclaimed with the right automation.",
+        "cta": "Fix This For Me →"
       }
     }
   },
-  "footer": {
-    "agencyName": "Workflow Craft",
-    "tagline": "Building the future of business through intelligent automation and smart digital systems.",
-    "sections": {
-      "links": "Quick Links",
-      "services": "Our Services",
-      "contact": "Let's Connect"
-    },
-    "copyright": "© 2026 Workflow Craft. All Rights Reserved.",
-    "credit": "Crafted for high-performance businesses."
-  },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Clear answers to help you understand how automation transforms your business.",
-    "questions": [
-      {
-        "q": "What exactly is Business Automation?",
-        "a": "It's replacing manual, repetitive tasks (like booking appointments, sending reminders, or tracking stock) with smart software systems that work 24/7 without human intervention."
-      },
-      {
-        "q": "How long does it take to set up the system?",
-        "a": "Most projects, like WhatsApp automation or Smart Websites, are delivered and live within 7 to 10 working days."
-      },
-      {
-        "q": "Do I need technical knowledge to use these systems?",
-        "a": "Not at all. We design everything to be 'Owner-Friendly'. If you can use WhatsApp and a smartphone, you can manage our systems effortlessly."
-      },
-      {
-        "q": "Is my business data safe?",
-        "a": "Absolutely. We use industry-standard encryption and secure platforms like Google Cloud and official Meta APIs for WhatsApp to ensure your data stays 100% private and protected."
-      },
-      {
-        "q": "How much can I actually save with automation?",
-        "a": "On average, our clients save 15-20 hours of manual work every week and see a significant reduction in 'no-shows'—which directly translates to higher revenue."
-      },
-      {
-        "q": "Do you provide support after the project is live?",
-        "a": "Yes! We don't just build and leave. We provide ongoing technical support and maintenance packages to ensure your system always runs at peak performance."
-      }
-    ]
-  },
-  "howItWorks": {
-    "title": "Your Journey to Automation",
-    "subtitle": "A simple 3-step process to transform your manual business into a high-speed automated machine.",
+  "process": {
+    "title": "How We Work",
     "steps": [
       {
         "id": "audit",
         "number": "01",
-        "title": "Workflow Audit",
-        "desc": "We identify your biggest time-wasters and manual bottlenecks through a deep-dive audit."
+        "title": "Business 'X-Ray'",
+        "desc": "We don't ignore your bottlenecks. Our team deep-dives into your current manual workflow to find hidden time-wasters and revenue leakages."
       },
       {
         "id": "build",
         "number": "02",
-        "title": "Custom Build",
-        "desc": "Our team builds your custom AI agents and automation workflows tailored to your niche."
+        "title": "Strategic Architecture",
+        "desc": "We write custom logic to replace manual tasks. No templates. No generic tools. Just pure, targeted automation built for your specific niche."
       },
       {
         "id": "scale",
         "number": "03",
-        "title": "Scale & Grow",
-        "desc": "Go live with your systems. Watch your business scale while you focus on high-level growth."
+        "title": "System Live & Scale",
+        "desc": "Go live with your new digital brain. Watch your business scale with zero human error while you step back and focus on strategic expansion."
       }
     ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about scaling with automation.",
+    "questions": [
+      {
+        "q": "Why should I choose JoyAutomations over generic tools?",
+        "a": "Unlike generic tools like Zapier that charge monthly fees (often ₹2,000+ extra), we write custom code for your business. You get 100% asset ownership with zero hidden subscription costs."
+      },
+      {
+        "q": "Will my business data be secure?",
+        "a": "Yes. We don't store your data on our servers. The automation is built directly into your infrastructure (Google Sheets, WhatsApp API, or Private DB), ensuring complete privacy."
+      },
+      {
+        "q": "How long does it take to see results?",
+        "a": "Most businesses reclaim 10-15 hours of manual work within the first week of going live. You'll see immediate clarity in lead tracking and appointment management."
+      },
+      {
+        "q": "Do I need technical skills to use the system?",
+        "a": "No. If you can use WhatsApp, you can use our systems. We build intuitive dashboards and bots that work for you, not the other way around."
+      },
+      {
+        "q": "What happens if the system breaks?",
+        "a": "We provide dedicated after-sales support. Since we write the code ourselves, we can identify and fix technical issues fast without relying on third-party support."
+      },
+      {
+        "q": "Can I automate my existing manual process?",
+        "a": "Yes. We don't force a new template on you. We analyze your current manual workflow and build a custom digital version of it to ensure zero business disruption."
+      }
+    ]
+  },
+  "footer": {
+    "agencyName": "JoyAutomations",
+    "tagline": "Building the future of local business with custom code and direct API integrations.",
+    "sections": {
+      "links": "Quick Links",
+      "services": "What we do",
+      "contact": "Get in touch"
+    },
+    "quickLinks": [
+      { "label": "About Us", "href": "/about" },
+      { "label": "Reality Check", "href": "/#problem-solution" },
+      { "label": "Services", "href": "/#services" },
+      { "label": "ROI Calculator", "href": "/#calculator" }
+    ],
+    "copyright": "© 2026 JoyAutomations. All rights reserved.",
+    "credit": "Crafted for high-performance businesses."
+  },
+  "servicesPage": {
+    "hero": {
+      "tag": "⚡ Trusted by Growing Businesses",
+      "title": "What's the Biggest Problem in Your Business?",
+      "subtitle": "Tell us your problem — we have the solution ready. Let technology work for you, while you focus on growth.",
+      "pills": [
+        "📅 Appointments are hard to manage",
+        "💬 No time to reply to customers",
+        "📊 Can't track my business numbers"
+      ],
+      "ui": {
+        "expertTag": "Expert Strategy",
+        "impactLabel": "Estimated Impact:"
+      },
+      "masterSolutions": {
+        "Appointments": {
+          "title": "Stop Being Chained to Your Phone",
+          "strategy": "Don't lose your sleep or family time over a ringing phone. We turn your WhatsApp into a 24/7 autonomous receptionist that handles everything while you sleep.",
+          "steps": [
+            "Your WhatsApp automatically answers & books slots 24/7",
+            "No more double bookings or 'I forgot' excuses",
+            "System sends polite reminders so customers actually show up",
+            "You just open your app and see a fully packed schedule"
+          ],
+          "impact": "Save 15+ hours of 'Admin Headache' every week. Reclaim your freedom."
+        },
+        "Reply": {
+          "title": "Stop Watching Your Leads Go to Competitors",
+          "strategy": "Every minute you don't reply, a customer is searching for someone else. Our AI ensures no customer ever feels ignored, even at 2 AM.",
+          "steps": [
+            "Instant, human-like replies to prices and details",
+            "Identify hot leads immediately and alert you",
+            "Automatically share your work gallery and catalog",
+            "Stop the anxiety of missing a 'money-making' message"
+          ],
+          "impact": "100% Response Rate. Never let another lead slip through your fingers."
+        },
+        "Numbers": {
+          "title": "Stop Doing Business in the Dark",
+          "strategy": "The fear of 'where did the money go?' ends here. We bring absolute clarity to your pocket, so you can grow with confidence.",
+          "steps": [
+            "Real-time profit tracking on your mobile screen",
+            "Instant alerts when stock is low—never say 'Out of stock' again",
+            "Daily business summary reports sent directly to your WhatsApp",
+            "See which service makes the most money without any math"
+          ],
+          "impact": "Zero Calculation Stress. Make decisions based on facts, not guesses."
+        }
+      }
+    },
+    "industryGrid": {
+      "title": "Which Business Do You Own?",
+      "subtitle": "Select your industry to see common problems and our custom automation solutions.",
+      "ui": {
+        "selectedTag": "Selected Industry",
+        "problemsTitle": "Common Issues",
+        "solutionTitle": "JoyAutomations Solution",
+        "cta": "Get This Solution",
+        "suffix": "— Your Problems Fixed"
+      },
+      "solutions": {
+        "Cafes & Restaurants": {
+          "label": "Cafes & Restaurants",
+          "problems": [
+            "Manual Table Booking: Answering 20 calls a day just to book tables is a major distraction for your staff.",
+            "Feedback Blackhole: Customers leave unhappy but you only find out when they post a 1-star review on Google.",
+            "Inventory Spill: High wastage of ingredients because there is no link between sales and stock usage."
+          ],
+          "solution": {
+            "title": "Dine-Logic Pro",
+            "features": [
+              "QR Table Bot: Customers book their table and pre-order via WhatsApp. No phone calls required.",
+              "Instant Review AI: System requests feedback after every meal and alerts you immediately if a rating is low.",
+              "Recipe-Cost Master: Live tracking of every ingredient used vs revenue generated for maximum profit."
+            ],
+            "toolStack": [
+              "Table Management",
+              "Feedback Bot",
+              "Recipe ERP",
+              "Inventory Sync"
+            ],
+            "result": "A restaurant owner reduced phone distractions by 70% and improved Google ratings by 0.5 stars."
+          }
+        },
+        "Bike Service Centers": {
+          "label": "Bike Service Centers",
+          "problems": [
+            "Status Inquiry Fatigue: Customers calling 10 times a day to ask 'Is my bike ready?' wastes your mechanic's time.",
+            "Manual Spare Tracking: Losing track of which spare part was used on which bike leads to incorrect billing.",
+            "Service Recall Loss: Customers forget their oil change, making you lose recurring service revenue."
+          ],
+          "solution": {
+            "title": "Moto-Care Master",
+            "features": [
+              "Live Status Bot: Customers type their bike number on WhatsApp and get instant status: 'Service in Progress' or 'Ready'.",
+              "Scan-to-Bill: Mechanics scan used parts via a mobile app; the digital bill is generated instantly without errors.",
+              "Auto-Service Invite: System predicts next service date and sends personalized WhatsApp invites to customers."
+            ],
+            "toolStack": [
+              "Workshop Manager",
+              "Parts Inventory",
+              "Status Bot",
+              "Service Scheduler"
+            ],
+            "result": "A service center reduced customer query calls by 90% and increased recurring visits by 30%."
+          }
+        },
+        "Real Estate": {
+          "label": "Real Estate",
+          "problems": [
+            "Ghosting Leads: Portal inquiries are missed because agents are busy on site visits with other clients.",
+            "Document Management: Losing track of which client was sent which layout map or legal document.",
+            "Follow-up Fatigue: Manually managing 50+ potential buyers across multiple projects is impossible."
+          ],
+          "solution": {
+            "title": "Plot-Lead Pro",
+            "features": [
+              "24/7 AI Sales Agent: Instantly answers pricing and location questions for every inquiry, even at midnight.",
+              "Safe Doc-Vault: Automatic sharing of layout PDFs and RERA certificates when a lead shows high interest.",
+              "Buyer Nurture Flow: AI follows up with every visitor with site photos until they book the final site visit."
+            ],
+            "toolStack": [
+              "Real Estate CRM",
+              "AI Chat Agent",
+              "Cloud Document Vault",
+              "Lead Scoring Engine"
+            ],
+            "result": "A real estate developer increased his site visit conversion by 45% using AI-driven follow-ups."
+          }
+        },
+        "Event Planners": {
+          "label": "Event Planners",
+          "problems": [
+            "Vendor Sync Chaos: Managing 10 different vendors (Decor, Food, Music) via phone calls is a nightmare.",
+            "Quote Writing Delay: Taking 3 days to send a quote means the client has already booked another planner.",
+            "Payment Collection Mess: Forgetting to collect the stage-wise payments during the high-stress event week."
+          ],
+          "solution": {
+            "title": "Event-Elite CRM",
+            "features": [
+              "Vendor Sync Hub: A central dashboard where all vendors see their specific tasks and deadlines on their phones.",
+              "Instant Quote Builder: AI generates a professional PDF quote based on guest count and event type in 1 minute.",
+              "Payment Milestone Bot: Automatic reminders and payment links sent after each planning stage is completed."
+            ],
+            "toolStack": [
+              "Vendor Portal",
+              "Quote Automation",
+              "Task Manager",
+              "Milestone Billing"
+            ],
+            "result": "An event planner reduced her 'Admin Stress' by 60% and secured 100% payments before event day."
+          }
+        },
+        "Salons & Spas": {
+          "label": "Salons & Spas",
+          "problems": [
+            "Membership Leakage: Clients visit once but never sign up for packages, leading to inconsistent monthly revenue.",
+            "Stock Wastage: Expensive spa oils and products are used without tracking, leading to high inventory loss.",
+            "Empty Afternoon Slots: Staff sitting idle during weekdays while the weekend is overloaded."
+          ],
+          "solution": {
+            "title": "Zen-Flow Manager",
+            "features": [
+              "Membership Conversion Bot: AI identifies high-spending walk-ins and sends personalized package offers automatically.",
+              "Smart Product Tracker: Real-time inventory alerts that notify you before expensive stocks run out.",
+              "Weekday Dynamic Pricing: Automatically broadcast 'Happy Hour' discounts to fill your idle afternoon slots."
+            ],
+            "toolStack": [
+              "Inventory CRM",
+              "Member Portal",
+              "WhatsApp Broadcast Engine",
+              "Dynamic Pricing Module"
+            ],
+            "result": "A luxury spa reduced product wastage by 25% and increased weekday bookings by 40%."
+          }
+        },
+        "Dental Clinics": {
+          "label": "Dental Clinics",
+          "problems": [
+            "Last Minute Cancellations: Empty dental chairs cost ₹2,000+ per hour in lost overhead and staff time.",
+            "Post-Treatment Neglect: Patients forget their 6-month check-ups, which is your most profitable recurring revenue.",
+            "Manual Lead Entry: Front desk missing inquiries from Facebook/Instagram because they are busy with patients."
+          ],
+          "solution": {
+            "title": "Smile-Sync Pro",
+            "features": [
+              "Smart Slot Filler: Automatically detects cancellations and offers the slot to 'Waiting List' patients via WhatsApp.",
+              "Care Cycle Bot: Sends post-surgery care tips and auto-books the next cleaning session 6 months in advance.",
+              "Lead Capture Agent: 24/7 AI agent that answers dental pricing questions and books consultations from social media."
+            ],
+            "toolStack": [
+              "Patient Management System",
+              "Care Automation Bot",
+              "Social Media API",
+              "SMS/WhatsApp Gateway"
+            ],
+            "result": "A dental clinic eliminated 80% of empty chair time within the first month of automation."
+          }
+        },
+        "Gyms & Fitness": {
+          "label": "Gyms & Fitness",
+          "problems": [
+            "Subscription Expiry Loss: Members stop coming when their plan ends because no one reminded them to renew.",
+            "Trainer Scheduling Mess: Managing personal training sessions between 5 trainers and 50 clients manually.",
+            "New Year Resolution Dropouts: High churn rate after the first month because of zero engagement."
+          ],
+          "solution": {
+            "title": "Fit-Track Master",
+            "features": [
+              "Auto-Renewal Engine: Personalized reminders sent 3 days before expiry with an instant UPI payment link.",
+              "Trainer Sync App: Clients book slots directly based on trainer availability. No more manual calls.",
+              "Engagement Bot: Sends daily motivational tips and workout tracking to keep members coming back."
+            ],
+            "toolStack": [
+              "Subscription Engine",
+              "PT Management App",
+              "Payment Gateway",
+              "Retention Bot"
+            ],
+            "result": "A local gym saw a 50% increase in membership renewals using automated payment reminders."
+          }
+        },
+        "Tuition Centers": {
+          "label": "Tuition Centers",
+          "problems": [
+            "Fee Collection Fatigue: Manually calling 100+ parents every month to ask for fees is exhausting and awkward.",
+            "Attendance Anxiety: Parents constantly calling to ask 'Did my child reach the center safely?'.",
+            "Result Transparency: Difficulty in sharing test scores and progress reports with parents instantly."
+          ],
+          "solution": {
+            "title": "Edu-Safe System",
+            "features": [
+              "Auto-Fee Accountant: System sends personalized fee links and instant receipts on the 1st of every month.",
+              "Safe-Arrival Alerts: Digital attendance that triggers an instant 'Your child has arrived' WhatsApp to parents.",
+              "Scoreboard Bot: Parents can query latest test results 24/7 via a simple WhatsApp keyword."
+            ],
+            "toolStack": [
+              "Academic CRM",
+              "Guardian Alert System",
+              "Integrated Billing",
+              "Student Database"
+            ],
+            "result": "A tuition center owner recovered 100% of fees on time for three consecutive months."
+          }
+        },
+        "Pharmacies": {
+          "label": "Pharmacies",
+          "problems": [
+            "Expiry Dead-Stock: Losing money because medicines expire on the shelf without any prior warning.",
+            "Manual Billing Rushes: Peak hour evening crowds lead to long queues and calculation errors.",
+            "Supplier Credit Chaos: Difficulty in tracking returns and credit notes from 10+ different medical wholesalers."
+          ],
+          "solution": {
+            "title": "Pharma-Logic Pro",
+            "features": [
+              "Expiry Alert Bot: Automated monthly reports and daily WhatsApp alerts for batches expiring in 60 days.",
+              "Rapid QR Billing: Scan-and-bill interface that handles 3x more customers per hour during peak times.",
+              "Supplier Ledger: A centralized dashboard to track every return and pending refund from wholesalers."
+            ],
+            "toolStack": [
+              "Inventory Management",
+              "Fast POS System",
+              "Wholesale Ledger",
+              "Expiry Tracker"
+            ],
+            "result": "A pharmacy owner reduced 'Dead Stock' loss by 90% using pre-expiry WhatsApp alerts."
+          }
+        },
+        "Tailoring Shops": {
+          "label": "Tailoring Shops",
+          "problems": [
+            "Delivery Date Disputes: Customers coming early and staff forgetting to finish urgent orders on time.",
+            "Measurement Loss: Losing paper slips with body measurements leads to ruined fabric and angry clients.",
+            "Festival Rush Chaos: Taking more orders than the tailors can handle during Diwali/Wedding season."
+          ],
+          "solution": {
+            "title": "Stitch-Perfect CRM",
+            "features": [
+              "Ready-to-Collect Bot: Automatic WhatsApp notification: 'Your dress is ready! Please collect before 8 PM'.",
+              "Measurement Cloud: Digital storage of every client's sizing history. Never ask 'What was your waist size?' twice.",
+              "Workload Manager: System warns you if your weekly delivery capacity is full before you take the next order."
+            ],
+            "toolStack": [
+              "Tailoring ERP",
+              "Digital Measurement Book",
+              "WhatsApp Notify",
+              "Order Timeline"
+            ],
+            "result": "A boutique owner eliminated 100% of delivery delays and reduced fabric wastage by digitizing measurements."
+          }
+        },
+        "Photography Studios": {
+          "label": "Photography Studios",
+          "problems": [
+            "Selection Delay: Clients take months to select photos for albums, delaying your final payment.",
+            "Equipment Scheduling: Forgetting which camera/lens is with which photography team on a multi-event day.",
+            "Ghosting Leads: Inquiries asking for 'Wedding Packages' that you forget to follow up with after the first call."
+          ],
+          "solution": {
+            "title": "Lens-Lead Pro",
+            "features": [
+              "Album Approval Funnel: Digital preview link where clients select photos. Reminders sent until they finish.",
+              "Gear Tracker: A live dashboard showing the location and status of every piece of expensive equipment.",
+              "Quote-Bot: Instant PDF sharing of your packages when someone types 'Wedding' or 'Shoot' on WhatsApp."
+            ],
+            "toolStack": [
+              "Selection Portal",
+              "Asset Management",
+              "AI Quote System",
+              "WhatsApp API"
+            ],
+            "result": "A studio reduced its album delivery cycle from 30 days to 10 days, leading to higher client referrals."
+          }
+        },
+        "Driving School": {
+          "label": "Driving School",
+          "problems": [
+            "Student No-shows: Students missing their morning driving classes wastes your instructor's time and fuel. Every empty slot is a loss.",
+            "LLR/License Expiry Risk: If a student's Learner License expires before the final test, it creates a massive re-registration headache.",
+            "Installment Collection Stress: Tracking who has paid which installment across 50+ students is a manual accounting nightmare."
+          ],
+          "solution": {
+            "title": "Road-Ready Manager",
+            "features": [
+              "Class Alert System: Automated 'Your class is tomorrow at 6 AM' message to students, reducing absenteeism by 80%.",
+              "Timeline Tracker: The system alerts you 7 days before a student's LLR is set to expire, so you can book the final test in time.",
+              "Installment Bot: Precise tracking of dues with automated, professional payment links sent to students on their specific due dates."
+            ],
+            "toolStack": [
+              "Academic CRM",
+              "Official WhatsApp Integration",
+              "Integrated Payment Gateway",
+              "Multichannel Notifications"
+            ],
+            "result": "A driving school owner recovered 90% of pending fees and optimized his instructor schedules efficiently."
+          }
+        },
+        "Car Wash": {
+          "label": "Car Wash Center",
+          "problems": [
+            "Low Customer Loyalty: Customers go wherever there is a discount, because they don't feel a personal connection with your brand.",
+            "Weekend Bottlenecks: Everyone wants a wash on Sunday morning, while your staff sits idle on Tuesday afternoon.",
+            "Wait Time Frustration: Customers drive in, see a queue of 5 cars, and leave instantly. You lost a sale without knowing it."
+          ],
+          "solution": {
+            "title": "Glossy CRM",
+            "features": [
+              "Advance Slot Booking: Customers book their wash time in advance. No queues, no waiting, no lost customers.",
+              "Automated Loyalty Program: The system tracks every visit; on the 4th wash, it automatically sends a 'Your Next Wash is FREE' coupon.",
+              "Dynamic Load Balancer: Send automated 20% discount offers for 'Tuesday Washes' to fill up your idle hours and boost revenue."
+            ],
+            "toolStack": [
+              "Smart Loyalty App",
+              "Official WhatsApp Integration",
+              "Booking Engine",
+              "Secure Payment Gateway"
+            ],
+            "result": "A car wash boutique increased its weekday revenue by 35% and doubled its recurring customer base."
+          }
+        },
+        "Education Management": {
+          "label": "Education Management",
+          "problems": [
+            "Manual Admission Mess: Processing paper forms and data entry for hundreds of student enrollments is extremely slow.",
+            "Fee Collection Stress: Manually chasing 500+ parents for monthly fees is an exhausting and awkward full-time task.",
+            "Communication Gap: Parents constantly calling to check on student attendance, test results, or homework updates."
+          ],
+          "solution": {
+            "title": "Global-Edu ERP",
+            "features": [
+              "Zero-Paper Admission: Online portal that captures student documents and exports them to a digital database instantly.",
+              "Fee Autopilot: System sends WhatsApp fee links on the 1st; parents pay via UPI and receipts are sent automatically.",
+              "Guardian Portal: Parents can access attendance, test scores, and homework in one simple automated dashboard 24/7."
+            ],
+            "toolStack": [
+              "Academic ERP",
+              "Guardian Alert System",
+              "Integrated Billing",
+              "Student Cloud Database"
+            ],
+            "result": "An academy recovered 100% of fees on time and reduced administrative phone distractions by 80%."
+          }
+        },
+        "Fireworks Industry": {
+          "label": "Fireworks Industry",
+          "problems": [
+            "Stock Safety Risk: Lack of real-time data on explosive storage levels poses a massive safety and regulatory audit risk.",
+            "Diwali Order Over-booking: Taking deep orders for peak seasons and realizing too late that you don't have enough stock.",
+            "Compliance Headaches: Managing multiple fire safety and explosives licenses across different warehouses manually."
+          ],
+          "solution": {
+            "title": "Nitro-Inventory Pro",
+            "features": [
+              "Explosive-Safe Tracker: Real-time inventory alerts for every explosive chemical and finished firework product.",
+              "Diwali-Rush Order Book: Lock orders only against verified available stock to ensure 100% fulfillment quality.",
+              "Compliance Vault: Digital reminders for license renewals and safety audits, ensuring you are always legally compliant."
+            ],
+            "toolStack": [
+              "Safety-First ERP",
+              "Diwali Order Engine",
+              "License Manager",
+              "Warehouse IoT Sync"
+            ],
+            "result": "A fireworks manufacturer avoided a ₹5L fine by timely renewals and eliminated seasonal stock shortages."
+          }
+        },
+        "Hardware Store": {
+          "label": "Hardware Store",
+          "problems": [
+            "Inventory Inquiry Fatigue: Taking 30 calls a day just to answer 'Do you have this specific bolt/paint in stock?' is a waste of time.",
+            "Contractor Credit Mess: Difficulty in tracking who owes how much across 20+ different contractors leads to massive bad debt.",
+            "Missed Sales on New Stock: Having no way to tell your best buyers about new tool arrivals or brand launches."
+          ],
+          "solution": {
+            "title": "Hard-Stock Pro",
+            "features": [
+              "WhatsApp Stock Bot: Contractors can type the item name and get an instant 'In Stock' or 'Expected in 2 days' reply via AI.",
+              "Automated Credit Ledger: Every month-end, contractors get their clear balance statement on WhatsApp with a payment link.",
+              "New Arrival Broadcast: Send one-click localized updates about new inventory to your segment of top 100 contractors/buyers."
+            ],
+            "toolStack": [
+              "Advanced Inventory System",
+              "Bulk Messaging Engine",
+              "ERP Integration Module",
+              "Secure Cloud Database"
+            ],
+            "result": "A hardware shop owner saw a 60% improvement in credit recovery speed from his regular contractors."
+          }
+        },
+        "Beauty Parlour": {
+          "label": "Beauty Parlour",
+          "problems": [
+            "Routine Breakage: Clients forget that they need a facial or threading every 21 days for best results. You lose that recurring visit.",
+            "Bridal Response Delay: Taking too long to send bridal packages to a Social Media inquiry means the bride books another parlour immediately.",
+            "Staff Scheduling Chaos: Managing 3-4 beauticians and their clients without a central dashboard causes double bookings and staff stress."
+          ],
+          "solution": {
+            "title": "Zen-Glow Manager",
+            "features": [
+              "21-Day Recall Bot: AI predicts the client's next threaded/facial date and sends a 'Time to GLOW again!' invite on WhatsApp.",
+              "Bridal Quote Agent: Instantly sends professional bridal brochures and pricing when an inquiry mentions 'Wedding' or 'Makeup'.",
+              "Stylist Calendar: A unified dashboard where staff see their daily appointments on their own phones, ensuring zero overlaps."
+            ],
+            "toolStack": [
+              "Beauty ERP",
+              "Client Loyalty Bot",
+              "Staff Management Portal",
+              "Mobile Scheduler"
+            ],
+            "result": "A beauty studio increased its bridal lead conversion by 55% and stabilized its recurring facial revenue."
+          }
+        }
+      }
+    },
+    "techStack": {
+      "title": "The Tech Behind Your Growth",
+      "subtitle": "We don't use slow, monthly-fee based tools like Zapier or Make. We write custom code to build your unique asset.",
+      "badges": [
+        "Next.js",
+        "Python",
+        "FastAPI",
+        "WhatsApp API",
+        "Google Sheets",
+        "Gemini AI",
+        "Railway",
+        "Vercel"
+      ],
+      "disclaimer": "100% Custom Code. No hidden tool subscription costs."
+    },
+    "uspSection": {
+      "title": "Why Are We Different?",
+      "labels": {
+        "others": "Other Agencies",
+        "volt": "JoyAutomations"
+      },
+      "comparisons": [
+        {
+          "others_title": "They Use Zapier",
+          "others_desc": "Costs you ₹2000+ extra monthly",
+          "volt_title": "We Write Custom Code",
+          "volt_desc": "Zero hidden tool subscriptions"
+        },
+        {
+          "others_title": "Make.com, WATI etc.",
+          "others_desc": "Your data goes to third parties",
+          "volt_title": "Direct API Integration",
+          "volt_desc": "Your data stays with you"
+        },
+        {
+          "others_title": "Template-based",
+          "others_desc": "Generic solutions for everyone",
+          "volt_title": "Built from Scratch",
+          "volt_desc": "Exact fit for your business"
+        },
+        {
+          "others_title": "Build & Leave",
+          "others_desc": "Zero after-sales support",
+          "volt_title": "We Fix What Breaks",
+          "volt_desc": "Proactive lifetime support"
+        },
+        {
+          "others_title": "Traffic Limits & Crashes",
+          "others_desc": "Slows down during high volume processing",
+          "volt_title": "Enterprise Scalability",
+          "volt_desc": "Processes millions of records instantly"
+        },
+        {
+          "others_title": "Rented Infrastructure",
+          "others_desc": "Stop paying the tools, lose your system",
+          "volt_title": "100% Asset Ownership",
+          "volt_desc": "You own the custom source code and IP"
+        }
+      ]
+    },
+    "expertiseSection": {
+      "title": "Machine Precision. Business Clarity.",
+      "subtitle": "Stop settling for basic templates. We engineer high-performance, autonomous digital engines that function as an invisible robotic workforce for your business.",
+      "items": [
+        {
+          "id": "erp",
+          "title": "Self-Driving Enterprise (ERP)",
+          "desc": "We build the central nervous system of your business. Our custom ERPs don't just store data; they actively manage it. From automated raw material alerts to synchronized multi-branch inventory, we remove the need for manual record-keeping entirely.",
+          "features": [
+            "Autonomous Inventory Sync",
+            "Staff Logic Dashboards",
+            "Multi-Branch Cloud Nodes",
+            "Zero-Data-Entry Systems"
+          ]
+        },
+        {
+          "id": "automation-crm",
+          "title": "Zero-Leakage Revenue CRM",
+          "desc": "Most leads die because of human delay. Our CRMs are built with 'Reply-First' logic. When a lead arrives, the system instantly qualifies them, updates your pipeline, and starts a nurturing cycle—all before you even pick up your phone.",
+          "features": [
+            "AI-Lead Scoring Logic",
+            "Automated Nurture Flows",
+            "24/7 Pipeline Status Bot",
+            "Revenue Prediction Engine"
+          ]
+        },
+        {
+          "id": "ai-lms",
+          "title": "Autonomous Education Engines",
+          "desc": "Scale your academy without hiring more staff. We automate the entire student lifecycle—from instant enrollment upon payment to AI-driven grading and automated WhatsApp certificate delivery. Let the system teach while you grow.",
+          "features": [
+            "Automated Student Onboarding",
+            "AI-Driven Grading Bots",
+            "Smart Progress Tracking",
+            "Auto-Certification Logic"
+          ]
+        },
+        {
+          "id": "web-mobile",
+          "title": "High-Performance Logic Apps",
+          "desc": "We don't build generic websites; we build internal business tools. Whether it's a native Desktop app for your front desk or a mobile dashboard for your field agents, we engineer the interface that makes automation feel effortless.",
+          "features": [
+            "Native Desktop Lab Software",
+            "Mobile Field-Agent Tools",
+            "High-Speed API Databases",
+            "Offline Sync Architecture"
+          ]
+        },
+        {
+          "id": "ai-chatbots",
+          "title": "24/7 Autonomous Sales Agents",
+          "desc": "Go beyond simple FAQs. We build AI agents that actually 'Work.' Our bots understand intent, check live inventory, book appointments directly into your calendar, and process orders without a human ever touching a button.",
+          "features": [
+            "Deep NLP Intent Processing",
+            "Live Database Integration",
+            "Conflict-Free Auto-Booking",
+            "Multilingual Support Logic"
+          ]
+        },
+        {
+          "id": "billing",
+          "title": "Automated Financial Engines",
+          "desc": "Remove the 'Chasing Payments' headache. Our billing systems are set-and-forget financial robots that generate professional GST invoices, track payment milestones, and send persistent but polite collection reminders automatically.",
+          "features": [
+            "GST-Automated Invoicing",
+            "Milestone Payment Logic",
+            "Defaulter Alert Engine",
+            "Instant Digital Receipts"
+          ]
+        }
+      ],
+      "more_badge": "+ Custom Engineering Projects"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "badge": "Strategic Consultation",
+      "title": "Stop Your Revenue Leakage Today",
+      "subtitle": "Fill out the audit form below or chat directly with our engineering team on WhatsApp.",
+      "pills": [
+        "24/7 Availability",
+        "Expert Engineering",
+        "Zero Hidden Fees"
+      ]
+    },
+    "form": {
+      "title": "Start Your Business Audit",
+      "fields": {
+        "name": "Full Name",
+        "business": "Business Name",
+        "industry": "Industry / Niche",
+        "painPoints": "Biggest Pain Points",
+        "message": "Tell us more (Optional)",
+        "whatsapp": "WhatsApp Number"
+      },
+      "industries": [
+        "Salon / Beauty",
+        "Clinic / Health",
+        "Hardware / Retail",
+        "Education / Tuition",
+        "Real Estate",
+        "Other"
+      ],
+      "pains": [
+        "Manual Appointment Chaos",
+        "Lead Ghosting / No Replies",
+        "Invoicing & Billing Mess",
+        "Inventory Tracking Stress",
+        "Customer Follow-up Failure"
+      ],
+      "cta": "Get My Free Audit →",
+      "success": "Audit Request Sent! We'll analyze your niche and reach out via WhatsApp within 24 hours."
+    },
+    "direct": {
+      "title": "Direct Channels",
+      "subtitle": "Prefer a quick chat? Reach out directly to our lead engineer.",
+      "whatsapp": {
+        "label": "Chat on WhatsApp",
+        "desc": "Fastest way for quick queries"
+      },
+      "email": {
+        "label": "Email Us",
+        "desc": "For detailed project briefs"
+      }
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "badge": "🚀 Premium Automation Partner",
+      "headline": {
+        "top": "We don't just 'Code' for living.",
+        "main": "We are your Strategic",
+        "highlight": "Growth Architects."
+      },
+      "subline": "We engineer freedom for business owners. By replacing tiring manual work with precise automation logic, we ensure your business grows while you focus on what truly matters.",
+      "chart": {
+        "manual": "Manual Struggle",
+        "pivot": "Automation Pivot",
+        "freedom": "Founder Freedom"
+      }
+    },
+    "story": {
+      "tag": "",
+      "title": "In the Age of AI, Why Are You Still Working Manually?",
+      "subtitle": "Every day you spend on manual tasks is a day your competitors get ahead. The real cost isn't just time — it's quality leads slipping away and profit you never see.",
+      "pains": [
+        {
+          "icon": "time",
+          "stat": "3 hrs",
+          "text": "Wasted every day on manual reminders, appointment calls, and follow-ups that a system can do in seconds."
+        },
+        {
+          "icon": "lead",
+          "stat": "60%",
+          "text": "Of potential customers leave for a competitor when you take more than 5 minutes to reply to an inquiry."
+        },
+        {
+          "icon": "money",
+          "stat": "₹40k",
+          "text": "In monthly revenue lost on average to manual errors, no-shows, and missed follow-ups by local businesses."
+        }
+      ],
+      "visual": {
+        "before": "Notebook, Phone Calls & Spreadsheets — doing everything manually, losing time and money every single day",
+        "after": "Smart System — auto-books, auto-follows-up, auto-bills. You just check your dashboard and grow."
+      },
+      "quote": "She was a brilliant salon owner. But every evening, she was exhausted — not from doing hair — but from manual phone calls, missed bookings, and chasing payments.",
+      "paragraphs": [
+        "We met a salon owner in Coimbatore who was waking up at 7 AM to confirm appointments and falling asleep at midnight worrying about which lead she'd missed. She wasn't failing because she was bad at business. She was failing because no one had given her the right tools.",
+        "This wasn't just her story. We heard the same thing from clinic owners, tuition center managers, hardware store owners, event planners — everyone was drowning in manual tasks while their attention should have been on growth.",
+        "The tools existed. AI was everywhere in the news. But for a local business owner in Tamil Nadu, the solutions were either too expensive, too complex, or built for Fortune 500 companies — not for the person running a business they've built with their own hands.",
+        "That gap is exactly why JoyAutomations exists."
+      ],
+      "mission": "JoyAutomations was built to bridge the gap between cutting-edge AI automation and the real business owners who need it most. You built your business with your hands. We'll make sure technology helps it grow."
+    },
+    "beliefs": {
+      "tag": "",
+      "title": "What We Stand For",
+      "subtitle": "We aren't just here to build software. We are here to change how local businesses operate with these three core principles.",
+      "list": [
+        {
+          "id": "power",
+          "title": "Technology for Everyone",
+          "text": "Automation shouldn't be a privilege for big corporations. Every small business in Coimbatore deserves the power to save time and scale.",
+          "icon": "globe"
+        },
+        {
+          "id": "data",
+          "title": "Your Data, Your Ownership",
+          "text": "No reliance on generic third-party tools. We write custom code so your business data stays in your control, 100% of the time.",
+          "icon": "shield"
+        },
+        {
+          "id": "partnership",
+          "title": "We don’t 'Build & Bolt'",
+          "text": "We aren't a 'deliver and disappear' agency. If your system breaks or your business grows, we are here to adapt and fix it.",
+          "icon": "handshake"
+        }
+      ]
+    }
   }
 }

@@ -19,18 +19,18 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Workflow Craft — Business Automation Agency, Coimbatore",
+  title: "JoyAutomations — Business Automation Agency",
   description:
-    "Coimbatore-la உங்கள் Business-ஐ Automatic-ஆக ஓட வையுங்கள். Appointment booking, WhatsApp reminders, Dashboard — எல்லாம் custom coded. No monthly subscription.",
+    "உங்கள் Business-ஐ Automatic-ஆக ஓட வையுங்கள். Appointment booking, WhatsApp reminders, Dashboard — எல்லாம் custom coded. No monthly subscription.",
   keywords: [
-    "business automation coimbatore",
-    "workflow automation tamil",
-    "appointment booking system coimbatore",
-    "whatsapp automation coimbatore",
+    "business automation agency",
+    "workflow automation solutions",
+    "appointment booking system",
+    "whatsapp automation",
     "small business automation india",
   ],
   openGraph: {
-    title: "Workflow Craft — Business Automation, Coimbatore",
+    title: "JoyAutomations — Business Automation",
     description: "Manual work குறையும். Time மிச்சமாகும். Revenue தானா ஏறும்.",
     type: "website",
     locale: "ta_IN",

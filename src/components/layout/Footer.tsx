@@ -13,7 +13,7 @@ export default function Footer({ dict, lang }: { dict: any, lang: string }) {
           {/* Brand Column */}
           <div className={styles.brand__col}>
             <Link href={`/${lang}`} className={styles.logo}>
-              Workflow<span>Craft</span>
+              Joy<span>Automations</span>
             </Link>
             <p className={styles.tagline}>{footer.tagline}</p>
           </div>
@@ -22,10 +22,11 @@ export default function Footer({ dict, lang }: { dict: any, lang: string }) {
           <div className={styles.links__col}>
             <h4>{footer.sections.links}</h4>
             <nav>
-              <Link href="#problem-solution">{lang === 'ta' ? 'Reality Check' : 'Reality Check'}</Link>
-              <Link href="#calculator">{lang === 'ta' ? 'ROI Calculator' : 'ROI Calculator'}</Link>
-              <Link href="#services">{nav.services}</Link>
-              <Link href="/">{nav.caseStudies}</Link>
+              {footer.quickLinks.map((link: any, i: number) => (
+                <Link key={i} href={link.href.startsWith('/') ? `/${lang}${link.href}` : link.href}>
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           </div>
 
@@ -34,7 +35,7 @@ export default function Footer({ dict, lang }: { dict: any, lang: string }) {
             <h4>{footer.sections.services}</h4>
             <nav>
               {hero.services.cards.map((card: any) => (
-                <Link key={card.id} href="#services">{card.title}</Link>
+                <Link key={card.id} href={`/${lang}/services`}>{card.title}</Link>
               ))}
             </nav>
           </div>
@@ -55,9 +56,9 @@ export default function Footer({ dict, lang }: { dict: any, lang: string }) {
                 <a href="#" aria-label="Instagram">IG</a>
               </div>
             </div>
-            <button className={styles.footer__cta}>
+            <Link href={`/${lang}/contact`} className={styles.footer__cta}>
               {nav.cta}
-            </button>
+            </Link>
           </div>
 
         </div>

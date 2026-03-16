@@ -1,0 +1,301 @@
+.section {
+  padding: 60px 0;
+  background: var(--bg-page);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--line-hover), transparent);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Label */
+.label__row {
+  display: flex;
+  justify-content: center;
+}
+
+.section__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(255, 77, 77, 0.06);
+  border: 1px solid rgba(255, 77, 77, 0.15);
+  border-radius: var(--r-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Title */
+.title__block {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+/* Pain Cards */
+.pain__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.pain__card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.pain__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.pain__card:hover {
+  border-color: rgba(255, 77, 77, 0.25);
+  transform: translateY(-4px);
+}
+
+.pain__card:hover::before {
+  opacity: 1;
+}
+
+.pain__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.pain__stat {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.pain__text {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* Story Layout */
+.story__layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Visual / Before-After */
+.story__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+
+.scene {
+  width: 100%;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.scene__after {
+  border-color: rgba(255, 77, 77, 0.2);
+  background: rgba(255, 77, 77, 0.03);
+}
+
+.scene__icon {
+  font-size: 2.5rem;
+}
+
+.scene__caption {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.arrow__down {
+  width: 28px;
+  height: 28px;
+  color: var(--accent);
+  opacity: 0.5;
+}
+
+/* Story Text */
+.story__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quote {
+  position: relative;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 77, 77, 0.03);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.6;
+  font-style: italic;
+  text-align: justify;
+}
+
+.quote__mark {
+  position: absolute;
+  top: -0.5rem;
+  left: 0.75rem;
+  font-size: 4rem;
+  color: var(--accent);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.paragraph {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  line-height: 1.75;
+  text-align: justify;
+}
+
+/* Mission Bar */
+.mission__bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 77, 77, 0.06), rgba(255, 77, 77, 0.02));
+  border: 1px solid rgba(255, 77, 77, 0.15);
+  border-radius: var(--r-lg);
+}
+
+.mission__icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.mission__text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .story__layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .story__visual {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .scene {
+    flex: 1;
+  }
+
+  .arrow__down {
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    gap: 2.5rem;
+  }
+
+  .pain__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .story__visual {
+    flex-direction: column;
+  }
+
+  .arrow__down {
+    transform: none;
+  }
+
+  .mission__bar {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+}
+
+/* Tamil Language Adjustments */
+[data-lang="ta"] .title {
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  line-height: 1.3;
+}

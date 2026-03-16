@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
@@ -21,6 +21,17 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
+
+  // Scroll to top only on actual page changes (not just locale)
+  const prevPathRef = useRef(pathname);
+  useEffect(() => {
+    const getPurePath = (path: string) => path.split('/').slice(2).join('/');
+    
+    if (getPurePath(prevPathRef.current) !== getPurePath(pathname)) {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+    prevPathRef.current = pathname;
+  }, [pathname]);
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -49,9 +60,9 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
       >
         <div className={`container ${styles.navbar__inner}`}>
           {/* LOGO */}
-          <Link href={`/${lang}`} className={styles.navbar__logo} aria-label="Workflow Craft Home">
+          <Link href={`/${lang}`} className={styles.navbar__logo} aria-label="JoyAutomations Home">
             <div className={styles.navbar__logo__icon} aria-hidden="true">⚡</div>
-            Workflow<span>Craft</span>
+            Joy<span>Automations</span>
           </Link>
 
           {/* DESKTOP NAV */}
@@ -61,6 +72,11 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
                 key={link.href}
                 href={link.href}
                 className={styles.navbar__link}
+                onClick={() => {
+                  if (pathname === link.href) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
               >
                 {link.label}
               </Link>
@@ -113,7 +129,14 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
             key={link.href}
             href={link.href}
             className={styles.navbar__link}
-            onClick={closeMenu}
+            onClick={() => {
+              closeMenu();
+              if (pathname === link.href) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              } else {
+                window.scrollTo({ top: 0, behavior: 'auto' });
+              }
+            }}
           >
             {link.label}
           </Link>

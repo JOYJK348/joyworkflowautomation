@@ -36,7 +36,7 @@
 }
 
 .logo span {
-  color: var(--emerald);
+  color: var(--accent);
 }
 
 .tagline {
@@ -125,7 +125,7 @@
 .footer__cta {
   width: 100%;
   padding: 1rem;
-  background: var(--emerald);
+  background: var(--accent);
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -133,7 +133,7 @@
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);
+  box-shadow: 0 10px 20px var(--accent-glow);
 }
 
 .footer__cta:hover {
