@@ -246,6 +246,11 @@
       "services": "What we do",
       "contact": "Get in touch"
     },
+    "contact": {
+      "email": "joyautomations.system@gmail.com",
+      "phone": "+91 9080558130",
+      "phone_href": "tel:+919080558130"
+    },
     "quickLinks": [
       { "label": "About Us", "href": "/about" },
       { "label": "Reality Check", "href": "/#problem-solution" },
@@ -887,11 +892,14 @@
       "subtitle": "Prefer a quick chat? Reach out directly to our lead engineer.",
       "whatsapp": {
         "label": "Chat on WhatsApp",
-        "desc": "Fastest way for quick queries"
+        "desc": "Fastest way for quick queries",
+        "number": "+91 9080558130",
+        "link": "https://wa.me/919080558130"
       },
       "email": {
         "label": "Email Us",
-        "desc": "For detailed project briefs"
+        "desc": "For detailed project briefs",
+        "address": "joyautomations.system@gmail.com"
       }
     }
   },

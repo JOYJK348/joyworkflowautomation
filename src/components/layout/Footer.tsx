@@ -40,15 +40,14 @@ export default function Footer({ dict, lang }: { dict: any, lang: string }) {
             </nav>
           </div>
 
-          {/* Contact Column */}
           <div className={styles.contact__col}>
             <h4>{footer.sections.contact}</h4>
             <div className={styles.contact__details}>
-              <a href="mailto:hello@workflowcraft.in" className={styles.contact__item}>
-                hello@workflowcraft.in
+              <a href={`mailto:${footer.contact.email}`} className={styles.contact__item}>
+                {footer.contact.email}
               </a>
-              <a href="tel:+91XXXXXXXXXX" className={styles.contact__item}>
-                +91 9XX XXX XXXX
+              <a href={footer.contact.phone_href} className={styles.contact__item}>
+                {footer.contact.phone}
               </a>
               <div className={styles.socials}>
                 <a href="#" aria-label="LinkedIn">LN</a>

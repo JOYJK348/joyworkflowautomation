@@ -239,6 +239,11 @@
       "services": "எங்கள் சேவைகள்",
       "contact": "தொடர்பு கொள்ள"
     },
+    "contact": {
+      "email": "joyautomations.system@gmail.com",
+      "phone": "+91 9080558130",
+      "phone_href": "tel:+919080558130"
+    },
     "quickLinks": [
       { "label": "எங்களைப் பற்றி", "href": "/about" },
       { "label": "பிசினஸ் ஆய்வு", "href": "/#problem-solution" },
@@ -960,11 +965,14 @@
       "subtitle": "உடனடி பதில்களுக்கு எங்களைத் தொடர்பு கொள்ளுங்கள்.",
       "whatsapp": {
         "label": "வாட்ஸ்அப்",
-        "desc": "வேகமான பதில்கள்"
+        "desc": "வேகமான பதில்கள்",
+        "number": "+91 9080558130",
+        "link": "https://wa.me/919080558130"
       },
       "email": {
         "label": "மின்னஞ்சல்",
-        "desc": "விரிவான திட்டங்கள்"
+        "desc": "விரிவான திட்டங்கள்",
+        "address": "joyautomations.system@gmail.com"
       }
     }
   },
