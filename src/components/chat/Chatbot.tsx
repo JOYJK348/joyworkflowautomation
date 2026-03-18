@@ -134,7 +134,11 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
   };
 
   const handleGoogleLogin = async () => {
-    if (!supabase) return;
+    if (!supabase) {
+      alert("Missing Supabase Keys! Please add them to Vercel Environment Variables.");
+      console.error("Supabase client is null. Initialization failed.");
+      return;
+    }
     await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
