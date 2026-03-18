@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import Chatbot from "@/components/chat/Chatbot";
 import { getDictionary } from "@/lib/get-dictionary";
 
 const spaceGrotesk = Space_Grotesk({
@@ -50,6 +51,7 @@ export default async function RootLayout(props: {
       <body className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
         <Navbar dict={dict} lang={lang} />
         {props.children}
+        <Chatbot dict={dict} lang={lang} />
       </body>
     </html>
   );
