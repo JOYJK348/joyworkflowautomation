@@ -39,21 +39,26 @@ const Icons = {
 export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [user, setUser] = useState<any>(null);
+  const [input, setInput] = useState('');
   const supabase = createClient();
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
-    api: '/api/chat',
-    initialMessages: [
+  const { messages, status, sendMessage } = useChat<any>({
+    messages: [
       {
         id: 'init',
         role: 'assistant',
-        content: lang === 'ta' 
-          ? 'வணக்கம்! JOY_AI v2.1 ஆன்லைனில் உள்ளது. ஒவ்வொரு நாளும் அதே பழைய மேனுவல் வேலைகளால் உங்கள் கணவுகள் தள்ளிப் போகிறதா? சொல்லுங்கள், அதற்கான புத்திசாலித்தனமான தீர்வை நாம் சேர்ந்து திட்டமிடலாம்.' 
-          : 'JOY_AI v2.1 Online. Are manual tasks holding back your biggest dreams? Tell me what keeps you busy or stressed in your workflow, and let’s engineer a smarter plan to scale your success.' 
+        parts: [{ 
+          type: 'text', 
+          text: lang === 'ta' 
+            ? 'வணக்கம்! JOY_AI v2.4 ஆன்லைனில் உள்ளது. ஒவ்வொரு நாளும் அதே பழைய மேனுவல் வேலைகளால் உங்கள் கணவுகள் தள்ளிப் போகிறதா? சொல்லுங்கள், அதற்கான புத்திசாலித்தனமான தீர்வை நாம் சேர்ந்து திட்டமிடலாம்.' 
+            : 'JOY_AI v2.4 Online. Are manual tasks holding back your biggest dreams? Tell me what keeps you busy or stressed in your workflow, and let’s engineer a smarter plan to scale your success.' 
+        }]
       }
     ],
   });
+
+  const isLoading = status === 'streaming' || status === 'submitted';
 
   useEffect(() => {
     const syncUserProfile = async (sessionUser: any) => {
@@ -106,6 +111,13 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
     });
   };
 
+  const handleCustomSubmit = (e: any) => {
+    e.preventDefault();
+    if (!input.trim() || isLoading) return;
+    sendMessage({ text: input });
+    setInput('');
+  };
+
   return (
     <div className={styles.chatbot_container}>
       <button 
@@ -146,7 +158,12 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
           {messages.map((msg: any, i: number) => (
             <div key={i} className={`${styles.message} ${styles[msg.role]}`}>
               <div className={styles.message_role}>{msg.role === 'assistant' ? 'JOY_AI' : 'CLIENT'}</div>
-              <div className={styles.message_bubble}>{msg.content}</div>
+              <div className={styles.message_bubble}>
+                {msg.parts?.map((part: any, idx: number) => {
+                  if (part.type === 'text') return <span key={idx}>{part.text}</span>;
+                  return null;
+                })}
+              </div>
             </div>
           ))}
           {isLoading && (
@@ -166,15 +183,15 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className={styles.input_wrapper}>
+            <form onSubmit={handleCustomSubmit} className={styles.input_wrapper}>
               <textarea 
                 placeholder={lang === 'ta' ? 'உங்கள் கேள்வியைக் கேளுங்கள்...' : 'Enter your request...'}
                 value={input}
-                onChange={handleInputChange}
+                onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' && !e.shiftKey) {
                     e.preventDefault();
-                    handleSubmit(e as any);
+                    handleCustomSubmit(e);
                   }
                 }}
               />

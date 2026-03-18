@@ -1,5 +1,5 @@
 import { google } from '@ai-sdk/google';
-import { streamText } from 'ai';
+import { streamText, createTextStreamResponse } from 'ai';
 
 export const maxDuration = 30; // Serverless Timeout Limit
 
@@ -24,5 +24,5 @@ export async function POST(req: Request) {
     system: SYSTEM_PROMPT,
   });
 
-  return result.toDataStreamResponse();
+  return createTextStreamResponse({ textStream: result.textStream });
 }
