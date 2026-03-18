@@ -19,10 +19,10 @@ export async function POST(req: Request) {
   const { messages } = await req.json();
 
   const result = streamText({
-    model: google('gemini-1.5-flash'), // Optimized for speed and free tier reliability
+    model: google('gemini-1.5-flash'),
     messages,
     system: SYSTEM_PROMPT,
   });
 
-  return createTextStreamResponse({ textStream: result.textStream });
+  return result.toUIMessageStreamResponse();
 }

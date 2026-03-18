@@ -51,8 +51,8 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
         parts: [{ 
           type: 'text', 
           text: lang === 'ta' 
-            ? 'வணக்கம்! JOY_AI v2.4 ஆன்லைனில் உள்ளது. ஒவ்வொரு நாளும் அதே பழைய மேனுவல் வேலைகளால் உங்கள் கணவுகள் தள்ளிப் போகிறதா? சொல்லுங்கள், அதற்கான புத்திசாலித்தனமான தீர்வை நாம் சேர்ந்து திட்டமிடலாம்.' 
-            : 'JOY_AI v2.4 Online. Are manual tasks holding back your biggest dreams? Tell me what keeps you busy or stressed in your workflow, and let’s engineer a smarter plan to scale your success.' 
+            ? 'வணக்கம்! JOY_AI v2.5 ஆன்லைனில் உள்ளது. ஒவ்வொரு நாளும் அதே பழைய மேனுவல் வேலைகளால் உங்கள் கணவுகள் தள்ளிப் போகிறதா? சொல்லுங்கள், அதற்கான புத்திசாலித்தனமான தீர்வை நாம் சேர்ந்து திட்டமிடலாம்.' 
+            : 'JOY_AI v2.5 Online. Are manual tasks holding back your biggest dreams? Tell me what keeps you busy or stressed in your workflow, and let’s engineer a smarter plan to scale your success.' 
         }]
       }
     ],
