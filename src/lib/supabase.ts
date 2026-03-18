@@ -5,9 +5,7 @@ export function createClient() {
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (!url || !key) {
-    // Return a dummy client or handle appropriately to avoid hard crash
-    console.warn("Supabase credentials missing! Authentication will not work.");
-    return createBrowserClient('', ''); 
+    return null; 
   }
 
   return createBrowserClient(url, key);

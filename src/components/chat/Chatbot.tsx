@@ -58,7 +58,7 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
   useEffect(() => {
     // Professional Upsert Logic: Ensures user data is synced without duplicates
     const syncUserProfile = async (sessionUser: any) => {
-      if (!sessionUser) return;
+      if (!sessionUser || !supabase) return;
       
       const { error } = await supabase
         .from('profiles')
@@ -77,6 +77,7 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
 
     // Check initial session
     const checkUser = async () => {
+      if (!supabase) return;
       const { data: { session } } = await supabase.auth.getSession();
       const currentUser = session?.user ?? null;
       setUser(currentUser);
@@ -96,15 +97,16 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
     checkUser();
 
     // Listen for auth changes and sync profile immediately
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
-      const authUser = session?.user ?? null;
-      setUser(authUser);
-      if (authUser) {
-        await syncUserProfile(authUser);
-      }
-    });
-
-    return () => subscription.unsubscribe();
+    if (supabase) {
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
+        const authUser = session?.user ?? null;
+        setUser(authUser);
+        if (authUser) {
+          await syncUserProfile(authUser);
+        }
+      });
+      return () => subscription.unsubscribe();
+    }
   }, [lang, supabase]);
 
   useEffect(() => {
@@ -132,6 +134,7 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
   };
 
   const handleGoogleLogin = async () => {
+    if (!supabase) return;
     await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
