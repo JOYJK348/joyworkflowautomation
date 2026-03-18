@@ -252,10 +252,22 @@
       "phone_href": "tel:+919080558130"
     },
     "quickLinks": [
-      { "label": "About Us", "href": "/about" },
-      { "label": "Reality Check", "href": "/#problem-solution" },
-      { "label": "Services", "href": "/#services" },
-      { "label": "ROI Calculator", "href": "/#calculator" }
+      {
+        "label": "About Us",
+        "href": "/about"
+      },
+      {
+        "label": "Reality Check",
+        "href": "/#problem-solution"
+      },
+      {
+        "label": "Services",
+        "href": "/#services"
+      },
+      {
+        "label": "ROI Calculator",
+        "href": "/#calculator"
+      }
     ],
     "copyright": "© 2026 JoyAutomations. All rights reserved.",
     "credit": "Crafted for high-performance businesses."
@@ -943,9 +955,9 @@
         "before": "Notebook, Phone Calls & Spreadsheets — doing everything manually, losing time and money every single day",
         "after": "Smart System — auto-books, auto-follows-up, auto-bills. You just check your dashboard and grow."
       },
-      "quote": "She was a brilliant salon owner. But every evening, she was exhausted — not from doing hair — but from manual phone calls, missed bookings, and chasing payments.",
+      "quote": "She was a brilliant makeup artist. But every evening, she was exhausted — not from doing bridal makeup — but from manual phone calls, missed trial bookings, and chasing advance payments.",
       "paragraphs": [
-        "We met a salon owner in Coimbatore who was waking up at 7 AM to confirm appointments and falling asleep at midnight worrying about which lead she'd missed. She wasn't failing because she was bad at business. She was failing because no one had given her the right tools.",
+        "We met a makeup artist in Coimbatore who was waking up at 4 AM for early bridal bookings and falling asleep at midnight worrying about which Instagram inquiry she'd missed. She wasn't failing because she was bad at her art. She was failing because no one had given her the right digital tools.",
         "This wasn't just her story. We heard the same thing from clinic owners, tuition center managers, hardware store owners, event planners — everyone was drowning in manual tasks while their attention should have been on growth.",
         "The tools existed. AI was everywhere in the news. But for a local business owner in Tamil Nadu, the solutions were either too expensive, too complex, or built for Fortune 500 companies — not for the person running a business they've built with their own hands.",
         "That gap is exactly why JoyAutomations exists."
