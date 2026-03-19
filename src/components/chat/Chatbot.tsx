@@ -98,6 +98,16 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
     }
   }, [messages, isOpen]);
 
+  const [status, setStatus] = useState<string>('');
+
+  const statusMessages = [
+    lang === 'ta' ? 'உங்கள் வணிக மாதிரியை ஆய்வு செய்கிறேன்...' : 'Analyzing your business model...',
+    lang === 'ta' ? 'ஆட்டோமேஷன் நெறிமுறைகளை மேம்படுத்துகிறேன்...' : 'Optimizing automation protocols...',
+    lang === 'ta' ? 'செயல்முறை செயல்திறனை கணக்கிடுகிறேன்...' : 'Calculating process efficiency...',
+    lang === 'ta' ? 'சிறந்த தீர்வை உருவாக்குகிறேன்...' : 'Engineering the best solution...',
+    lang === 'ta' ? 'தரவு பாதுகாப்பு சரிபார்க்கப்படுகிறது...' : 'Verifying data security compliance...',
+  ];
+
   const handleGoogleLogin = async () => {
     if (!supabase) {
       alert("Please configure Supabase in your environment variables.");
@@ -111,65 +121,90 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
     });
   };
 
-  const handleCustomSubmit = async (e: any) => {
+  const [logs, setLogs] = useState<string[]>([]);
+  const technicalSteps = [
+    '> UPLINK_ESTABLISHED',
+    '> ANALYZING_USER_INTENT',
+    '> SCANNING_AUTOMATION_PROTOCOLS',
+    lang === 'ta' ? '> தமிழ்_மொழிபெயர்ப்பு_சரிபார்க்கப்படுகிறது...' : '> OPTIMIZING_REGION_CONTEXT',
+    '> GENERATING_STRATEGY_STREAM...',
+  ];
+
+  const handleCustomSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
-    const userMessage: Message = { id: Date.now().toString(), role: 'user', content: input };
-    const currentMessages = [...messages, userMessage];
-    setMessages(currentMessages);
+    const userMessage = { id: Date.now().toString(), role: 'user' as const, content: input };
+    setMessages(prev => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
+    setLogs([]);
 
-    // Prepare messages for API (exclude the initial greeting from history)
-    const apiMessages = currentMessages
-      .filter(m => m.id !== 'init')
-      .map(m => ({ role: m.role, content: m.content }));
+    const apiMessages = [...messages, userMessage].map(({ role, content }) => ({ role, content }));
 
-    try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: apiMessages }),
-      });
-
-      if (!response.ok) throw new Error('API Error');
-
-      // Stream the response
-      const reader = response.body?.getReader();
-      const decoder = new TextDecoder();
-      let aiText = '';
-      const aiId = Date.now().toString() + '-ai';
-
-      setMessages(prev => [...prev, { id: aiId, role: 'assistant', content: '' }]);
-
-      while (reader) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        const chunk = decoder.decode(value, { stream: true });
-        // Parse AI SDK streaming format: lines starting with '0:"..."'
-        const lines = chunk.split('\n');
-        for (const line of lines) {
-          if (line.startsWith('0:')) {
-            try {
-              const text = JSON.parse(line.slice(2));
-              aiText += text;
-              setMessages(prev => prev.map(m => m.id === aiId ? { ...m, content: aiText } : m));
-            } catch {}
-          }
-        }
+    let logInterval: any;
+    let logIdx = 0;
+    logInterval = setInterval(() => {
+      if (logIdx < technicalSteps.length) {
+        setLogs(prev => [...prev, technicalSteps[logIdx]]);
+        logIdx++;
+      } else {
+        clearInterval(logInterval);
       }
-    } catch (err) {
-      setMessages(prev => [...prev, {
-        id: Date.now().toString(),
-        role: 'assistant',
-        content: lang === 'ta'
-          ? 'மன்னிக்கவும், தொடர்பில் சிக்கல் ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.'
-          : 'Sorry, I encountered an error. Please try again.',
-      }]);
-    } finally {
-      setIsLoading(false);
-    }
+    }, 800);
+
+    const fetchWithRetry = async (retryCount = 0): Promise<void> => {
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ messages: apiMessages }),
+        });
+
+        if (!response.ok) {
+          if (response.status === 503 && retryCount < 2) {
+            setLogs(prev => [...prev, `> RETRYING_UPLINK_${retryCount + 1}...`]);
+            await new Promise(resolve => setTimeout(resolve, retryCount === 0 ? 5000 : 10000));
+            return fetchWithRetry(retryCount + 1);
+          }
+          throw new Error(`API Error: ${response.status}`);
+        }
+
+        clearInterval(logInterval);
+        setLogs([]);
+
+        if (!response.body) throw new Error('No response body');
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let aiText = '';
+        const aiId = Date.now().toString() + '-ai';
+
+        setMessages(prev => [...prev, { id: aiId, role: 'assistant', content: '' }]);
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          const chunk = decoder.decode(value, { stream: true });
+          aiText += chunk;
+          setMessages(prev => prev.map(m => m.id === aiId ? { ...m, content: aiText } : m));
+        }
+      } catch (err) {
+        console.error('[JoyAI] Fetch error:', err);
+        setLogs([]);
+        setMessages(prev => [...prev, {
+          id: Date.now().toString(),
+          role: 'assistant',
+          content: lang === 'ta'
+            ? 'மன்னிக்கவும், தொடர்பில் சிறிய சிக்கல். சில நொடிகள் கழித்து மீண்டும் முயற்சிக்கவும்.'
+            : 'Slight delay in bridge connection. Let me try again in a few seconds.',
+        }]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    await fetchWithRetry();
   };
 
 
@@ -224,12 +259,24 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
               </div>
             );
           })}
-          {isLoading && (
-            <div className={`${styles.message} ${styles.assistant}`}>
-              <div className={styles.message_role}>JOY_AI</div>
-              <div className={styles.message_bubble}><span className={styles.typing_dot}></span><span className={styles.typing_dot}></span><span className={styles.typing_dot}></span></div>
-            </div>
-          )}
+            {isLoading && (
+              <div className={`${styles.message} ${styles.ai}`}>
+                <div className={styles.message_role}>JOY_AI</div>
+                <div className={styles.message_bubble}>
+                  <div className={styles.log_container}>
+                    {logs.map((log, i) => (
+                      <div key={i} className={styles.log_line}>{log}</div>
+                    ))}
+                    <div className={styles.loader_bar}></div>
+                  </div>
+                  <div className={styles.typing_container}>
+                    <span className={styles.typing_dot}></span>
+                    <span className={styles.typing_dot}></span>
+                    <span className={styles.typing_dot}></span>
+                  </div>
+                </div>
+              </div>
+            )}
         </div>
 
         <div className={styles.window_footer}>
@@ -237,8 +284,11 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
             <div className={styles.auth_lock}>
               <button className={styles.google_btn} onClick={handleGoogleLogin}>
                 {Icons.google}
-                <span>{lang === 'ta' ? 'கூகுள் மூலம் தொடரவும்' : 'Continue with Google'}</span>
+                <span>{dict?.chat?.loginWithGoogle || 'Continue with Google'}</span>
               </button>
+              <p className={styles.lock_hint}>
+                {dict?.chat?.loginHint || 'Login required to start automation strategy'}
+              </p>
             </div>
           ) : (
             <form onSubmit={handleCustomSubmit} className={styles.input_wrapper}>
