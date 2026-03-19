@@ -2,8 +2,8 @@
 
 import styles from './Chatbot.module.css';
 import { useState, useRef, useEffect } from 'react';
-import { useChat } from '@ai-sdk/react';
 import { createClient } from '@/lib/supabase';
+
 
 const Icons = {
   chat: (
@@ -43,22 +43,22 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
   const supabase = createClient();
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const { messages, status, sendMessage } = useChat<any>({
-    messages: [
-      {
-        id: 'init',
-        role: 'assistant',
-        parts: [{ 
-          type: 'text', 
-          text: lang === 'ta' 
-            ? 'வணக்கம்! JOY_AI v2.5 ஆன்லைனில் உள்ளது. ஒவ்வொரு நாளும் அதே பழைய மேனுவல் வேலைகளால் உங்கள் கணவுகள் தள்ளிப் போகிறதா? சொல்லுங்கள், அதற்கான புத்திசாலித்தனமான தீர்வை நாம் சேர்ந்து திட்டமிடலாம்.' 
-            : 'JOY_AI v2.5 Online. Are manual tasks holding back your biggest dreams? Tell me what keeps you busy or stressed in your workflow, and let’s engineer a smarter plan to scale your success.' 
-        }]
-      }
-    ],
-  });
+  interface Message {
+    id: string;
+    role: 'user' | 'assistant';
+    content: string;
+  }
 
-  const isLoading = status === 'streaming' || status === 'submitted';
+  const initialMessage: Message = {
+    id: 'init',
+    role: 'assistant',
+    content: lang === 'ta'
+      ? 'வணக்கம்! நான் JoyAI — Joy Automations-இன் AI ஆலோசகர். உங்கள் பிசினஸில் எந்த வேலைகள் உங்களை அதிகம் நேரம் எடுக்கின்றன? அதை ஆட்டோமேட் பண்ண நாம் உடனே திட்டமிடலாம்.'
+      : 'Welcome! I am JoyAI — your dedicated Business Automation Consultant from Joy Automations. What manual tasks are consuming most of your time? Let me engineer a smart automation strategy for your business.',
+  };
+
+  const [messages, setMessages] = useState<Message[]>([initialMessage]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const syncUserProfile = async (sessionUser: any) => {
@@ -111,12 +111,67 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
     });
   };
 
-  const handleCustomSubmit = (e: any) => {
+  const handleCustomSubmit = async (e: any) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
-    sendMessage({ text: input });
+
+    const userMessage: Message = { id: Date.now().toString(), role: 'user', content: input };
+    const currentMessages = [...messages, userMessage];
+    setMessages(currentMessages);
     setInput('');
+    setIsLoading(true);
+
+    // Prepare messages for API (exclude the initial greeting from history)
+    const apiMessages = currentMessages
+      .filter(m => m.id !== 'init')
+      .map(m => ({ role: m.role, content: m.content }));
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: apiMessages }),
+      });
+
+      if (!response.ok) throw new Error('API Error');
+
+      // Stream the response
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
+      let aiText = '';
+      const aiId = Date.now().toString() + '-ai';
+
+      setMessages(prev => [...prev, { id: aiId, role: 'assistant', content: '' }]);
+
+      while (reader) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value, { stream: true });
+        // Parse AI SDK streaming format: lines starting with '0:"..."'
+        const lines = chunk.split('\n');
+        for (const line of lines) {
+          if (line.startsWith('0:')) {
+            try {
+              const text = JSON.parse(line.slice(2));
+              aiText += text;
+              setMessages(prev => prev.map(m => m.id === aiId ? { ...m, content: aiText } : m));
+            } catch {}
+          }
+        }
+      }
+    } catch (err) {
+      setMessages(prev => [...prev, {
+        id: Date.now().toString(),
+        role: 'assistant',
+        content: lang === 'ta'
+          ? 'மன்னிக்கவும், தொடர்பில் சிக்கல் ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.'
+          : 'Sorry, I encountered an error. Please try again.',
+      }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
+
 
   return (
     <div className={styles.chatbot_container}>
@@ -155,17 +210,20 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
         </div>
 
         <div className={styles.window_content} ref={scrollRef}>
-          {messages.map((msg: any, i: number) => (
-            <div key={i} className={`${styles.message} ${styles[msg.role]}`}>
-              <div className={styles.message_role}>{msg.role === 'assistant' ? 'JOY_AI' : 'CLIENT'}</div>
-              <div className={styles.message_bubble}>
-                {msg.parts?.map((part: any, idx: number) => {
-                  if (part.type === 'text') return <span key={idx}>{part.text}</span>;
-                  return null;
-                })}
+          {messages.map((msg: any, i: number) => {
+            // Extract text from message — handles both string content and parts array
+            const text = typeof msg.content === 'string'
+              ? msg.content
+              : msg.parts?.find((p: any) => p.type === 'text')?.text
+              ?? msg.content;
+            
+            return (
+              <div key={i} className={`${styles.message} ${msg.role === 'assistant' ? styles.ai : styles.user}`}>
+                <div className={styles.message_role}>{msg.role === 'assistant' ? 'JOY_AI' : 'CLIENT'}</div>
+                <div className={styles.message_bubble}>{text}</div>
               </div>
-            </div>
-          ))}
+            );
+          })}
           {isLoading && (
             <div className={`${styles.message} ${styles.assistant}`}>
               <div className={styles.message_role}>JOY_AI</div>
