@@ -103,6 +103,7 @@ export default function RoiCalculator({ dict, lang }: { dict: any; lang: string 
             <button 
               className={`${styles.radio__btn} ${activeTier === 'early' ? styles.activeRadio : ''}`}
               onClick={() => handleTierChange('early')}
+              suppressHydrationWarning
             >
               <span className={styles.radio__circle} />
               {calculator.tiers.early}
@@ -110,6 +111,7 @@ export default function RoiCalculator({ dict, lang }: { dict: any; lang: string 
             <button 
               className={`${styles.radio__btn} ${activeTier === 'growing' ? styles.activeRadio : ''}`}
               onClick={() => handleTierChange('growing')}
+              suppressHydrationWarning
             >
               <span className={styles.radio__circle} />
               {calculator.tiers.growing}
@@ -117,6 +119,7 @@ export default function RoiCalculator({ dict, lang }: { dict: any; lang: string 
             <button 
               className={`${styles.radio__btn} ${activeTier === 'scale' ? styles.activeRadio : ''}`}
               onClick={() => handleTierChange('scale')}
+              suppressHydrationWarning
             >
               <span className={styles.radio__circle} />
               {calculator.tiers.scale}
@@ -206,12 +209,14 @@ export default function RoiCalculator({ dict, lang }: { dict: any; lang: string 
                 <button 
                   className={`${styles.toggle__btn} ${timeframe === 'yearly' ? styles.active : ''}`}
                   onClick={() => setTimeframe('yearly')}
+                  suppressHydrationWarning
                 >
                   {calculator.results.toggleYearly}
                 </button>
                 <button 
                   className={`${styles.toggle__btn} ${timeframe === 'monthly' ? styles.active : ''}`}
                   onClick={() => setTimeframe('monthly')}
+                  suppressHydrationWarning
                 >
                   {calculator.results.toggleMonthly}
                 </button>

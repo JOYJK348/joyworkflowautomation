@@ -47,8 +47,8 @@ export default async function RootLayout(props: {
   const dict = await getDictionary(lang);
 
   return (
-    <html lang={lang === "ta" ? "ta-IN" : "en-US"}>
-      <body className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
+    <html lang={lang === "ta" ? "ta-IN" : "en-US"} suppressHydrationWarning>
+      <body className={`${spaceGrotesk.variable} ${dmSans.variable}`} suppressHydrationWarning>
         <Navbar dict={dict} lang={lang} />
         {props.children}
         <Chatbot dict={dict} lang={lang} />

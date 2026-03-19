@@ -164,7 +164,7 @@ export default function Services({ dict }: { dict: any }) {
                    <span className={styles.price__label}>{card.priceLabel}</span>
                    <span className={styles.price__value}>{card.price}</span>
                 </div>
-                <button className={styles.cta}>
+                <button className={styles.cta} suppressHydrationWarning>
                   {card.cta}
                   <span className={styles.cta__icon}>{Icons.arrow}</span>
                 </button>

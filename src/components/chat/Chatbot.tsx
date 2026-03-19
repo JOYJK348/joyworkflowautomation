@@ -214,6 +214,7 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
         className={`${styles.fab} ${isOpen ? styles.fab_active : ''}`}
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Open Chat"
+        suppressHydrationWarning
       >
         <div className={styles.scan_line}></div>
         <div className={styles.fab_icon}>

@@ -29,6 +29,7 @@ export default function Faq({ dict }: { dict: any }) {
               <button 
                 className={styles.question} 
                 onClick={() => toggleAccordion(index)}
+                suppressHydrationWarning
               >
                 <span>{item.q}</span>
                 <span className={styles.icon}>
