@@ -23,7 +23,11 @@ const Icons = {
   ),
   bot: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M12 8v4"/><path d="M8 12h8"/>
+      {/* Central intelligent core */}
+      <circle cx="12" cy="12" r="3" fill="currentColor" fillOpacity="0.2" />
+      <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
+      <path d="M18.36 5.64l-2.12 2.12M8.12 15.88l-2.12 2.12M18.36 18.36l-2.12-2.12M8.12 8.12L5.99 6" />
+      <circle cx="12" cy="12" r="8" strokeOpacity="0.3" />
     </svg>
   ),
   google: (
@@ -218,7 +222,7 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
       >
         <div className={styles.scan_line}></div>
         <div className={styles.fab_icon}>
-          {isOpen ? Icons.close : Icons.bot}
+          {isOpen ? Icons.close : Icons.chat}
         </div>
         {!isOpen && (
           <>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 
@@ -26,7 +27,7 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
   const prevPathRef = useRef(pathname);
   useEffect(() => {
     const getPurePath = (path: string) => path.split('/').slice(2).join('/');
-    
+
     if (getPurePath(prevPathRef.current) !== getPurePath(pathname)) {
       window.scrollTo({ top: 0, behavior: 'auto' });
     }
@@ -39,7 +40,6 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
     { label: nav.home, href: `/${lang}` },
     { label: nav.about, href: `/${lang}/about` }, // keeping original hrefs but adding prefix
     { label: nav.services, href: `/${lang}/services` },
-    { label: nav.caseStudies, href: `/${lang}/case-studies` },
     { label: nav.contact, href: `/${lang}/contact` },
   ];
 
@@ -61,8 +61,23 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
         <div className={`container ${styles.navbar__inner}`}>
           {/* LOGO */}
           <Link href={`/${lang}`} className={styles.navbar__logo} aria-label="JoyAutomations Home">
-            <div className={styles.navbar__logo__icon} aria-hidden="true">⚡</div>
-            Joy<span>Automations</span>
+            <div className={styles.navbar__logo__icon} aria-hidden="true">
+              <Image
+                src="/images/offl_logo.png"
+                alt="JoyAutomations Logo"
+                width={54}
+                height={54}
+                className={styles.logo_img}
+                priority
+              />
+            </div>
+            <div className={styles.navbar__brand_text}>
+              <div className={styles.brand_main}>
+                <span className={styles.brand_j}>JOY</span>
+                <div className={styles.brand_divider}></div>
+                <span className={styles.brand_a}>AUTOMATIONS</span>
+              </div>
+            </div>
           </Link>
 
           {/* DESKTOP NAV */}
@@ -97,13 +112,7 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
               {lang === 'en' ? 'தமிழ்' : 'EN'}
             </Link>
 
-            <Link
-              href={`/${lang}/contact`}
-              className={styles.navbar__cta}
-              id="nav-contact-btn"
-            >
-              {nav.cta}
-            </Link>
+
 
             <button
               className={`${styles.navbar__hamburger} ${menuOpen ? styles.open : ''}`}
@@ -111,6 +120,7 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={menuOpen}
               id="hamburger-btn"
+              suppressHydrationWarning
             >
               <span />
               <span />
@@ -120,53 +130,40 @@ export default function Navbar({ dict, lang }: { dict: any; lang: 'en' | 'ta' })
         </div>
       </header>
 
-      {/* MOBILE DRAWER */}
+      {/* PREMIUM MODERN UI/UX DRAWER */}
       <nav
         className={`${styles.navbar__mobile} ${menuOpen ? styles.open : ''}`}
         role="navigation"
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
+        onClick={closeMenu}
       >
-        {NAV_LINKS.map((link) => {
-          const isActive = pathname === link.href;
-          return (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`${styles.navbar__link} ${isActive ? styles.navbar__link_active : ''}`}
-              onClick={() => {
-                closeMenu();
-                if (pathname === link.href) {
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                  window.scrollTo({ top: 0, behavior: 'auto' });
-                }
-              }}
-            >
-              {link.label}
-            </Link>
-          );
-        })}
-
-        {/* Mobile Language SwitchER */}
-        <Link
-          href={redirectedPathname(targetLang)}
-          className={styles.navbar__link}
-          onClick={closeMenu}
-          scroll={false}
-          style={{ color: 'var(--accent)' }}
-        >
-          {lang === 'en' ? 'தமிழ்-க்கு மாற்றவும்' : 'Switch to English'}
-        </Link>
-
-        <Link
-          href={`/${lang}/contact`}
-          className={styles.navbar__cta}
-          onClick={closeMenu}
-          id="mobile-contact-btn"
-        >
-          {nav.cta}
-        </Link>
+        <div className={styles.navbar__mobile_content} onClick={(e) => e.stopPropagation()}>
+          <div className={styles.drawer__handle}></div>
+          
+          <div className={styles.navbar__mobile_links}>
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`${styles.navbar__link} ${isActive ? styles.navbar__link_active : ''}`}
+                  onClick={() => {
+                    closeMenu();
+                    if (pathname === link.href) {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else {
+                      window.scrollTo({ top: 0, behavior: 'auto' });
+                    }
+                  }}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
       </nav>
     </>
   );

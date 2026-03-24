@@ -242,9 +242,6 @@ export default function RoiCalculator({ dict, lang }: { dict: any; lang: string 
 
             <div className={styles.cta__box}>
               <p className={styles.cta__text}>{calculator.results.fixIt}</p>
-              <a href="#contact" className={styles.btn__cta}>
-                {calculator.results.cta}
-              </a>
             </div>
 
           </div>

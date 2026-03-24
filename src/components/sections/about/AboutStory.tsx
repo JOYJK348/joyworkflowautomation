@@ -66,7 +66,9 @@ export default function AboutStory({ dict, lang }: { dict: any; lang: string }) 
               </svg>
             </div>
             <div className={`${styles.scene} ${styles.scene__after}`}>
-              <div className={styles.scene__icon}>⚡</div>
+              <div className={styles.scene__icon}>
+                <img src="/images/offl_logo.png" alt="JoyAutomations Smart System" style={{ width: '48px', height: '48px', objectFit: 'contain' }} />
+              </div>
               <div className={styles.scene__caption}>{story.visual.after}</div>
             </div>
           </div>

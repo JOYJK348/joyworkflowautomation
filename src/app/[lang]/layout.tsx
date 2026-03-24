@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ta_IN",
   },
+  icons: {
+    icon: "/images/offl_logo.png",
+    apple: "/images/offl_logo.png",
+  },
 };
 
 export default async function RootLayout(props: {

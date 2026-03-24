@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 export default function Footer({ dict, lang }: { dict: any, lang: string }) {
@@ -12,8 +12,22 @@ export default function Footer({ dict, lang }: { dict: any, lang: string }) {
           
           {/* Brand Column */}
           <div className={styles.brand__col}>
-            <Link href={`/${lang}`} className={styles.logo}>
-              Joy<span>Automations</span>
+            <Link href={`/${lang}`} className={styles.logo} aria-label="JoyAutomations Home">
+              <div className={styles.footer__logo__icon}>
+                <Image 
+                  src="/images/offl_logo.png" 
+                  alt="JoyAutomations" 
+                  width={44} 
+                  height={44} 
+                />
+              </div>
+              <div className={styles.footer__brand_text}>
+                <div className={styles.brand_main}>
+                  <span className={styles.brand_j}>JOY</span>
+                  <div className={styles.brand_divider}></div>
+                  <span className={styles.brand_a}>AUTOMATIONS</span>
+                </div>
+              </div>
             </Link>
             <p className={styles.tagline}>{footer.tagline}</p>
           </div>

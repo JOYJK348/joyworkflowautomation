@@ -19,8 +19,8 @@
       "secondary": "Let smart systems do the heavy lifting for you."
     },
     "cta": {
-      "primary": "Claim Free Audit",
-      "secondary": "How it works ↓"
+      "primary": "Free Audit",
+      "secondary": "// SYSTEM_DEPLOYMENT: ACTIVE ⚡"
     },
     "niches": {
       "title": "We Automate Processes For",
@@ -57,9 +57,9 @@
       }
     ],
     "visual": {
-      "botTitle": "24/7 AI WhatsApp Bot",
-      "chatIn": "Hey, I need an appointment for tomorrow.",
-      "chatOut": "Sure! 10:00 AM is confirmed for you. ✅",
+      "botTitle": "Automated Growth Engine",
+      "chatIn": "Jay, scale my operations.",
+      "chatOut": "Analyzing... Proposal sent to 50+ clients. ✅",
       "leadTitle": "Smart Lead Manager",
       "leadJay": "Lead: Jay",
       "leadPriya": "Booking: Priya",
@@ -109,34 +109,36 @@
         {
           "id": "website",
           "tag": "IDENTITY",
-          "title": "Smart Business Websites",
-          "desc": "Your own <span>digital asset</span>. Built once, owned <span>forever</span> with zero monthly maintenance or hosting fees. High <span>trust</span> for your brand.",
+          "title": "Intelligent Business Websites",
+          "subtitle": "Your digital asset doesn't just look good; it thinks for you. We build high-trust engines that monitor every visitor and optimize themselves for conversion.",
           "features": [
-            "Premium Portfolio Layouts",
-            "Speed-Optimized Architecture",
-            "High-Conversion Landing Pages",
-            "Dynamic SEO Foundation"
+            "Real-Time Visitor Intelligence",
+            "Deep Customer Behavior Analysis",
+            "High-Conversion Conversion Engines",
+            "Military-Grade Performance Stats"
           ],
+          "logic": "DATA_INTELLIGENCE",
           "priceLabel": "One-Time Settlement",
-          "price": "Starting from ₹6,000",
+          "price": "Starting from ₹5,999",
           "cta": "Build My Identity",
           "link": "/services/websites"
         },
         {
           "id": "automation",
-          "tag": "EFFICIENCY",
-          "title": "Autonomous Outreach Systems",
-          "desc": "Official <span>API-Driven</span> workflows. Powerful <span>lead management</span> with a flexible monthly subscription for API & server maintenance.",
+          "tag": "AI_POWERED",
+          "title": "Smart AI & Chatbot Systems",
+          "desc": "24/7 Autonomous <span>AI Agents</span>. Note: These systems use external <span>API calls</span> (like OpenAI/WhatsApp) which require a small monthly fee to keep the AI active.",
           "features": [
-            "Official API Architecture",
-            "Dynamic Lead Qualification",
-            "Conflict-Free Slot Booking",
-            "Integrated Payment Links"
+            "24/7 Smart Customer Support",
+            "Instant AI Lead Qualification",
+            "Auto-Slot Booking Logic",
+            "Integrated Payment Gateways"
           ],
-          "priceLabel": "Setup + API Subscription",
-          "price": "Starting from ₹15,000",
-          "cta": "Automate My Business",
-          "link": "/services/automation"
+          "priceLabel": "Setup + Small Monthly API Fee",
+          "price": "Starting from ₹9,999",
+          "cta": "Start My AI Agent",
+          "link": "/services/automation",
+          "logic": "AI_RUNTIME"
         },
         {
           "id": "software",
@@ -146,13 +148,14 @@
           "features": [
             "Real-time Inventory Audit",
             "Staff Performance Tracking",
-            "Automated GST Billing",
+            "Omnichannel System Logic",
             "Advanced Growth Analytics"
           ],
           "priceLabel": "Tailored Investment",
           "price": "Custom Pricing",
           "cta": "Build My Idea",
-          "link": "/services/software"
+          "link": "/services/software",
+          "logic": "SYSTEM_ARCH"
         }
       ]
     },
@@ -987,6 +990,59 @@
           "text": "We aren't a 'deliver and disappear' agency. If your system breaks or your business grows, we are here to adapt and fix it.",
           "icon": "handshake"
         }
+      ]
+    },
+    "vision": {
+      "tag": "// STRATEGIC_INTENT",
+      "title": "Our <span class='accent'>Vision</span> & <span class='accent'>Mission</span>",
+      "subtitle": "We aren't just building tools; we are engineering the future of business operations.",
+      "list": [
+        {
+          "id": "vision",
+          "title": "THE VISION",
+          "headline": "Engineering a Borderless Digital Future.",
+          "text": "To be the primary architect for small and medium businesses in Tamil Nadu, transforming them into high-efficiency automated powerhouses that compete on a global scale.",
+          "icon": "eye"
+        },
+        {
+          "id": "mission",
+          "title": "THE MISSION",
+          "headline": "Fueling Growth Through Precision.",
+          "text": "To empower 1,000+ local business owners by 2030 with custom-engineered, intelligent digital infrastructures that terminate manual labor and maximize scalability.",
+          "icon": "target"
+        }
+      ]
+    },
+    "founder": {
+      "tag": "// SYSTEM_ARCHITECT",
+      "title": "The Person <span class='accent'>Behind</span> the Systems",
+      "subtitle": "Every automation you see is engineered by one person — with precision, purpose, and a deep obsession for clean systems.",
+      "role": "Lead System Architect",
+      "status": "Systems Deployment: ACTIVE",
+      "stats": [
+        { "value": "10k+", "label": "Human Hours\nAutomated" },
+        { "value": "SaaS", "label": "Architecture\nSpecialist" },
+        { "value": "Lead", "label": "Product\nLifecycle" }
+      ],
+      "linkedin": {
+        "count": "🔗 1,000+ connections on LinkedIn",
+        "btn": "Connect on LinkedIn"
+      },
+      "bio": [
+        "I am <strong>Jay</strong>, the Lead System Architect at JoyAutomations. My mission is to help ambitious businesses and educational institutions reclaim their time by replacing manual bottlenecks with <span class='highlight'>intelligent, high-performance systems</span>.",
+        "I specialize in engineering <span class='highlight'>strategic workflow automation</span>. Rather than just writing code, I build scalable digital infrastructures that allow organizations to exponentially grow their customer base and revenue without scaling their <span class='highlight_orange'>operational headaches</span>.",
+        "With a strong foundation in complex software engineering, including <span class='highlight_orange'>SaaS architectures and multi-tenant platforms</span>, I oversee the entire product lifecycle. My expertise ensures that from initial deployment to long-term monitoring, every system we deliver operates flawlessly.",
+        "I leverage deep proficiency in <span class='highlight'>Full-Stack Development, DevOps,</span> and <span class='highlight_orange'>Automation Testing</span> to guarantee that your business engines never stop running. We don't just build software; we build robust <span class='highlight_orange'>operational freedom</span>."
+      ],
+      "quote": "True automation isn't just about writing scripts. It's about engineering <strong>reliability, scale, and uncompromising freedom</strong> for business owners.",
+      "skillsTitle": "CORE SKILLS",
+      "skills": [
+        { "icon": "frontend", "label": "Full-Stack Architecture", "desc": "Scalable React & Cloud-based backends." },
+        { "icon": "automation", "label": "Enterprise Workflow Automation", "desc": "Automating high-volume business logic." },
+        { "icon": "devops", "label": "Advanced CI/CD & DevOps", "desc": "Seamless, automated delivery machines." },
+        { "icon": "docker", "label": "Docker & Cloud Orchestration", "desc": "Reliable containerized infrastructures." },
+        { "icon": "testing", "label": "End-to-End Automation Testing", "desc": "Bug-free deployment with zero downtime." },
+        { "icon": "lifecycle", "label": "Strategic Product Management", "desc": "Visionary scaling for SaaS products." }
       ]
     }
   }

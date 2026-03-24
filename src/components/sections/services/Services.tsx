@@ -4,23 +4,8 @@ import React from 'react';
 import styles from './Services.module.css';
 
 const Icons = {
-  globe: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-    </svg>
-  ),
-  cpu: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/>
-    </svg>
-  ),
-  layers: (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polygon points="12 2 2 7 12 12 22 7 12 2"/><polygon points="2 17 12 22 22 17"/><polygon points="2 12 12 17 22 12"/>
-    </svg>
-  ),
   check: (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="20 6 9 17 4 12"/>
     </svg>
   ),
@@ -31,51 +16,17 @@ const Icons = {
   )
 };
 
-const serviceIcons: Record<string, React.ReactNode> = {
-  website: Icons.globe,
-  automation: Icons.cpu,
-  software: Icons.layers
-};
-
 export default function Services({ dict }: { dict: any }) {
-  const { services } = dict.hero;
+  // Accessing cards from the updated dictionary path
+  const { title, subtitle, cards } = dict.hero.services;
   const [activeIndex, setActiveIndex] = React.useState(0);
-  const [mounted, setMounted] = React.useState(false);
   const scrollRef = React.useRef<HTMLDivElement>(null);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    
-    // Mouse coords relative to card
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    // 3D Tilt calculation
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = ((y - centerY) / centerY) * -10; // Max 10deg tilt
-    const rotateY = ((x - centerX) / centerX) * 10;
-    
-    card.style.setProperty('--mouse-x', `${x}px`);
-    card.style.setProperty('--mouse-y', `${y}px`);
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  };
-
-  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    const card = e.currentTarget;
-    card.style.transform = `perspective(1000px) rotateX(0) rotateY(0)`;
-  };
 
   const handleScroll = () => {
     if (!scrollRef.current) return;
     const scrollLeft = scrollRef.current.scrollLeft;
     const width = scrollRef.current.offsetWidth;
-    const cardWidth = width * 0.88; // Matches 88vw in CSS
+    const cardWidth = width * 0.85; 
     const index = Math.round(scrollLeft / cardWidth);
     if (index !== activeIndex) {
       setActiveIndex(index);
@@ -84,24 +35,10 @@ export default function Services({ dict }: { dict: any }) {
 
   return (
     <section className={styles.services} id="services">
-      {/* Dynamic Background Particles */}
-      {mounted && [...Array(6)].map((_, i) => (
-        <div 
-          key={i} 
-          className={styles.particle} 
-          style={{ 
-            left: `${Math.random() * 100}%`, 
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 10}s`,
-            animationDuration: `${15 + Math.random() * 15}s`
-          }} 
-        />
-      ))}
-
-      <div className={`container ${styles.services__inner}`}>
+      <div className="container">
         <div className={styles.header}>
-          <h2 className="section-title">{services.title}</h2>
-          <p className="section-sub">{services.subtitle}</p>
+          <h2 className="section-title">{title}</h2>
+          <p className="section-sub">{subtitle}</p>
         </div>
 
         <div 
@@ -109,77 +46,44 @@ export default function Services({ dict }: { dict: any }) {
           ref={scrollRef}
           onScroll={handleScroll}
         >
-          {services.cards.map((card: any, i: number) => (
-            <div 
-              key={card.id} 
-              className={styles.card} 
-              data-type={card.id}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-            >
-
-              <div className={styles.meta}>
-                <span className={styles.coord}>X: 0{i + 1} / Y: 100%</span>
-                <span className={styles.status}>// ACTIVE_CORE</span>
-              </div>
-
-              {/* Decorative Data Stream */}
-              <div className={styles.card_data_stream}>
-                {`// SYSTEM_LOAD: OK\n// AUTH: GRANTED\n// BUILD: 2026.03.16\n// LOGIC: CUSTOM`}
-              </div>
-
-              {/* Floating Decoration Icon */}
-              <div className={styles.card__bg_icon} aria-hidden="true">
-                {serviceIcons[card.id]}
-              </div>
-
-              <div className={styles.card__top}>
-                <div className={styles.icon__box}>
-                  {serviceIcons[card.id]}
+          {cards.map((card: any, i: number) => (
+            <div key={card.id} className={styles.card_wrap}>
+              <div className={styles.card}>
+                <div className={styles.card__top}>
+                  <span className={styles.tag}>{card.tag}</span>
+                  <span className={styles.logic_badge}>// {card.logic}</span>
                 </div>
-                <span className={styles.tag}>{card.tag}</span>
-              </div>
 
-              <h3 className={styles.title}>{card.title}</h3>
-              <p className={styles.description} dangerouslySetInnerHTML={{ __html: card.desc }} />
+                <h3 className={styles.title}>{card.title}</h3>
+                <p 
+                  className={styles.description} 
+                  dangerouslySetInnerHTML={{ __html: card.desc || card.subtitle }} 
+                />
 
-              <ul className={styles.feature__list}>
-                {card.features.map((feature: string, i: number) => (
-                  <li key={i} className={styles.feature__item}>
-                    <span className={styles.feature__icon}>{Icons.check}</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+                <ul className={styles.feature__list}>
+                  {card.features.map((feature: string, fIdx: number) => (
+                    <li key={fIdx} className={styles.feature__item}>
+                      <span className={styles.feature__icon}>{Icons.check}</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
 
-              {/* Dimension Line Decor */}
-              <div className={styles.dimension__line}>
-                <div className={styles.dim__arrow}></div>
-                <div className={styles.dim__label}>{card.id.toUpperCase()}_LOGIC</div>
-                <div className={styles.dim__arrow}></div>
-              </div>
-
-              <div className={styles.card__footer}>
-                <div className={styles.price__badge}>
-                   <span className={styles.price__label}>{card.priceLabel}</span>
-                   <span className={styles.price__value}>{card.price}</span>
+                <div className={styles.card__footer}>
+                  <div className={styles.price_wrap}>
+                    <span className={styles.price__label}>{card.priceLabel}</span>
+                    <span className={styles.price__value}>{card.price}</span>
+                  </div>
+                  <button 
+                    className={styles.cta} 
+                    aria-label={`Choose ${card.title}`}
+                    suppressHydrationWarning
+                  >
+                    {Icons.arrow}
+                  </button>
                 </div>
-                <button className={styles.cta} suppressHydrationWarning>
-                  {card.cta}
-                  <span className={styles.cta__icon}>{Icons.arrow}</span>
-                </button>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Mobile Swipe Indicators */}
-        <div className={styles.mobile_indicator}>
-          {services.cards.map((_: any, i: number) => (
-            <div 
-              key={i} 
-              className={`${styles.dot} ${activeIndex === i ? styles.dot_active : ''}`} 
-            />
           ))}
         </div>
       </div>

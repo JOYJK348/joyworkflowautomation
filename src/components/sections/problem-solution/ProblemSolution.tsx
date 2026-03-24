@@ -53,12 +53,14 @@ export default function ProblemSolution({ dict, lang }: { dict: any; lang: strin
           <button 
             className={`${styles.toggle_btn} ${activeTab === 'before' ? styles.active : ''}`}
             onClick={() => setActiveTab('before')}
+            suppressHydrationWarning
           >
             {beforeAfter.header_before}
           </button>
           <button 
             className={`${styles.toggle_btn} ${activeTab === 'after' ? styles.active : ''}`}
             onClick={() => setActiveTab('after')}
+            suppressHydrationWarning
           >
             {beforeAfter.header_after}
           </button>
