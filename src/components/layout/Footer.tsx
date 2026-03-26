@@ -1,8 +1,9 @@
+import { memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Footer.module.css';
 
-export default function Footer({ dict, lang }: { dict: any, lang: string }) {
+function FooterComponent({ dict, lang }: { dict: any, lang: string }) {
   const { footer, nav, hero } = dict;
   
   return (
@@ -17,8 +18,8 @@ export default function Footer({ dict, lang }: { dict: any, lang: string }) {
                 <Image 
                   src="/images/offl_logo.png" 
                   alt="JoyAutomations" 
-                  width={44} 
-                  height={44} 
+                  width={60} 
+                  height={60} 
                 />
               </div>
               <div className={styles.footer__brand_text}>
@@ -85,3 +86,5 @@ export default function Footer({ dict, lang }: { dict: any, lang: string }) {
     </footer>
   );
 }
+
+export default memo(FooterComponent);

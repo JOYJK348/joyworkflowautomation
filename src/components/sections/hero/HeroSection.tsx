@@ -112,13 +112,10 @@ export default function HeroSection({ dict, lang }: { dict: any; lang: string })
               {hero.cta.primary}
               {Icons.arrowRight}
             </Link>
-            <div className={styles.system__status}>
-              <span className={styles.status__tag}>// CORE_LOGIC</span>
-              <div className={styles.status__body}>
-                <span className={styles.status__dot_pulse} />
-                <span className={styles.status__text}>{hero.cta.secondary}</span>
-              </div>
-            </div>
+            <Link href={`/${lang}/services`} className={styles.hero__btn__secondary}>
+              <span className={styles.btn__text}>SERVICES</span>
+              <span className={styles.btn__icon}>{Icons.layers}</span>
+            </Link>
           </div>
 
           <div className={styles.hero__trust}>

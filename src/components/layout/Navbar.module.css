@@ -47,8 +47,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 54px;
-  width: 54px;
+  height: 70px;
+  width: 70px;
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -117,7 +117,7 @@
 }
 
 .brand_j {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 900;
   color: #fff;
   letter-spacing: -0.04em;
@@ -161,7 +161,7 @@
 }
 
 .brand_a {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 300;
   color: var(--accent);
   letter-spacing: 0.1em;
@@ -187,7 +187,7 @@
   }
 
   .brand_j {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     line-height: 1;
   }
 
@@ -270,8 +270,8 @@
 /* ─── HAMBURGER & MOBILE SCALING ─── */
 @media (max-width: 768px) {
   .navbar__logo__icon {
-    width: 42px;
-    height: 42px;
+    width: 50px;
+    height: 50px;
   }
 
   .brand_main {

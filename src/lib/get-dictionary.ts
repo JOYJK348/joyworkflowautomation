@@ -5,9 +5,16 @@ const dictionaries = {
   ta: () => import('../dictionaries/ta.json').then((module) => module.default),
 };
 
+const cache = new Map<string, any>();
+
 export const getDictionary = async (locale: string) => {
-  if (locale !== 'en' && locale !== 'ta') {
-    return dictionaries['en']();
+  const targetLocale = (locale !== 'en' && locale !== 'ta') ? 'en' : locale;
+  
+  if (cache.has(targetLocale)) {
+    return cache.get(targetLocale);
   }
-  return dictionaries[locale as 'en' | 'ta']();
+
+  const dict = await dictionaries[targetLocale as 'en' | 'ta']();
+  cache.set(targetLocale, dict);
+  return dict;
 };
