@@ -197,7 +197,7 @@
   color: #fff;
   line-height: 1.6;
   font-style: italic;
-  text-align: justify;
+  text-align: left;
 }
 
 .quote__mark {
@@ -215,7 +215,7 @@
   font-size: 1rem;
   color: var(--ink-soft);
   line-height: 1.75;
-  text-align: justify;
+  text-align: left;
 }
 
 /* Mission Bar */

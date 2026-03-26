@@ -7,7 +7,7 @@ Page URL: /services
 Section 1 — Page Hero
 Background: Dark navy — full width
 Small tag above headline:
-⚡ Trusted by Local Businesses in Coimbatore
+⚡ Trusted by Growing Local Businesses
 
 Main Headline:
 "உங்கள் Business-ல
@@ -63,7 +63,7 @@ Owner "Salon" click பண்ணா — same page-la below section change aagum:
 → Payment auto follow-up
 
 Real Result:
-"Coimbatore Salon — No-shows 25% → 8%
+"Premium Salon — No-shows 25% → 8%
 Monthly extra revenue: +₹18,000"
 
 [இந்த Solution வேணும் →]

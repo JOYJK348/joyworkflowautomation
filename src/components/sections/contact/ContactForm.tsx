@@ -23,7 +23,17 @@ const Icons = {
 
 export default function ContactForm({ dict }: { dict: any }) {
   const { form, direct } = dict.contactPage;
+  const [formData, setFormData] = useState({
+    name: '',
+    whatsapp: '',
+    business: '',
+    intent: '', // What do they need?
+    source: 'DIRECT',
+    message: ''
+  });
+
   const [selectedPains, setSelectedPains] = useState<string[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const togglePain = (pain: string) => {
@@ -32,10 +42,35 @@ export default function ContactForm({ dict }: { dict: any }) {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Auto-detect referral source
+  React.useEffect(() => {
+    const referrer = document.referrer.toLowerCase();
+    if (referrer.includes('google')) {
+      setFormData(prev => ({ ...prev, source: 'GOOGLE_SEARCH' }));
+    }
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    // In a real app, you would send the data to a backend here
+    setIsSubmitting(true);
+    
+    try {
+      const res = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, pains: selectedPains })
+      });
+
+      if (res.ok) {
+        setIsSubmitted(true);
+      } else {
+        console.error('SERVER_REJECTION');
+      }
+    } catch (err) {
+      console.error('NETWORK_ERROR:', err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -44,31 +79,71 @@ export default function ContactForm({ dict }: { dict: any }) {
 
         {/* LEFT: AUDIT FORM */}
         <div className={styles.form__container}>
-          <h2 className={styles.form__title}>{form.title}</h2>
+          <div className={styles.form_header_group}>
+            <h2 className={styles.form__title}>READY_TO_AUTOMATE?</h2>
+            <p className={styles.form_tagline}>Tell us what your business needs. If you don't know, we'll architect it for you.</p>
+          </div>
 
           <form className={styles.grid} onSubmit={handleSubmit}>
             <div className={styles.field}>
               <label className={styles.label}>{form.fields.name}</label>
-              <input type="text" className={styles.input} required placeholder="Jay" />
+              <input 
+                type="text" 
+                className={styles.input} 
+                required 
+                placeholder="Jay" 
+                onChange={(e) => setFormData({...formData, name: e.target.value})}
+              />
             </div>
 
             <div className={styles.field}>
               <label className={styles.label}>{form.fields.whatsapp}</label>
-              <input type="tel" className={styles.input} required placeholder="+91 98765 43210" />
+              <input 
+                type="tel" 
+                className={styles.input} 
+                required 
+                placeholder="+91 98765 43210" 
+                onChange={(e) => setFormData({...formData, whatsapp: e.target.value})}
+              />
             </div>
 
             <div className={styles.field}>
-              <label className={styles.label}>{form.fields.business}</label>
-              <input type="text" className={styles.input} required placeholder="Business Name" />
+              <label className={styles.label}>BUSINESS_NAME / ORGANIZATION</label>
+              <input 
+                type="text" 
+                className={styles.input} 
+                required 
+                placeholder="Ex: Jay's Tech Solutions" 
+                onChange={(e) => setFormData({...formData, business: e.target.value})}
+              />
             </div>
 
             <div className={styles.field}>
-              <label className={styles.label}>{form.fields.industry}</label>
-              <select className={styles.select} required>
-                <option value="">Select Industry</option>
-                {form.industries.map((ind: string, i: number) => (
-                  <option key={i} value={ind}>{ind}</option>
-                ))}
+              <label className={styles.label}>WHAT_ARE_YOUR_REQUIREMENTS?</label>
+              <select 
+                className={styles.select} 
+                required
+                value={formData.intent}
+                onChange={(e) => setFormData({...formData, intent: e.target.value})}
+              >
+                <option value="">SELECT_INTENT_LEVEL</option>
+                <option value="FULL_AUTOMATION">I WANT FULL END-TO-END AUTOMATION</option>
+                <option value="CRM_DATABASE">I NEED A CUSTOM CRM/DATABASE</option>
+                <option value="WHATSAPP_BOT">I NEED WHATSAPP AUTOMATION</option>
+                <option value="NO_IDEA">I HAVE NO IDEA / NEED EXPERT ADVICE</option>
+              </select>
+            </div>
+
+            <div className={styles.field}>
+              <label className={styles.label}>TRAFFIC_SOURCE</label>
+              <select 
+                className={styles.select} 
+                value={formData.source}
+                onChange={(e) => setFormData({...formData, source: e.target.value})}
+              >
+                <option value="DIRECT">DIRECT_ACCESS</option>
+                <option value="GOOGLE_SEARCH">GOOGLE_SEARCH</option>
+                <option value="SOCIAL_MEDIA">SOCIAL_MEDIA</option>
               </select>
             </div>
 
@@ -89,8 +164,13 @@ export default function ContactForm({ dict }: { dict: any }) {
             </div>
 
             <div className={`${styles.field} ${styles.full}`}>
-              <label className={styles.label}>{form.fields.message}</label>
-              <textarea className={styles.textarea} rows={4} placeholder="Briefly describe your current manual process..."></textarea>
+              <label className={styles.label}>WHAT_ON_YOUR_MIND? (SUGGESTIONS/REQUIREMENTS)</label>
+              <textarea 
+                className={styles.textarea} 
+                rows={4} 
+                placeholder="Ex: I don't have a clear idea, but I want to reduce manual follow-ups by 50%. Suggest me a better architecture."
+                onChange={(e) => setFormData({...formData, message: e.target.value})}
+              ></textarea>
             </div>
 
             <div className={styles.full}>

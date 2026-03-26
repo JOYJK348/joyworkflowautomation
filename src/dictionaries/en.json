@@ -960,7 +960,7 @@
       },
       "quote": "She was a brilliant makeup artist. But every evening, she was exhausted — not from doing bridal makeup — but from manual phone calls, missed trial bookings, and chasing advance payments.",
       "paragraphs": [
-        "We met a makeup artist in Coimbatore who was waking up at 4 AM for early bridal bookings and falling asleep at midnight worrying about which Instagram inquiry she'd missed. She wasn't failing because she was bad at her art. She was failing because no one had given her the right digital tools.",
+        "We met a dedicated makeup artist who was waking up at 4 AM for early bridal bookings and falling asleep at midnight worrying about which Instagram inquiry she'd missed. She wasn't failing because she was bad at her art. She was failing because no one had given her the right digital tools.",
         "This wasn't just her story. We heard the same thing from clinic owners, tuition center managers, hardware store owners, event planners — everyone was drowning in manual tasks while their attention should have been on growth.",
         "The tools existed. AI was everywhere in the news. But for a local business owner in Tamil Nadu, the solutions were either too expensive, too complex, or built for Fortune 500 companies — not for the person running a business they've built with their own hands.",
         "That gap is exactly why JoyAutomations exists."
@@ -975,8 +975,7 @@
         {
           "id": "power",
           "title": "Technology for Everyone",
-          "text": "Automation shouldn't be a privilege for big corporations. Every small business in Coimbatore deserves the power to save time and scale.",
-          "icon": "globe"
+          "text": "Automation shouldn't be a privilege for big corporations. Every small business deserves the power to save time and scale."
         },
         {
           "id": "data",
@@ -1044,6 +1043,10 @@
         { "icon": "testing", "label": "End-to-End Automation Testing", "desc": "Bug-free deployment with zero downtime." },
         { "icon": "lifecycle", "label": "Strategic Product Management", "desc": "Visionary scaling for SaaS products." }
       ]
+    },
+    "chat": {
+      "loginWithGoogle": "Continue with Google",
+      "loginHint": "Login required to start automation strategy"
     }
   }
 }

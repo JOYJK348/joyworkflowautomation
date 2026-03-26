@@ -7,6 +7,9 @@ let defaultLocale = 'en';
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
+  // Skip Admin Routes from locale redirection
+  if (pathname.startsWith('/admin')) return;
+
   // Check if there is any supported locale in the pathname
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
@@ -23,6 +26,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Skip all internal paths (_next, api, images, symbols, etc)
-    '/((?!api|_next/static|_next/image|images|favicon.ico).*)',
+    '/((?!api|admin|_next/static|_next/image|images|favicon.ico).*)',
   ],
 };

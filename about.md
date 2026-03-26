@@ -10,7 +10,7 @@ Page URL: /about
 Section 1 — Opening Statement
 First 5 seconds — set the tone
 Small tag:
-⚡ Coimbatore-based Automation Agency
+⚡ Elite Workflow Automation Agency
 
 Main Headline:
 "நாங்கள் Developers இல்ல.
@@ -32,7 +32,7 @@ Title:
 
 Story format — conversational:
 
-"Coimbatore-ல ஒரு Salon owner-கிட்ட
+"ஒரு Salon owner-கிட்ட
 பேசும் போது ஒரு விஷயம் புரிஞ்சுது.
 
 அவங்க daily 45 minutes
@@ -90,7 +90,7 @@ BELIEF 1:
 💡 "Technology எல்லோருக்கும்"
 
 "Automation என்பது big companies-க்கு
-மட்டும் இல்ல. Coimbatore-ல உள்ள
+மட்டும் இல்ல. ஒவ்வொரு சிறிய
 ஒவ்வொரு small business-க்கும்
 இந்த power கிடைக்கணும்."
 
@@ -211,7 +211,7 @@ Future — shows ambition
 Title:
 "எங்கள் Vision"
 
-"2025-ல் Coimbatore-ல
+"2025-ல்
 உள்ள 100 local businesses-ஐ
 automate பண்றது எங்கள் goal.
 
@@ -234,6 +234,6 @@ No commitment."
 [💬 WhatsApp-ல பேசலாம்]
 
 Trust strip:
-✅ Local Coimbatore Agency
+✅ Elite Agency
 ⚡ Reply within 1 hour
 ₹0 Consultation fee
