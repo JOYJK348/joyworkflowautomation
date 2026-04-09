@@ -108,14 +108,18 @@ export default function HeroSection({ dict, lang }: { dict: any; lang: string })
           </div>
 
           <div className={styles.hero__cta}>
-            <Link href="/contact" className={styles.hero__btn__primary}>
+            <Link href={`/${lang}/contact#audit-form`} className={styles.hero__btn__primary}>
               {hero.cta.primary}
               {Icons.arrowRight}
             </Link>
-            <Link href={`/${lang}/services`} className={styles.hero__btn__secondary}>
-              <span className={styles.btn__text}>SERVICES</span>
-              <span className={styles.btn__icon}>{Icons.layers}</span>
-            </Link>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', padding: '0.5rem 1rem', background: 'rgba(255, 77, 77, 0.05)', border: '1px solid rgba(255, 77, 77, 0.15)', borderRadius: 'var(--r-sm)' }}>
+              <span style={{ fontSize: '1.2rem', color: 'var(--accent)' }}>⏱️</span>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#fff', lineHeight: 1.2 }}>Bleeding 20+ Hours/Week?</span>
+                <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.6)', marginTop: '2px' }}>On repetitive manual operations</span>
+              </div>
+            </div>
+
           </div>
 
           <div className={styles.hero__trust}>

@@ -247,10 +247,22 @@
       "phone_href": "tel:+919080558130"
     },
     "quickLinks": [
-      { "label": "எங்களைப் பற்றி", "href": "/about" },
-      { "label": "பிசினஸ் ஆய்வு", "href": "/#problem-solution" },
-      { "label": "சேவைகள்", "href": "/#services" },
-      { "label": "ROI கால்குலேட்டர்", "href": "/#calculator" }
+      {
+        "label": "எங்களைப் பற்றி",
+        "href": "/about"
+      },
+      {
+        "label": "பிசினஸ் ஆய்வு",
+        "href": "/#problem-solution"
+      },
+      {
+        "label": "சேவைகள்",
+        "href": "/#services"
+      },
+      {
+        "label": "ROI கால்குலேட்டர்",
+        "href": "/#calculator"
+      }
     ],
     "copyright": "© 2026 JoyAutomations. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
     "credit": "உயர்தர பிசினஸ்களுக்காக உருவாக்கப்பட்டது."
@@ -1080,9 +1092,18 @@
       "role": "Lead System Architect",
       "status": "Systems Deployment: ACTIVE",
       "stats": [
-        { "value": "10k+", "label": "மனித நேரங்கள்\nமீட்பு" },
-        { "value": "SaaS", "label": "ஆர்க்கிடெக்ட்\nநிபுணர்" },
-        { "value": "Lead", "label": "தயாரிப்பு\nசுழற்சி" }
+        {
+          "value": "10k+",
+          "label": "மனித நேரங்கள்\nமீட்பு"
+        },
+        {
+          "value": "SaaS",
+          "label": "ஆர்க்கிடெக்ட்\nநிபுணர்"
+        },
+        {
+          "value": "Lead",
+          "label": "தயாரிப்பு\nசுழற்சி"
+        }
       ],
       "linkedin": {
         "count": "🔗 லிங்க்டினில் 1,000+ இணைப்புகள்",
@@ -1097,12 +1118,36 @@
       "quote": "உண்மையான ஆட்டோமேஷன் என்பது வெறும் ஸ்கிரிப்ட் எழுதுவது மட்டுமல்ல. அது பிசினஸ் உரிமையாளர்களுக்கு <strong>நம்பகத்தன்மை, வளர்ச்சி மற்றும் சமரசமற்ற சுதந்திரத்தை</strong> வழங்குவதாகும்.",
       "skillsTitle": "முக்கிய திறன்கள்",
       "skills": [
-        { "icon": "frontend", "label": "Full-Stack Architecture", "desc": "பெரிய அளவிலான React & Cloud பேக்-எண்ட்ஸ்." },
-        { "icon": "automation", "label": "Enterprise Workflow Automation", "desc": "பிசினஸ் முறைகளைத் தானியக்கமாக்குதல்." },
-        { "icon": "devops", "label": "Advanced CI/CD & DevOps", "desc": "தடையற்ற, தானியங்கி டெலிவரி சிஸ்டம்கள்." },
-        { "icon": "docker", "label": "Docker & Cloud Orchestration", "desc": "நம்பகமான கன்டெய்னரைஸ் கட்டமைப்புகள்." },
-        { "icon": "testing", "label": "End-to-End Automation Testing", "desc": "தவறுகள் இல்லாத வேகமான செயல்பாடுகள்." },
-        { "icon": "lifecycle", "label": "Strategic Product Management", "desc": "SaaS தயாரிப்புகளுக்கான வளர்ச்சித் திட்டங்கள்." }
+        {
+          "icon": "frontend",
+          "label": "Full-Stack Architecture",
+          "desc": "பெரிய அளவிலான React & Cloud பேக்-எண்ட்ஸ்."
+        },
+        {
+          "icon": "automation",
+          "label": "Enterprise Workflow Automation",
+          "desc": "பிசினஸ் முறைகளைத் தானியக்கமாக்குதல்."
+        },
+        {
+          "icon": "devops",
+          "label": "Advanced CI/CD & DevOps",
+          "desc": "தடையற்ற, தானியங்கி டெலிவரி சிஸ்டம்கள்."
+        },
+        {
+          "icon": "docker",
+          "label": "Docker & Cloud Orchestration",
+          "desc": "நம்பகமான கன்டெய்னரைஸ் கட்டமைப்புகள்."
+        },
+        {
+          "icon": "testing",
+          "label": "End-to-End Automation Testing",
+          "desc": "தவறுகள் இல்லாத வேகமான செயல்பாடுகள்."
+        },
+        {
+          "icon": "lifecycle",
+          "label": "Strategic Product Management",
+          "desc": "SaaS தயாரிப்புகளுக்கான வளர்ச்சித் திட்டங்கள்."
+        }
       ]
     },
     "chat": {

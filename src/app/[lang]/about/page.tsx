@@ -1,7 +1,6 @@
 import AboutHero from "@/components/sections/about/AboutHero";
 import AboutVision from "@/components/sections/about/AboutVision";
 import AboutStory from "@/components/sections/about/AboutStory";
-import AboutFounder from "@/components/sections/about/AboutFounder";
 import AboutBeliefs from "@/components/sections/about/AboutBeliefs";
 import Footer from "@/components/layout/Footer";
 import { getDictionary } from "@/lib/get-dictionary";
@@ -18,7 +17,6 @@ export default async function AboutPage(props: {
       <AboutHero dict={dict} lang={lang} />
       <AboutVision dict={dict} />
       <AboutStory dict={dict} lang={lang} />
-      <AboutFounder dict={dict} />
       <AboutBeliefs dict={dict} lang={lang} />
       {/* More sections will go here */}
       <Footer dict={dict} lang={lang} />

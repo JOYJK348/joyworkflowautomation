@@ -1019,9 +1019,18 @@
       "role": "Lead System Architect",
       "status": "Systems Deployment: ACTIVE",
       "stats": [
-        { "value": "10k+", "label": "Human Hours\nAutomated" },
-        { "value": "SaaS", "label": "Architecture\nSpecialist" },
-        { "value": "Lead", "label": "Product\nLifecycle" }
+        {
+          "value": "10k+",
+          "label": "Human Hours\nAutomated"
+        },
+        {
+          "value": "SaaS",
+          "label": "Architecture\nSpecialist"
+        },
+        {
+          "value": "Lead",
+          "label": "Product\nLifecycle"
+        }
       ],
       "linkedin": {
         "count": "🔗 1,000+ connections on LinkedIn",
@@ -1036,12 +1045,36 @@
       "quote": "True automation isn't just about writing scripts. It's about engineering <strong>reliability, scale, and uncompromising freedom</strong> for business owners.",
       "skillsTitle": "CORE SKILLS",
       "skills": [
-        { "icon": "frontend", "label": "Full-Stack Architecture", "desc": "Scalable React & Cloud-based backends." },
-        { "icon": "automation", "label": "Enterprise Workflow Automation", "desc": "Automating high-volume business logic." },
-        { "icon": "devops", "label": "Advanced CI/CD & DevOps", "desc": "Seamless, automated delivery machines." },
-        { "icon": "docker", "label": "Docker & Cloud Orchestration", "desc": "Reliable containerized infrastructures." },
-        { "icon": "testing", "label": "End-to-End Automation Testing", "desc": "Bug-free deployment with zero downtime." },
-        { "icon": "lifecycle", "label": "Strategic Product Management", "desc": "Visionary scaling for SaaS products." }
+        {
+          "icon": "frontend",
+          "label": "Full-Stack Architecture",
+          "desc": "Scalable React & Cloud-based backends."
+        },
+        {
+          "icon": "automation",
+          "label": "Enterprise Workflow Automation",
+          "desc": "Automating high-volume business logic."
+        },
+        {
+          "icon": "devops",
+          "label": "Advanced CI/CD & DevOps",
+          "desc": "Seamless, automated delivery machines."
+        },
+        {
+          "icon": "docker",
+          "label": "Docker & Cloud Orchestration",
+          "desc": "Reliable containerized infrastructures."
+        },
+        {
+          "icon": "testing",
+          "label": "End-to-End Automation Testing",
+          "desc": "Bug-free deployment with zero downtime."
+        },
+        {
+          "icon": "lifecycle",
+          "label": "Strategic Product Management",
+          "desc": "Visionary scaling for SaaS products."
+        }
       ]
     },
     "chat": {

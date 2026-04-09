@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ta-IN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>JoyAutomations — Next-Gen Corporate Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;700;800;900&family=Outfit:wght@400;700&family=Noto+Sans+Tamil:wght@400;700;900&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ═══════════════════════════════════
+       NEXT-GEN CORPORATE — EXACT REPLICA
+       A4 = 210mm × 297mm
+    ═══════════════════════════════════ */
+    @page {
+      size: A4 portrait;
+      margin: 0 !important;
+    }
+
+    html,
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* ═══════════════════════════════════
+       EXECUTIVE CORPORATE — ONE PAGE LOCK
+    ═══════════════════════════════════ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --red: #B22222;
+      /* Sophisticated Matte Red for Print Optimization */
+      --black: #0A0A0A;
+      /* Pure Minimalist Black */
+      --white: #FFFFFF;
+      /* Pure White */
+      --light: #F8F9FA;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background-color: var(--black);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    /* Right-Side Balancing Accent */
+    .page::before {
+      content: '';
+      position: absolute;
+      top: 15mm;
+      right: 0;
+      width: 2mm;
+      height: 115mm;
+      background: var(--red);
+      opacity: 0.2;
+      z-index: 5;
+    }
+
+    /* Page Corner Accents (Bottom Left Tech Detailing) */
+    .page::after {
+      content: '';
+      position: absolute;
+      bottom: -10mm;
+      left: -10mm;
+      width: 40mm;
+      height: 1mm;
+      background: var(--red);
+      transform: rotate(45deg);
+      opacity: 0.3;
+    }
+
+    /* ─── 01 HERO SECTION (NAV BAR & CHEVRON) ─── */
+    .hero-container {
+      height: 110mm;
+      /* Reduced from 130mm to pull the body up */
+      position: relative;
+      background: var(--black);
+      /* Fixed: Changed from White to Black */
+    }
+
+    .header-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 24mm;
+      /* Big size for maximum impact */
+      background: var(--black);
+      z-index: 1000;
+      /* Supreme priority to avoid overlap */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12mm;
+      border-bottom: 0.8mm solid var(--red);
+    }
+
+    .logo-side {
+      display: flex;
+      align-items: center;
+      gap: 5mm;
+    }
+
+    .logo-box {
+      width: 15mm;
+      /* Enhanced size for official logo */
+      height: 15mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1mm 3mm rgba(0, 0, 0, 0.3);
+      background: transparent;
+      /* Cleaner for logos */
+    }
+
+    .logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .logo-txt {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 8.5mm;
+      /* Massive font size as requested */
+      font-weight: 900;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: -0.6mm;
+      line-height: 0.9;
+    }
+
+    .logo-txt b {
+      color: var(--red);
+    }
+
+    .logo-txt span {
+      display: block;
+      font-size: 3.2mm;
+      /* Bigger tagline */
+      font-weight: 800;
+      letter-spacing: 0.2mm;
+      opacity: 0.9;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-top: 1.5mm;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .nav-right-txt {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.7mm;
+      /* Slightly increased for readability */
+      color: var(--white);
+      text-transform: lowercase;
+      font-weight: 700;
+      opacity: 1;
+      letter-spacing: 0.1mm;
+      text-align: right;
+      line-height: 1.4;
+    }
+
+    /* THE CYBER-GEOMETRIC ASSEMBLY (Zero Square Feel) */
+    .chevron-bg {
+      position: relative;
+      width: 130mm;
+      height: 75mm;
+      /* Ultra-tight height for compact finish */
+      margin: 15mm 0 0 0;
+      background: linear-gradient(165deg, var(--red) 0%, #600 100%);
+      /* Straight-Bottom with Cyber-Clean finish */
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      z-index: 10;
+      padding: 7.2mm 15mm 10mm;
+      box-shadow: 20mm 20mm 60mm rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Floating Blueprint Accent (Ghost Layer) */
+    .chevron-bg::before {
+      content: '';
+      position: absolute;
+      top: 5mm;
+      left: 5mm;
+      width: calc(100% - 10mm);
+      height: calc(100% - 10mm);
+      border: 0.2mm dashed rgba(255, 255, 255, 0.2);
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 85% 100%, 25% 100%, 15% 90%, 0 90%);
+      z-index: -1;
+    }
+
+    /* Technical Vertex Markers (+) */
+    .chevron-bg::after {
+      content: '+             +             + \A \A \A +             +             +';
+      position: absolute;
+      top: 10mm;
+      right: 10mm;
+      font-family: 'Outfit', sans-serif;
+      font-size: 5mm;
+      color: rgba(255, 255, 255, 0.1);
+      white-space: pre-wrap;
+      z-index: -2;
+    }
+
+    .hero-h1 {
+      color: var(--white);
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 12.5mm;
+      /* Reduced for high-end executive look */
+      font-weight: 950;
+      line-height: 1;
+      letter-spacing: -0.5mm;
+      /* More breathable spacing */
+      margin-bottom: 4mm;
+      text-transform: uppercase;
+      padding-top: 15.2mm;
+      /* Absolute Top Alignment - Micro-adjusted total 4px */
+      text-shadow: 0 4mm 10mm rgba(0, 0, 0, 0.4);
+      white-space: nowrap;
+    }
+
+    .hero-p {
+      color: var(--white);
+      font-size: 5mm;
+      /* Significantly larger as requested */
+      font-weight: 600;
+      line-height: 1.5;
+      /* Slightly increased for better Tamil readability */
+      opacity: 1;
+      /* Maximum visibility */
+      max-width: 100mm;
+      text-transform: uppercase;
+      letter-spacing: 0.1mm;
+      margin-bottom: 5mm;
+    }
+
+    /* Unified Hero Right Panel (Elite Correction Fix) */
+    .hero-right-panel {
+      position: absolute;
+      top: 25mm;
+      right: 0;
+      width: 135mm;
+      height: 110mm;
+      background-color: var(--black);
+      background-image:
+        radial-gradient(circle at 70% 30%, rgba(210, 30, 42, 0.15) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0mm 15mm 10mm 45mm;
+      /* Vertical line moved romba LEFT side */
+      overflow: hidden;
+    }
+
+    .panel-content {
+      border-left: 1mm solid var(--red);
+      padding-left: 20mm;
+      /* Increased internal padding so text stays safe while line moves left */
+      position: relative;
+    }
+
+    .panel-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3mm;
+      color: var(--red);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2mm;
+      margin-bottom: 8mm;
+    }
+
+    .pillar-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 7mm;
+      /* Standardized Similar Line Spacing */
+      margin-bottom: 10mm;
+    }
+
+    .pillar {
+      margin-bottom: 2mm;
+      /* Further reduced for ultra-tight panel density */
+      display: flex;
+      align-items: center;
+      /* Exact Center Alignment */
+      gap: 0;
+      /* Gaps handled by fixed width num */
+    }
+
+    .pillar-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.5mm;
+      color: var(--red);
+      opacity: 0.6;
+      width: 12mm;
+      /* Strategic reduction to avoid cut-offs */
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    .pillar-txt {
+      font-family: 'Outfit', sans-serif;
+      font-size: 7.2mm;
+      /* Refined for single-line fitment */
+      color: var(--white);
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: 0.8mm;
+      font-weight: 900;
+      white-space: nowrap;
+      /* Prevents SCALE UP from breaking */
+    }
+
+    .arch-quote {
+      color: var(--white);
+      /* Brighter for readability */
+      font-size: 4.2mm;
+      /* Increased scale */
+      font-family: 'Noto Sans Tamil', sans-serif;
+      line-height: 1.6;
+      font-weight: 800;
+      /* Elite Bold Weight */
+      opacity: 1.0;
+      font-style: normal;
+      margin-top: 5mm;
+      letter-spacing: 0.2mm;
+    }
+
+    .leader-txt-wrap b {
+      display: block;
+      color: var(--red);
+      /* Dark Pure Red */
+      font-size: 4.2mm;
+      font-family: 'Archivo Black', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.3mm;
+      /* Increased spacing for airy look */
+      margin-bottom: 1.5mm;
+      font-weight: 950;
+      /* Extra bold for visibility */
+      white-space: nowrap;
+    }
+
+    .leader-txt-wrap span {
+      display: block;
+      color: #ffffff;
+      font-size: 3.1mm;
+      /* Balanced increase for visibility */
+      font-family: 'Outfit', sans-serif;
+      line-height: 1.3;
+      font-weight: 700;
+      letter-spacing: 0.2mm;
+      /* Increased airy spacing */
+    }
+
+    /* ─── 02 AUTOMATION-FIRST CORE — CLEAN EDITION ─── */
+    .body-section {
+      flex: 1;
+      background-color: var(--black);
+      padding: 0mm 5mm 15mm;
+      /* Expanded to left/right for better space usage */
+      /* Set padding-top to 0 since we'll use margins for precision */
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      z-index: 20;
+      /* Float entire body over hero shapes if they overlap */
+    }
+
+    /* Primary Automation Focus Statement — CENTERED EXCELLENCE */
+    .automation-header {
+      position: relative;
+      text-align: center;
+      margin-top: 15mm;
+      /* Restored breathing space for clear section separation */
+      margin-bottom: 8mm;
+      /* Proportional bottom margin */
+      padding: 0;
+    }
+
+    .automation-header::before {
+      display: none;
+      /* Removed the left bar to maintain symmetry */
+    }
+
+    .auto-sub-h {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 5mm;
+      color: #fff;
+      /* Base color set to White */
+      font-weight: 850;
+      /* Increased for high-end print punch */
+      letter-spacing: 0.2mm;
+      line-height: 1.4;
+    }
+
+    .auto-sub-h b {
+      color: var(--red);
+      /* Key highlight words in Red */
+      font-weight: 950;
+    }
+
+    /* Ledger Layout Sync */
+    .ledger-main {
+      display: grid;
+      grid-template-columns: 1fr;
+      /* Full width - single column */
+      gap: 12mm;
+      flex: 1;
+    }
+
+    .ledger-h {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 3.8mm;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 0.8mm;
+      /* Tightened for impact */
+      margin-bottom: 8mm;
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+      opacity: 0.9;
+    }
+
+    .ledger-h::after {
+      content: '';
+      height: 0.1mm;
+      flex: 1;
+      background: var(--red);
+      opacity: 0.4;
+    }
+
+    /* MODULE CARDS: PREMIER TECH-SPEC STYLE */
+    .blueprint-list {
+      display: flex;
+      flex-direction: row;
+      gap: 12mm;
+      margin-top: 10mm;
+    }
+
+    .bp-item {
+      position: relative;
+      padding: 8mm 5mm 6mm;
+      flex: 1;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0) 100%),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 1px, transparent 1px, transparent 2px);
+      /* Scanline texture */
+      border-left: 1.2mm solid var(--red);
+      border-top: 0.1mm solid rgba(255, 255, 255, 0.05);
+      /* Ghost Top Border */
+      border-right: 0.1mm solid rgba(255, 255, 255, 0.05);
+      /* Ghost Right Border */
+      box-shadow: 0 4mm 10mm rgba(0, 0, 0, 0.4);
+    }
+
+    /* Red Header Plate Accent */
+    .bp-item::before {
+      content: attr(data-index);
+      position: absolute;
+      top: -4mm;
+      left: -1.2mm;
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.2mm;
+      color: #fff;
+      font-weight: 900;
+      letter-spacing: 1mm;
+      background: var(--red);
+      /* Red Header Pop */
+      padding: 1.5mm 4mm;
+      box-shadow: 2mm 0 5mm rgba(210, 30, 42, 0.4);
+    }
+
+    /* Bottom Technical Mark (+) */
+    .bp-item::after {
+      content: '●';
+      position: absolute;
+      bottom: 3mm;
+      right: 3mm;
+      color: var(--red);
+      font-size: 1.5mm;
+      opacity: 0.6;
+    }
+
+    .bp-name {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 4.5mm;
+      color: var(--white);
+      margin-bottom: 4mm;
+      text-transform: uppercase;
+      letter-spacing: 1mm;
+      line-height: 1;
+      border-bottom: 0.5mm solid rgba(210, 30, 42, 0.3);
+      padding-bottom: 2mm;
+      display: inline-block;
+      font-weight: 950;
+    }
+
+    .bp-desc {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 3.8mm;
+      /* Increased for better legibility */
+      color: #FFFFFF;
+      line-height: 1.6;
+      font-weight: 850;
+    }
+
+    .bp-desc b {
+      color: var(--red);
+      /* Highlight key words in Red */
+      font-weight: 900;
+    }
+
+    /* ─── 03 FOOTER ─── */
+    .footer-area {
+      position: relative;
+      background: var(--black);
+      padding: 12mm 15mm 8mm;
+      display: flex;
+      justify-content: space-between;
+      color: var(--white);
+      font-size: 3.2mm;
+    }
+
+    .contact-btn {
+      position: absolute;
+      top: -6mm;
+      left: 15mm;
+      background: var(--red);
+      color: white;
+      padding: 3mm 12mm;
+      font-weight: 900;
+      font-size: 4mm;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      box-shadow: 0 3mm 10mm rgba(0, 0, 0, 0.2);
+    }
+
+    .f-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1mm;
+    }
+
+    .f-item b {
+      color: var(--red);
+      text-transform: uppercase;
+      font-size: 2.5mm;
+      letter-spacing: 0.05em;
+    }
+
+    @media print {
+      body {
+        width: 210mm;
+        height: 297mm;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+    <!-- HERO SECTION -->
+    <header class="hero-container">
+      <div class="header-logo">
+        <div class="logo-side">
+          <div class="logo-box"><img src="images/offl_logo.png" alt="JoyAutomations Logo"></div>
+          <div class="logo-txt">JOY<b>AUTOMATIONS</b><span>Elite Business Agent</span></div>
+        </div>
+        <div class="nav-right-txt" style="line-height: 1.25;">
+          📞 +91 90805 58130<br />
+          🌐 www.joyautomations.in <br />
+          ✉️ joyautomations.system@gmail.com<br />
+
+        </div>
+      </div>
+
+      <!-- Headline: Reality Check (Pain-Point Driven) -->
+      <div class="chevron-bg">
+        <h1 class="hero-h1">OWN FREEDOM.</h1>
+        <p class="hero-p" style="font-family: 'Noto Sans Tamil', sans-serif; margin-bottom: 6mm;">வேலையைக்
+          குறைப்போம்.<br />லாபத்தைப் பெருக்குவோம்.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; width: 100%; margin-top: 5mm;">
+
+          <div style="display: flex; align-items: center; gap: 3mm;">
+            <div style="width: 2mm; height: 2mm; background: var(--red); transform: rotate(45deg);"></div>
+            <div
+              style="font-family: 'Outfit', sans-serif; font-size: 3mm; color: #fff; font-weight: 900; letter-spacing: 1.5mm; text-transform: uppercase;">
+              01. Digitize</div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 3mm;">
+            <div style="width: 2mm; height: 2mm; background: var(--red); transform: rotate(45deg);"></div>
+            <div
+              style="font-family: 'Outfit', sans-serif; font-size: 3mm; color: #fff; font-weight: 900; letter-spacing: 1.5mm; text-transform: uppercase;">
+              02. Automate</div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 3mm;">
+            <div style="width: 2mm; height: 2mm; background: var(--red); transform: rotate(45deg);"></div>
+            <div
+              style="font-family: 'Outfit', sans-serif; font-size: 3mm; color: #fff; font-weight: 900; letter-spacing: 1.5mm; text-transform: uppercase;">
+              03. Dominate</div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 3mm;">
+            <div style="width: 2mm; height: 2mm; background: var(--red); transform: rotate(45deg);"></div>
+            <div
+              style="font-family: 'Outfit', sans-serif; font-size: 3mm; color: #fff; font-weight: 900; letter-spacing: 1.5mm; text-transform: uppercase;">
+              04. Liberate</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Unified Hero Right Panel: Power Pillars -->
+      <div class="hero-right-panel">
+        <div class="panel-content">
+          <!-- THE STRATEGIC ASSURANCE GRID (Clean Focus Edition) -->
+          <div
+            style="display: flex; flex-direction: column; gap: 6mm; border-left: 0.8mm solid var(--red); padding-left: 8mm;">
+
+            <div style="display: flex; flex-direction: column;">
+              <div
+                style="font-family: 'Outfit', sans-serif; font-size: 6.2mm; color: #fff; font-weight: 950; line-height: 1.1; letter-spacing: -0.2mm;">
+                YOUR ASSET. YOUR EMPIRE.<br /><span style="opacity: 0.5; font-size: 0.75em; font-weight: 700;">FOR THE
+                  LIFETIME.</span></div>
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+              <div
+                style="font-family: 'Outfit', sans-serif; font-size: 6.2mm; color: #fff; font-weight: 950; line-height: 1.1; letter-spacing: -0.2mm;">
+                WORK MAY SHUTS DOWN.<br /><span style="color: var(--red);">BUSINESS DOESN'T.</span></div>
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+              <div
+                style="font-family: 'Outfit', sans-serif; font-size: 6.2mm; color: #fff; font-weight: 900; line-height: 1.1; letter-spacing: -0.2mm;">
+                ZERO RENTAL COSTS.<br /><span style="opacity: 0.5; font-size: 0.75em; font-weight: 700;">MAXIMIZED NET
+                  PROFIT.</span></div>
+            </div>
+
+          </div>
+        </div>
+    </header>
+
+    <!-- BODY CONTENT -->
+    <main class="body-section">
+      <!-- MAIN AUTOMATION FOCUS -->
+      <div class="automation-header">
+        <div class="auto-sub-h">பிசினஸை <b>மனித உதவியின்றி தானாக</b> இயங்க வைக்கும் <b>தொழில்நுட்பம்.</b></div>
+      </div>
+
+      <div class="ledger-main">
+        <!-- LEFT: THE MODULES -->
+        <div class="col-blueprint">
+          <div class="ledger-h">AUTOMATION MODULES</div>
+          <div class="blueprint-list">
+            <div class="bp-item" data-index="01 //">
+              <div class="bp-name">AI AGENTS</div>
+              <div class="bp-desc">அழைப்புகள் & முன்பதிவுகளை <b>24/7 மனித உதவியின்றி</b> நுட்பமாகக் கையாளும் AI.</div>
+            </div>
+            <div class="bp-item" data-index="02 //">
+              <div class="bp-name"> ERP&CRM</div>
+              <div class="bp-desc">விற்பனை, ஸ்டாக் மற்றும் 'லீட்களை' ஒரே இடத்தில் <b>தானாக நிர்வகிக்கும்</b> சிஸ்டம்.
+              </div>
+            </div>
+            <div class="bp-item" data-index="03 //">
+              <div class="bp-name">SMART FOLLOW-UP</div>
+              <div class="bp-desc">கஸ்டமர்களை ஃபாலோ-அப் செய்யும் வலியைத் தவிர்க்கும் <b>ஸ்மார்ட் ஆட்டோமேஷன்</b>.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GLOBAL INDUSTRY COVERAGE STRIP (Everything we Automate) -->
+        <div style="margin-top: -3mm; padding: 0 5mm; opacity: 1; position: relative; width: 100%;">
+          <p
+            style="font-family: 'Noto Sans Tamil', sans-serif; color: var(--red); font-size: 3.5mm; font-weight: 800; margin-bottom: 2mm; letter-spacing: 0.5mm; text-align: center; border-bottom: 0.1mm solid rgba(210, 30, 42, 0.3); display: block; padding-bottom: 1mm; width: 100%;">
+            அனைத்துத் தொழில்களுக்கும் ஆட்டோமேஷன்.
+          </p>
+          <div
+            style="position: relative; font-family: 'Outfit', sans-serif; font-size: 3.5mm; color: #fff; font-weight: 700; line-height: 1.8; text-align: center; border: 0.1mm solid rgba(255,255,255,0.1); padding: 5mm; text-transform: uppercase; letter-spacing: 0.5mm; background: rgba(255,255,255,0.02); width: 100%;">
+
+            <!-- Technical Markers -->
+            <span
+              style="position: absolute; top: -1mm; left: -1mm; color: var(--red); font-size: 4mm; font-weight: 100;">+</span>
+            <span
+              style="position: absolute; top: -1mm; right: -1mm; color: var(--red); font-size: 4mm; font-weight: 100;">+</span>
+            <span
+              style="position: absolute; bottom: -1mm; left: -1mm; color: var(--red); font-size: 4mm; font-weight: 100;">+</span>
+            <span
+              style="position: absolute; bottom: -1mm; right: -1mm; color: var(--red); font-size: 4mm; font-weight: 100;">+</span>
+            <span
+              style="position: absolute; top: 1.5mm; right: 2mm; color: var(--red); font-size: 1.8mm; opacity: 0.8;">[
+              TOTAL_SECTORS: 21 ]</span>
+
+            CAFES & RESTAURANTS <span style="color:var(--red)">•</span> BIKE SERVICES <span
+              style="color:var(--red)">•</span> REAL ESTATE <span style="color:var(--red)">•</span> EVENT PLANNING <span
+              style="color:var(--red)">•</span> SALONS <br />
+            DENTAL CLINICS <span style="color:var(--red)">•</span> GYMS <span style="color:var(--red)">•</span> TUITION
+            CENTERS <span style="color:var(--red)">•</span> FIREWORKS <span style="color:var(--red)"></span> <span
+              style="color:var(--red)">•</span> BEAUTY PARLOURS <br />
+            PHARMACIES <span style="color:var(--red)">•</span> TAILORING SHOPS <span style="color:var(--red)">•</span>
+            PHOTOGRAPHY <span style="color:var(--red)">•</span> DRIVING SCHOOLS <span style="color:var(--red)">•</span>
+            CAR WASH <br />
+            <div style="color: var(--red);">SCHOOLS • COLLEGES • INSTITUTIONS • ACADEMIES • EDUCATION MANAGEMENT</div>
+          </div>
+        </div>
+
+        <div
+          style="margin-top: -10mm; border: none; padding-top: 0; display: flex; justify-content: space-between; align-items: flex-start;">
+
+          <!-- Contact & CTA -->
+          <div style="flex: 1;">
+            <p
+              style="font-family: 'Noto Sans Tamil', sans-serif; font-size: 5.5mm; color: #FFFFFF; font-weight: 850; line-height: 1.3; margin: 0 0 4mm 0; letter-spacing: 0.2mm;">
+              மேலும் விபரங்கள் மற்றும் <span style="color:var(--red)">இலவச Audit </span> இதை ஸ்கேன் செய்யவும்.
+            </p>
+
+            <div style="margin-top: 6mm; display: flex; align-items: center; gap: 3mm;">
+              <div
+                style="font-family: 'Archivo Black', sans-serif; font-size: 6mm; color: #000; background: var(--red); padding: 1.5mm 3mm; border-radius: 1mm; line-height: 1;">
+                45% OFF
+              </div>
+              <div
+                style="font-family: 'Outfit', sans-serif; font-size: 3.5mm; color: #fff; font-weight: 800; letter-spacing: 0.5mm; line-height: 1.2;">
+                EXCLUSIVE LAUNCH PRICING<br />
+                <span style="color: #999; font-size: 2.5mm;">CONTACT US TODAY TO CLAIM.</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 3mm; margin-top: -2.6mm;">
+            <div
+              style="width: 40mm; height: 40mm; border: 0.8mm solid var(--red); display: flex; align-items: center; justify-content: center; background: #fff; padding: 2mm; box-shadow: 0 5mm 15mm rgba(0,0,0,0.3);">
+              <img src="images/QR.png" alt="JoyAutomations QR Code"
+                style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div
+              style="font-family: 'Outfit', sans-serif; color: #fff; font-size: 2mm; letter-spacing: 1mm; opacity: 0.7; text-align: center;">
+              SCAN FOR INSTANT DEMO & AUDIT</div>
+          </div>
+        </div>
+
+        <!-- ASSET OWNERSHIP SEAL -->
+        <div
+          style="margin-top: 5mm; padding-top: 4mm; display: flex; justify-content: space-between; align-items: center;">
+          <div
+            style="font-family: 'Archivo Black', sans-serif; font-size: 3.5mm; color: var(--white); background: var(--red); padding: 1.5mm 4mm; letter-spacing: 0.5mm;">
+            100% CUSTOM ASSET</div>
+          <div
+            style="font-family: 'Outfit', sans-serif; font-size: 3mm; color: #666; font-weight: 800; letter-spacing: 0.5mm;">
+            NO TOOL SUBSCRIPTIONS. ZERO RENTAL COSTS. YOU OWN THE SOURCE CODE.</div>
+        </div>
+
+    </main>
+  </div>
+
+</body>
+
+</html>

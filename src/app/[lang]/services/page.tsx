@@ -1,7 +1,6 @@
 import ServicesHero from "@/components/sections/services/ServicesHero";
 import IndustryGrid from "@/components/sections/services/IndustryGrid";
 import ExpertiseSection from "@/components/sections/services/ExpertiseSection";
-import TechStack from "@/components/sections/services/TechStack";
 import UspSection from "@/components/sections/services/UspSection";
 import Footer from "@/components/layout/Footer";
 import { getDictionary } from "@/lib/get-dictionary";
@@ -18,7 +17,6 @@ export default async function ServicesPage(props: {
       <ServicesHero dict={dict} lang={lang} />
       <IndustryGrid dict={dict} />
       <ExpertiseSection dict={dict} />
-      <TechStack dict={dict} />
       <UspSection dict={dict} />
       <Footer dict={dict} lang={lang} />
     </main>

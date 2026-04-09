@@ -255,16 +255,52 @@
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .nav__actions {
+    gap: 0.8rem;
+  }
+}
+
 /* Language switch specifically */
 .lang__switch {
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 850;
   color: var(--accent) !important;
   text-decoration: none;
+  border: 1px solid rgba(255, 77, 77, 0.4);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(255, 77, 77, 0.05);
+  transition: all var(--fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 65px;
+  line-height: 1;
 }
 
 .lang__switch:hover {
+  background: var(--accent);
   color: #fff !important;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .lang__switch {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+    min-width: 55px;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #fff !important;
+  }
 }
 
 /* ─── HAMBURGER & MOBILE SCALING ─── */
