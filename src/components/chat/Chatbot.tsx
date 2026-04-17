@@ -89,7 +89,7 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
     };
 
     if (supabase) {
-      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event: any, session: any) => {
         if (!isMounted) return;
         const authUser = session?.user ?? null;
         setUser(authUser);
