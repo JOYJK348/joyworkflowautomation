@@ -186,6 +186,100 @@
         "fixIt": "This isn't inevitable. Every rupee and hour lost can be reclaimed with the right automation.",
         "cta": "Fix This For Me →"
       }
+    },
+    "painPoint": {
+      "title": "Stop Losing Leads",
+      "subtitle": "Automate your admissions today"
+    },
+    "trustTitle": "Trusted by 50+ Educational Institutions & Academies",
+    "botDemo": {
+      "tag": "LIVE PROCESS DEMO",
+      "title": "Automated Admission System",
+      "subtitle": "See how our system precisely handles student inquiries and completes admissions entirely via WhatsApp.",
+      "chat": [
+        {
+          "id": 1,
+          "type": "student",
+          "text": "Hi, I would like to know about the Web Development course."
+        },
+        {
+          "id": 2,
+          "type": "bot",
+          "text": "Hello! We offer an AI-First Web Development bootcamp covering React and AI. Would you like the course details?"
+        },
+        {
+          "id": 3,
+          "type": "student",
+          "text": "Yes, can you tell me the duration?"
+        },
+        {
+          "id": 4,
+          "type": "bot",
+          "text": "It is a 12-week program. We have morning and evening batches. Which do you prefer?"
+        },
+        {
+          "id": 5,
+          "type": "student",
+          "text": "Evening batch works best for me."
+        },
+        {
+          "id": 6,
+          "type": "bot",
+          "text": "Excellent. You are registered for the Evening Batch. A confirmation message has been sent to your WhatsApp. Thank you!"
+        }
+      ],
+      "features": [
+        "24/7 Instant Clear Responses",
+        "WhatsApp & Instagram Automation",
+        "Professional Registration & Booking",
+        "Direct Payment Link Integration"
+      ]
+    },
+    "lmsPortal": {
+      "tag": "🔥 BENEFITS",
+      "title": "AI System that converts Inquiries into Admissions",
+      "subtitle": "Increase admissions by responding without delay. Our AI automation works 24/7 exactly for you.",
+      "features": [
+        {
+          "title": "More Admissions",
+          "desc": "Instant inquiry processing and direct payments via WhatsApp."
+        },
+        {
+          "title": "Zero Leaked Leads",
+          "desc": "Respond to all WhatsApp/Instagram messages within seconds."
+        },
+        {
+          "title": "Auto Follow-up",
+          "desc": "Automatic tracking for pending fees and dropped admissions."
+        },
+        {
+          "title": "No Manual Work",
+          "desc": "Put an end to time-wasting manual record keeping permanently."
+        }
+      ],
+      "sequence": [
+        {
+          "id": 1,
+          "type": "attendance",
+          "title": "Live Attendance",
+          "status": "Confirmed",
+          "icon": "✓"
+        },
+        {
+          "id": 2,
+          "type": "performance",
+          "title": "Average Score",
+          "metric": "85%",
+          "trend": "+12% Increase"
+        },
+        {
+          "id": 3,
+          "type": "tutor",
+          "title": "AI Tutor",
+          "action": "New exercise generated",
+          "icon": "✨"
+        }
+      ]
     }
   },
   "process": {
