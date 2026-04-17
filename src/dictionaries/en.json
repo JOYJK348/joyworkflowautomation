@@ -300,18 +300,47 @@
       "innovation": "Tech Vision"
     },
     "quickLinks": [
-      { "label": "Services", "href": "/services" },
-      { "label": "LMS Portal", "href": "/services" },
-      { "label": "About Us", "href": "/about" },
-      { "label": "Contact", "href": "/contact" }
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "LMS Portal",
+        "href": "/services"
+      },
+      {
+        "label": "About Us",
+        "href": "/about"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      }
     ],
     "solutions": [
-      { "label": "Academy ERP", "href": "/services" },
-      { "label": "WhatsApp CRM", "href": "/services" },
-      { "label": "AI Admission Bot", "href": "/services" },
-      { "label": "Custom SaaS", "href": "/services" }
+      {
+        "label": "Academy ERP",
+        "href": "/services"
+      },
+      {
+        "label": "WhatsApp CRM",
+        "href": "/services"
+      },
+      {
+        "label": "AI Admission Bot",
+        "href": "/services"
+      },
+      {
+        "label": "Custom SaaS",
+        "href": "/services"
+      }
     ],
-    "stack": ["Next.js 15", "TypeScript", "Node.js", "AI/LLMs"],
+    "stack": [
+      "Next.js 15",
+      "TypeScript",
+      "Node.js",
+      "AI/LLMs"
+    ],
     "contact": {
       "email": "joyautomations.system@gmail.com",
       "phone": "+91 90805 58130",
@@ -1136,9 +1165,18 @@
       "cta": "Start Your Builder Journey",
       "waCta": "Talk to Us",
       "stats": [
-        { "value": "50+", "label": "Apps Built" },
-        { "value": "3", "label": "Skill Levels" },
-        { "value": "100%", "label": "Project-Based" }
+        {
+          "value": "50+",
+          "label": "Apps Built"
+        },
+        {
+          "value": "3",
+          "label": "Skill Levels"
+        },
+        {
+          "value": "100%",
+          "label": "Project-Based"
+        }
       ]
     },
     "why": {
@@ -1146,10 +1184,26 @@
       "title": "Why This Program Exists",
       "subtitle": "The world changed. Traditional coding bootcamps teach you syntax. We teach you to ship products.",
       "points": [
-        { "icon": "⚡", "title": "AI Writes Code Now", "desc": "Modern AI tools generate production-grade code. Your job is to architect, prompt, and ship." },
-        { "icon": "🎯", "title": "Outcomes Over Theory", "desc": "Every lesson ends with something you built — not just something you learned." },
-        { "icon": "🔗", "title": "Real Business Problems", "desc": "Projects come directly from our automation clients actual business challenges." },
-        { "icon": "🚀", "title": "Build to Earn", "desc": "Students leave with a portfolio, freelance-ready skills, and real deployed products." }
+        {
+          "icon": "⚡",
+          "title": "AI Writes Code Now",
+          "desc": "Modern AI tools generate production-grade code. Your job is to architect, prompt, and ship."
+        },
+        {
+          "icon": "🎯",
+          "title": "Outcomes Over Theory",
+          "desc": "Every lesson ends with something you built — not just something you learned."
+        },
+        {
+          "icon": "🔗",
+          "title": "Real Business Problems",
+          "desc": "Projects come directly from our automation clients actual business challenges."
+        },
+        {
+          "icon": "🚀",
+          "title": "Build to Earn",
+          "desc": "Students leave with a portfolio, freelance-ready skills, and real deployed products."
+        }
       ]
     },
     "levels": {
@@ -1163,7 +1217,12 @@
           "title": "AI Builder Foundation",
           "subtitle": "Build websites and simple apps using AI — even if you've never written a line of code.",
           "duration": "4 Weeks",
-          "learn": ["HTML & CSS with AI assistance", "Prompt-to-code workflows", "Landing page creation", "Live deployment basics"],
+          "learn": [
+            "HTML & CSS with AI assistance",
+            "Prompt-to-code workflows",
+            "Landing page creation",
+            "Live deployment basics"
+          ],
           "outcome": "\"I built and deployed my own website.\"",
           "projects": "3+ Live Projects"
         },
@@ -1173,7 +1232,12 @@
           "title": "AI Full-Stack Development",
           "subtitle": "Build real-world applications that solve actual business problems using modern tools.",
           "duration": "8 Weeks",
-          "learn": ["Full-stack app architecture", "Database & authentication", "Admin dashboards & CRMs", "WhatsApp automation tools"],
+          "learn": [
+            "Full-stack app architecture",
+            "Database & authentication",
+            "Admin dashboards & CRMs",
+            "WhatsApp automation tools"
+          ],
           "outcome": "\"I build and ship real-world applications.\"",
           "projects": "5+ Production Apps",
           "tech": "Next.js · Firebase · Supabase"
@@ -1184,7 +1248,12 @@
           "title": "AI Systems Engineer",
           "subtitle": "Architect intelligent AI systems that think, reason, and automate complex workflows.",
           "duration": "6 Weeks",
-          "learn": ["Python for AI development", "LLM integration & fine-tuning", "RAG pipelines & Vector DBs", "Autonomous AI agent systems"],
+          "learn": [
+            "Python for AI development",
+            "LLM integration & fine-tuning",
+            "RAG pipelines & Vector DBs",
+            "Autonomous AI agent systems"
+          ],
           "outcome": "\"I architect and deploy AI-powered systems.\"",
           "projects": "3+ AI Systems"
         }
@@ -1195,22 +1264,62 @@
       "title": "Real Projects. Not Tutorials.",
       "subtitle": "Every student ships real products — not toy apps.",
       "items": [
-        { "title": "Portfolio Website", "desc": "A professional personal brand site deployed live.", "level": "Level 1" },
-        { "title": "Business Landing Page", "desc": "Client-ready marketing pages with lead capture forms.", "level": "Level 1" },
-        { "title": "Student Dashboard", "desc": "Full-stack dashboard with auth, data, and analytics.", "level": "Level 2" },
-        { "title": "WhatsApp Bot", "desc": "Automated messaging system for real businesses.", "level": "Level 2" },
-        { "title": "AI Chatbot", "desc": "Intelligent assistant powered by LLMs and RAG.", "level": "Level 3" },
-        { "title": "SaaS Micro-Tool", "desc": "A deployable product with user management and billing.", "level": "Level 2" }
+        {
+          "title": "Portfolio Website",
+          "desc": "A professional personal brand site deployed live.",
+          "level": "Level 1"
+        },
+        {
+          "title": "Business Landing Page",
+          "desc": "Client-ready marketing pages with lead capture forms.",
+          "level": "Level 1"
+        },
+        {
+          "title": "Student Dashboard",
+          "desc": "Full-stack dashboard with auth, data, and analytics.",
+          "level": "Level 2"
+        },
+        {
+          "title": "WhatsApp Bot",
+          "desc": "Automated messaging system for real businesses.",
+          "level": "Level 2"
+        },
+        {
+          "title": "AI Chatbot",
+          "desc": "Intelligent assistant powered by LLMs and RAG.",
+          "level": "Level 3"
+        },
+        {
+          "title": "SaaS Micro-Tool",
+          "desc": "A deployable product with user management and billing.",
+          "level": "Level 2"
+        }
       ]
     },
     "audience": {
       "tag": "IS THIS FOR YOU?",
       "title": "Who Should Join",
       "items": [
-        { "icon": "🎓", "title": "Students", "desc": "Build a tech career by learning to ship products, not just pass exams." },
-        { "icon": "💼", "title": "Professionals", "desc": "Upskill with AI-powered development to stay ahead in your career." },
-        { "icon": "🏗️", "title": "Entrepreneurs", "desc": "Build your own MVP and launch your startup idea without hiring developers." },
-        { "icon": "🎨", "title": "Creators", "desc": "Turn your content and ideas into functional web applications." }
+        {
+          "icon": "🎓",
+          "title": "Students",
+          "desc": "Build a tech career by learning to ship products, not just pass exams."
+        },
+        {
+          "icon": "💼",
+          "title": "Professionals",
+          "desc": "Upskill with AI-powered development to stay ahead in your career."
+        },
+        {
+          "icon": "🏗️",
+          "title": "Entrepreneurs",
+          "desc": "Build your own MVP and launch your startup idea without hiring developers."
+        },
+        {
+          "icon": "🎨",
+          "title": "Creators",
+          "desc": "Turn your content and ideas into functional web applications."
+        }
       ]
     },
     "outcomes": {
@@ -1218,22 +1327,190 @@
       "title": "Your Path Forward",
       "subtitle": "Every graduate walks away with real, tangible superpowers.",
       "paths": [
-        { "icon": "💻", "title": "Freelance Developer", "desc": "Start earning by building websites and apps for clients worldwide." },
-        { "icon": "🚀", "title": "Startup Founder", "desc": "Launch your own product with the skills to build, deploy, and iterate fast." },
-        { "icon": "🏢", "title": "Tech Professional", "desc": "Get hired with a portfolio of real-world shipped projects that prove your ability." }
+        {
+          "icon": "💻",
+          "title": "Freelance Developer",
+          "desc": "Start earning by building websites and apps for clients worldwide."
+        },
+        {
+          "icon": "🚀",
+          "title": "Startup Founder",
+          "desc": "Launch your own product with the skills to build, deploy, and iterate fast."
+        },
+        {
+          "icon": "🏢",
+          "title": "Tech Professional",
+          "desc": "Get hired with a portfolio of real-world shipped projects that prove your ability."
+        }
       ]
     },
     "extra": {
       "tag": "THE JOYAI PROMISE",
       "title": "Build → Deploy → Earn",
       "desc": "We don't just teach — we help you build and launch real products that generate real value.",
-      "items": ["Production-ready portfolio", "Freelancing launchpad", "Real client projects", "Lifetime community access"]
+      "items": [
+        "Production-ready portfolio",
+        "Freelancing launchpad",
+        "Real client projects",
+        "Lifetime community access"
+      ]
     },
     "finalCta": {
       "title": "Ready to Become a Builder?",
       "subtitle": "Join the next batch of AI Labs and start shipping real products in weeks, not years.",
       "cta": "Start Your Journey",
       "waCta": "Chat with Us"
+    }
+  },
+  "results": {
+    "tag": "PROVEN OUTCOMES",
+    "title": "Real Impact. No Fluff.",
+    "subtitle": "We deploy systems that generate measurable business value within weeks.",
+    "items": [
+      {
+        "value": "300%",
+        "label": "Lead Conversion",
+        "desc": "Average increase using our automated WhatsApp flows."
+      },
+      {
+        "value": "40hrs",
+        "label": "Saved Weekly",
+        "desc": "By replacing manual tasks with smart AI agents."
+      },
+      {
+        "value": "100%",
+        "label": "Custom Fit",
+        "desc": "Tailored solutions designed for your specific industry."
+      },
+      {
+        "value": "99.9%",
+        "label": "System Uptime",
+        "desc": "Reliable, scalable infrastructure that never sleeps."
+      }
+    ]
+  },
+  "common": {
+    "bookDemo": "Book Free Demo",
+    "readMore": "Read More",
+    "contactUs": "Contact Us",
+    "joinNow": "Join Now"
+  },
+  "dualMission": {
+    "tag": "OUR PURPOSE",
+    "title": {
+      "main": "One Vision.",
+      "accent": "Two Missions."
+    },
+    "desc": "Joy Automations is built on a dual-engine architecture. We automate businesses to scale, and we empower individuals to build the tech of tomorrow. They fuel each other.",
+    "left": {
+      "title": "B2B: Joy Automations",
+      "icon": "M12 2L2 7l10 5 10-5-10-5zm0 2.8L18.4 7 12 10.2 5.6 7 12 4.8zM2 17l10 5 10-5M2 12l10 5 10-5",
+      "text": "Building high-performance automation systems for growing businesses."
+    },
+    "right": {
+      "title": "B2C: JoyAI Labs",
+      "icon": "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z",
+      "text": "Training the next generation of builders through applied AI engineering."
+    }
+  },
+  "hybridEcosystem": {
+    "tag": "THE ENGINE",
+    "title": "The Hybrid Advantage",
+    "subtitle": "Our enterprise solutions drive our curriculum. Our students build real systems. It is an endless feedback loop of innovation.",
+    "business": {
+      "id": "B2B",
+      "name": "Joy<span class='accent_main'>Automations</span>",
+      "headline": "Production-Grade Systems",
+      "desc": "We do not build toys. We build AI-LMS platforms, Custom ERPs, and smart agents that save companies hours of manual labor every single day.",
+      "metrics": [
+        {
+          "value": "AI-LMS",
+          "label": "Education Systems"
+        },
+        {
+          "value": "CRM/ERP",
+          "label": "Business Logic"
+        },
+        {
+          "value": "AI AGENTS",
+          "label": "Automated Bots"
+        },
+        {
+          "value": "SaaS",
+          "label": "Scalable Apps"
+        }
+      ]
+    },
+    "education": {
+      "id": "B2C",
+      "name": "Joy<span class='accent_purple'>AI Labs</span>",
+      "headline": "Prompt-to-Product",
+      "desc": "Traditional coding is slow. We teach high-velocity prompt engineering. Students learn to leverage AI to spin up apps and deploy digital products in record time.",
+      "metrics": [
+        {
+          "value": "PROMPT",
+          "label": "Engineering"
+        },
+        {
+          "value": "CONTENT",
+          "label": "Creation"
+        }
+      ]
+    },
+    "link": "Real World Connection",
+    "linkDesc": "Every student project is born from a real business problem we solved today."
+  },
+  "about": {
+    "hero": {
+      "badge": "WHO WE ARE",
+      "title": "Advanced Workflow Automation",
+      "opening": "JoyAutomations helps businesses eliminate manual bottlenecks and scale effortlessly through intelligent AI systems."
+    },
+    "problem": {
+      "title": "The Problem We Solve",
+      "text": "Companies lose revenue due to slow follow-ups, fragmented tools, and manual administrative bloat."
+    },
+    "solution": {
+      "title": "Our Elegant Solution",
+      "text": "We build custom AI-LMS systems and intelligent workflows that handle everything from inquiry to closure automatically."
+    },
+    "strength": {
+      "title": "Our Core Strength",
+      "text": "We have actually built and deployed multiple successful portals and AI agents for real businesses."
+    },
+    "who": {
+      "title": "Who We Work With",
+      "text": "We provide digital transformation and ERP solutions to coaching centers, schools, colleges, and service businesses."
+    },
+    "vision": {
+      "title": "Our Strategy",
+      "text": "Our goal is to eliminate administrative burden, turning chaotic processes into smooth, automated engines.",
+      "points": [
+        "100% elimination of manual follow-up delays",
+        "Converting WhatsApp into a 24/7 sales agent",
+        "Centralizing all data for crystal clear visibility"
+      ]
+    },
+    "labs": {
+      "title": "JoyAI Labs",
+      "text": "We bring this enterprise expertise directly to students, giving them real-time training on building modern apps."
+    },
+    "trust": {
+      "title": "Why Institutions Trust Us",
+      "items": [
+        {
+          "title": "Industry-Specific Solutions",
+          "desc": "We build systems designed to solve real operational problems, from fee collection to student tracking."
+        },
+        {
+          "title": "Extreme Simplicity",
+          "desc": "If you can use WhatsApp, you can use our tools. No steep technical learning curves."
+        },
+        {
+          "title": "Guaranteed Results",
+          "desc": "We design our systems with one objective: increasing your admissions and saving your time."
+        }
+      ]
     }
   }
 }
