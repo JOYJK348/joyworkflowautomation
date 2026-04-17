@@ -1,6 +1,5 @@
 import { getDictionary } from '@/lib/get-dictionary';
-import ContactHero from '@/components/sections/contact/ContactHero';
-import ContactForm from '@/components/sections/contact/ContactForm';
+import ContactContent from '@/components/sections/contact/ContactContent';
 import Footer from '@/components/layout/Footer';
 
 export default async function ContactPage(props: {
@@ -12,8 +11,7 @@ export default async function ContactPage(props: {
 
   return (
     <main>
-      <ContactHero dict={dict} lang={lang} />
-      <ContactForm dict={dict} />
+      <ContactContent dict={dict} lang={lang} />
       <Footer dict={dict} lang={lang} />
     </main>
   );

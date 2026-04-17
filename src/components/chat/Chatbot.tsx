@@ -44,7 +44,7 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [user, setUser] = useState<any>(null);
   const [input, setInput] = useState('');
-  const supabase = createClient();
+  const [supabase] = useState(() => createClient());
   const scrollRef = useRef<HTMLDivElement>(null);
 
   interface Message {
@@ -65,34 +65,43 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    let isMounted = true;
+
     const syncUserProfile = async (sessionUser: any) => {
       if (!sessionUser || !supabase) return;
-      const { error } = await supabase.from('profiles').upsert({
-        id: sessionUser.id,
-        email: sessionUser.email,
-        full_name: sessionUser.user_metadata.full_name,
-        avatar_url: sessionUser.user_metadata.avatar_url,
-        last_seen: new Date().toISOString(),
-      }, { onConflict: 'id' });
-      if (error) console.error('Error syncing profile:', error.message);
+      try {
+        const { error } = await supabase.from('profiles').upsert({
+          id: sessionUser.id,
+          email: sessionUser.email,
+          full_name: sessionUser.user_metadata?.full_name || '',
+          avatar_url: sessionUser.user_metadata?.avatar_url || '',
+          last_seen: new Date().toISOString(),
+        }, { onConflict: 'id' });
+        
+        if (error && !error.message.includes('AbortError') && !error.message.includes('Lock broken')) {
+          console.error('Error syncing profile:', error.message);
+        }
+      } catch (err: any) {
+        if (err.name !== 'AbortError' && !err.message?.includes('Lock broken')) {
+          console.error('Error syncing profile:', err.message || err);
+        }
+      }
     };
-
-    const checkUser = async () => {
-      if (!supabase) return;
-      const { data: { session } } = await supabase.auth.getSession();
-      const currentUser = session?.user ?? null;
-      setUser(currentUser);
-      if (currentUser) await syncUserProfile(currentUser);
-    };
-    checkUser();
 
     if (supabase) {
-      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+        if (!isMounted) return;
         const authUser = session?.user ?? null;
         setUser(authUser);
-        if (authUser) await syncUserProfile(authUser);
+        if (authUser && (event === 'INITIAL_SESSION' || event === 'SIGNED_IN')) {
+          await syncUserProfile(authUser);
+        }
       });
-      return () => subscription.unsubscribe();
+
+      return () => {
+        isMounted = false;
+        subscription.unsubscribe();
+      };
     }
   }, [supabase]);
 

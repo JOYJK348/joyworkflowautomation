@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './HeroSection.module.css';
 
 /* ═══ Icons ═══ */
@@ -112,14 +113,13 @@ export default function HeroSection({ dict, lang }: { dict: any; lang: string })
               {hero.cta.primary}
               {Icons.arrowRight}
             </Link>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', padding: '0.5rem 1rem', background: 'rgba(255, 77, 77, 0.05)', border: '1px solid rgba(255, 77, 77, 0.15)', borderRadius: 'var(--r-sm)' }}>
-              <span style={{ fontSize: '1.2rem', color: 'var(--accent)' }}>⏱️</span>
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#fff', lineHeight: 1.2 }}>Bleeding 20+ Hours/Week?</span>
-                <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.6)', marginTop: '2px' }}>On repetitive manual operations</span>
+            <div className={styles.painPoint}>
+              <span className={styles.painPoint__emoji}>🔥</span>
+              <div className={styles.painPoint__text}>
+                <span className={styles.painPoint__title}>{hero.painPoint.title}</span>
+                <span className={styles.painPoint__subtitle}>{hero.painPoint.subtitle}</span>
               </div>
             </div>
-
           </div>
 
           <div className={styles.hero__trust}>
@@ -131,66 +131,99 @@ export default function HeroSection({ dict, lang }: { dict: any; lang: string })
             </div>
             <div className={styles.trust__text}>
               <div className={styles.stars}>★★★★★</div>
-              <p>Trusted by businesses for <strong>Smart Automation</strong></p>
+              <p>{hero.trustTitle}</p>
             </div>
           </div>
         </div>
 
-        {/* ═══ RIGHT SIDE: PERFORMANCE-FIRST BENTO GRID ═══ */}
-        <div className={styles.hero__right}>
-          <div className={styles.bento}>
-
-            {/* Bento Card 1: AI Chat (Wide) */}
-            <div className={`${styles.bento__card} ${styles.bento__wide}`}>
-              <div className={styles.bento__header}>
-                <div className={styles.icon_wrap} style={{ color: '#25D366', background: 'rgba(37, 211, 102, 0.1)' }}>
-                  {Icons.bot}
+        {/* ═══ SWAPPED RIGHT SIDE: LMS PORTAL VISUAL ═══ */}
+        <div className={styles.visual}>
+          <div className={styles.dashboardFrame}>
+             
+             <div className={styles.frameHeader}>
+                <div className={styles.dots}>
+                  <span className={styles.dotRed}></span>
+                  <span className={styles.dotYellow}></span>
+                  <span className={styles.dotGreen}></span>
                 </div>
-                <span className={styles.bento__title}>{hero.visual.botTitle}</span>
-              </div>
-              <div className={styles.bento__chat}>
-                <div className={styles.chat__bubble_in}>{hero.visual.chatIn}</div>
-                <div className={styles.chat__bubble_out}>{hero.visual.chatOut}</div>
-              </div>
-            </div>
+                <div className={styles.urlBar}>academy.lms.cloud</div>
+                <div className={styles.menuIcon}></div>
+             </div>
 
-            {/* Bento Card 2: Smart Lead Manager */}
-            <div className={styles.bento__card}>
-              <div className={styles.bento__header}>
-                <div className={styles.icon_wrap} style={{ color: '#ff4d4d', background: 'rgba(255, 77, 77, 0.1)' }}>
-                  {Icons.database}
+             <div className={styles.frameBody}>
+               
+                <div className={styles.dashboardGrid}>
+                   
+                   {/* Static Header */}
+                   <div className={styles.profileCard}>
+                      <div className={styles.avatar}>
+                         <Image src="/images/JK.jpg" alt="Student Profile" width={48} height={48} className={styles.profilePic} />
+                      </div>
+                      <div className={styles.studentInfo}>
+                         <div className={styles.sessionTitle}>{lang === 'ta' ? 'மாணவர்: ஜாய் ஜேகே' : 'Student: Joy JK'}</div>
+                         <div className={styles.sessionDetail}>{lang === 'ta' ? 'பயிற்சி: AI மாஸ்டர்கிளாஸ்' : 'Course: AI Masterclass'}</div>
+                      </div>
+                      <div className={styles.liveIndicator}>
+                         <span className={styles.liveDot}></span> LIVE
+                      </div>
+                   </div>
+
+                   {/* 1. Face & Geo-Location Tracker (Always Scanning) */}
+                   <div className={`${styles.widget} ${styles.widgetAttSuccess}`}>
+                      <div className={styles.faceScanner}>
+                         <div className={styles.corner} style={{top: -2, left: -2, borderRight: 0, borderBottom: 0}}></div>
+                         <div className={styles.corner} style={{top: -2, right: -2, borderLeft: 0, borderBottom: 0}}></div>
+                         <div className={styles.corner} style={{bottom: -2, left: -2, borderRight: 0, borderTop: 0}}></div>
+                         <div className={styles.corner} style={{bottom: -2, right: -2, borderLeft: 0, borderTop: 0}}></div>
+                         <div className={`${styles.faceSilhouette} ${styles.faceVerified}`}></div>
+                         <div className={styles.laser}></div>
+                      </div>
+                      <div className={styles.widgetInfo}>
+                         <h4>{lang === 'ta' ? 'முக மற்றும் இருப்பிட சரிபார்ப்பு' : 'Face & Geo-Lock'}</h4>
+                         <div className={styles.geoTag}>
+                            <span className={styles.pulseDot}></span>
+                            {lang === 'ta' ? 'பாளையம்பட்டி, TN' : 'Palayampatti TN'}
+                         </div>
+                         <span className={styles.statusSuccess}>{lang === 'ta' ? 'லைவ் டிராக்கிங்' : 'Active Tracking'}</span>
+                      </div>
+                   </div>
+
+                   {/* 2. Live Performance Gauge (Always Animating) */}
+                   <div className={`${styles.widget} ${styles.widgetPerf} ${styles.widgetActive}`}>
+                      <div className={styles.perfHeader}>
+                        <h4>{lang === 'ta' ? 'நிகழ்நேர செயல்பாடு' : 'Live Performance'}</h4>
+                      </div>
+                      <div className={styles.gaugeContainer}>
+                        <svg viewBox="0 0 100 50" className={styles.gaugeMeter}>
+                          <path className={styles.gaugeBg} d="M 10 45 A 35 35 0 0 1 90 45" fill="none" />
+                          <path className={`${styles.gaugeFill} ${styles.gaugeAnimate}`} d="M 10 45 A 35 35 0 0 1 90 45" fill="none" />
+                        </svg>
+                        <div className={styles.gaugeValue}>
+                          85<span className={styles.percentText}>%</span>
+                        </div>
+                      </div>
+                      <div className={styles.trendUp}>
+                        +12% {lang === 'ta' ? 'உயர்வு' : 'Increase'}
+                      </div>
+                   </div>
+
+                   {/* 3. Adaptive AI Smart Assistant */}
+                   <div className={`${styles.widget} ${styles.widgetTutor} ${styles.widgetActive}`}>
+                      <div className={styles.orbContainer}>
+                         <div className={styles.aiOrb}></div>
+                         <div className={styles.orbRing}></div>
+                      </div>
+                      <div className={styles.tutorContent}>
+                         <h4>{lang === 'ta' ? 'AI ஸ்மார்ட் அசிஸ்டன்ட்' : 'AI Smart Assistant'}</h4>
+                         <p>{lang === 'ta' ? 'உங்களுக்கான பிரத்யேக பாடக்குறிப்புகள் தயாராகிறது...' : 'Auto-generating personalized session notes...'}</p>
+                      </div>
+                   </div>
+
                 </div>
-                <span className={styles.bento__title}>{hero.visual.leadTitle}</span>
-              </div>
-              <div className={styles.bento__data}>
-                <div className={styles.data__row}><span>{hero.visual.leadJay}</span><span className={styles.tag_green}>{hero.visual.statusSaved}</span></div>
-                <div className={styles.data__row}><span>{hero.visual.leadPriya}</span><span className={styles.tag_orange}>{hero.visual.statusConfirmed}</span></div>
-              </div>
-              <div className={styles.bento__metric} style={{ marginTop: '0.5rem', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '0.75rem' }}>
-                <h3 style={{ fontSize: '1.5rem' }}>100<span>%</span></h3>
-                <p style={{ fontSize: '0.7rem', marginTop: '2px' }}>{hero.visual.zeroLeadLabel}</p>
-              </div>
-            </div>
 
-            {/* Bento Card 3: Solutions Suite (Now Normal Width) */}
-            <div className={`${styles.bento__card} ${styles.bento__suite}`}>
-              <div className={styles.bento__header}>
-                <div className={styles.icon_wrap} style={{ color: '#fff', background: 'rgba(255, 255, 255, 0.1)' }}>
-                  {Icons.layers}
-                </div>
-                <span className={styles.bento__title}>{hero.visual.expertiseTitle}</span>
-              </div>
-              <div className={styles.suite__grid}>
-                <div className={styles.suite__item}>{Icons.layers} {hero.visual.erp}</div>
-                <div className={styles.suite__item}>{Icons.globe} {hero.visual.webMobile}</div>
-                <div className={styles.suite__item}>{Icons.bot} {hero.visual.aiChatbot}</div>
-                <div className={styles.suite__item}>{Icons.cap} {hero.visual.aiLms}</div>
-                <div className={styles.suite__item}>{Icons.receipt} {hero.visual.billing}</div>
-                <div className={styles.suite__item}>{hero.visual.more}</div>
-              </div>
-            </div>
-
+             </div>
           </div>
+          <div className={styles.glowBg}></div>
         </div>
       </div>
     </section>

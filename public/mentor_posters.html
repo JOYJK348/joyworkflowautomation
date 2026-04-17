@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Mentor — Posters</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Space+Grotesk:wght@500;700&family=Outfit:wght@400;900&family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+        :root {
+            --school-primary: #339af0;
+            /* Electric Blue */
+            --school-secondary: #ff007f;
+            /* Neon Pink */
+            --college-primary: #1a1a1a;
+            /* Keep College Pro */
+            --accent-yellow: #fcc419;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            background: #f0f2f5;
+            padding: 40px 0;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .poster-container {
+            width: 210mm;
+            height: 262.5mm; /* Optimized 4:5 Aspect Ratio for Instagram Portrait */
+            margin: 0 auto 50px;
+            background: white !important;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            -webkit-print-color-adjust: exact;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Removed bg-graphic as it causes rendering artifacts in PDF */
+
+        /* Floating Bubbles */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            z-index: 1;
+            opacity: 0.4;
+        }
+
+        .b1 {
+            width: 300px;
+            height: 300px;
+            background: var(--school-primary);
+            top: -50px;
+            left: -100px;
+        }
+
+        .b2 {
+            width: 250px;
+            height: 250px;
+            background: var(--school-secondary);
+            bottom: -50px;
+            right: -50px;
+        }
+
+        /* ─── SLANTED HEADER ─── */
+        .header-slant {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 320px;
+            clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+            z-index: 2;
+        }
+
+        .school-theme .header-slant {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed, #ec4899) !important;
+            /* Premium AI Indigo/Magenta Gradient */
+        }
+
+        .college-theme .header-slant {
+            background: var(--college-primary) !important;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px; /* Reduced from 25px */
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+        }
+
+
+
+        .badge {
+            background: var(--school-secondary);
+            color: white;
+            font-weight: 800;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(255, 0, 127, 0.3);
+        }
+
+        .main-content {
+            padding: 40px;
+            position: relative;
+            z-index: 10;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            color: var(--dark);
+        }
+
+        .headline-section {
+            grid-column: span 2;
+            margin-top: 10px;
+        }
+
+        .headline-section h1 {
+            color: white;
+            font-size: 3.5rem;
+            line-height: 1;
+            font-weight: 800;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .headline-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* ─── IMAGE / VISUAL ─── */
+        .visual-circle {
+            position: relative;
+            width: 240px; /* Highly optimized for 4:5 frame */
+            height: 240px;
+            border-radius: 50%;
+            border: 8px solid white;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            z-index: 5;
+        }
+
+        .school-theme .visual-circle {
+            background-image: url('file:///C:/Users/joyjk/.gemini/antigravity/brain/cea966d7-d54b-488c-8960-9ef8e9b9a58b/universal_online_mentorship_multigenerational_hero_1775886948814.png');
+        }
+
+        .college-theme .visual-circle {
+            background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=350&auto=format&fit=crop');
+        }
+
+        .offer-bubble {
+            position: absolute;
+            bottom: -15px;
+            right: -25px;
+            background: var(--dark);
+            color: white;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: 800;
+            border: 5px solid white;
+            transform: rotate(5deg);
+        }
+
+        .offer-bubble span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        .offer-bubble strong {
+            font-size: 1.4rem;
+        }
+
+        /* ─── MODULES LIST ─── */
+        .modules-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .module-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: #f1f3f5;
+            padding: 15px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .module-num {
+            background: var(--dark);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .module-text h4 {
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+
+        .module-text p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* ─── MAIN CONTENT ─── */
+        .main-content {
+            padding: 15px 40px; /* Tightened top/bottom padding significantly */
+            position: relative;
+            z-index: 5;
+            /* Above BG elements */
+            margin-top: 5px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px; /* Highly reduced gap */
+        }
+
+        /* ─── LIST ITEMS ─── */
+        .curriculum-list div h3 {
+            color: var(--dark) !important;
+            font-weight: 800;
+        }
+
+        .curriculum-list div p {
+            color: #444 !important;
+        }
+
+        /* ═══════════════════════════════════════════ */
+        /* ─── FOOTER — Complete Redesign v2 ──────── */
+        /* ═══════════════════════════════════════════ */
+        .poster-footer {
+            margin-top: auto;
+            position: relative;
+            z-index: 10;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* The vibrant colorful strip at the bottom */
+        .footer-strip {
+            background: linear-gradient(135deg, #4f46e5, #9333ea, #db2777); 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 40px; /* Highly compressed for 4:5 Insta Frame */
+            gap: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: -1px; /* Prevents tiny sub-pixel gap at bottom */
+        }
+
+        /* ── Price Tag: The hero element ── */
+        .price-tag {
+            background: white;
+            border-radius: 16px;
+            padding: 14px 28px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+            position: relative;
+        }
+
+        .price-tag::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 19px;
+            background: linear-gradient(135deg, #4f46e5, #ec4899, #fcc419);
+            z-index: -1;
+        }
+
+        .price-old {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .price-old .was {
+            font-size: 0.65rem;
+            color: #9ca3af;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .price-old .amount {
+            font-size: 1.2rem;
+            color: #9ca3af;
+            text-decoration: line-through;
+            font-weight: 700;
+        }
+
+        /* Arrow between old and new price */
+        .price-arrow {
+            color: #d1d5db;
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .price-new {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .price-new .now {
+            font-size: 0.65rem;
+            color: #4f46e5;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .price-new .amount {
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: #111827;
+            line-height: 1;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -1px;
+        }
+
+        .price-hook {
+            font-size: 0.65rem;
+            color: #4f46e5;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .price-urgency {
+            font-size: 0.7rem;
+            color: #e03131;
+            font-weight: 900;
+            display: block;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .price-label {
+            background: linear-gradient(135deg, #12b886, #099268);
+            /* Success Green */
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 5px 14px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(18, 184, 134, 0.3);
+        }
+
+        /* ── Contact Block ── */
+        .footer-contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: white;
+        }
+
+        .footer-phone {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
+        .footer-phone .phone-num {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-phone .phone-num svg {
+            opacity: 0.7;
+        }
+
+        .footer-phone .avail-tag {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-qr {
+            width: 95px;
+            height: 95px;
+            border-radius: 4px; /* Sharp professional square with subtle softening */
+            border: 4px solid white;
+            background: white;
+            padding: 2px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0;
+        }
+
+        /* ── Assurance Bar ── (Simplified to remove ghost boxes) */
+        .assurance-bar {
+            grid-column: span 2;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 0px; /* Reduced from 10px to move it up further */
+            padding: 5px;
+            background: transparent;
+        }
+
+        .assurance-chip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: #4f46e5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #eef2ff;
+        }
+
+        .assurance-chip svg {
+            color: #12b886; /* Success Green */
+        }
+
+        /* ─── PRINT OPTIMIZATION ─── */
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+                background: white;
+            }
+
+            .poster-container {
+                margin: 0 !important;
+                box-shadow: none !important;
+                page-break-after: always;
+                width: 210mm !important;
+                height: 262.5mm !important; /* Matches Insta 4:5 Ratio */
+            }
+            
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 🟢 SCHOOL POSTER -->
+    <div class="poster-container school-theme">
+        <div class="bubble b1"></div>
+        <div class="bubble b2"></div>
+        <div class="header-slant"></div>
+        <div class="header-top">
+            <div class="logo"
+                style="background: white; padding: 10px 22px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); display: flex; align-items: center; gap: 8px; margin-left: -5px;">
+                <img src="images/offl_logo-removebg-preview.png" style="height: 45px; width: auto;">
+                <div style="display: flex; align-items: baseline; font-family: 'Plus Jakarta Sans', sans-serif;">
+                    <span
+                        style="font-size: 2.1rem; font-weight: 800; color: #e03131; letter-spacing: -1.5px;">JoyAI</span>
+                    <span
+                        style="font-size: 1.1rem; font-weight: 500; color: #e03131; letter-spacing: 1.5px; text-transform: uppercase; margin-left: 4px; opacity: 0.8;">Lab</span>
+                </div>
+            </div>
+            <div class="badge">From 6th to Any Graduates | AI Web Mastery</div>
+        </div>
+
+        <div class="main-content">
+            <div class="headline-section"
+                style="margin-top: -15px; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
+                <div style="flex: 1;">
+                    <h1 style="font-size: 2.8rem; line-height: 1.1; margin-bottom: 15px;">Master AI-First <br> Web
+                        Development</h1>
+                    <p style="font-size: 1.1rem; color: rgba(255,255,255,0.95); max-width: 90%; font-weight: 600;">
+                        Build, code, and deploy professional web apps 10x faster using AI mastery.</p>
+                </div>
+
+                <!-- Sleek Professional Tech Graphic -->
+                <div class="floating-tech-art"
+                    style="position: relative; width: 170px; height: 130px; margin-top: 5px; flex-shrink: 0; perspective: 800px;">
+
+                    <!-- Floating IDE Window -->
+                    <div
+                        style="position: absolute; right: 0; top: 10px; width: 155px; background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 20px 40px rgba(0,0,0,0.25); overflow: hidden; transform: rotateY(-15deg) rotateX(8deg) rotateZ(3deg); z-index: 2;">
+                        <!-- Window Header -->
+                        <div style="background: rgba(255,255,255,0.1); padding: 6px 8px; display: flex; gap: 5px;">
+                            <span style="width: 7px; height: 7px; border-radius: 50%; background: #ff5f56;"></span>
+                            <span style="width: 7px; height: 7px; border-radius: 50%; background: #ffbd2e;"></span>
+                            <span style="width: 7px; height: 7px; border-radius: 50%; background: #27c93f;"></span>
+                        </div>
+                        <!-- Code Lines -->
+                        <div style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+                            <div
+                                style="height: 5px; border-radius: 3px; width: 85%; background: linear-gradient(90deg, #4f46e5, #ec4899);">
+                            </div>
+                            <div
+                                style="height: 4px; border-radius: 2px; width: 60%; background: rgba(255,255,255,0.3);">
+                            </div>
+                            <div
+                                style="height: 4px; border-radius: 2px; width: 90%; background: rgba(255,255,255,0.3);">
+                            </div>
+                            <div
+                                style="height: 4px; border-radius: 2px; width: 40%; background: rgba(255,255,255,0.3);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating AI Prompt Pill -->
+                    <div
+                        style="position: absolute; left: -15px; bottom: 15px; background: white; padding: 10px 16px; border-radius: 20px; box-shadow: 0 12px 30px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; gap: 10px; transform: translateZ(30px); z-index: 3;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                        </svg>
+                        <span
+                            style="color: var(--dark); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.5px;">Generate
+                            app...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Background Decorative Text to fill space -->
+            <div style="position: absolute; left: 40px; top: 160px; font-size: 7rem; font-weight: 900; color: rgba(79, 70, 229, 0.03); z-index: 1; pointer-events: none; line-height: 0.8;">
+                LIVE<br>1-ON-1
+            </div>
+
+            <div class="visual-circle" style="grid-column: span 1; position: relative; margin-top: 35px;">
+                <!-- New Online Class Badge -->
+                <div style="position: absolute; top: 15px; right: -35px; background: #4f46e5; color: white; padding: 12px 20px; border-radius: 50px; font-weight: 900; font-size: 0.8rem; box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4); border: 3px solid white; transform: rotate(12deg); z-index: 15; display: flex; align-items: center; gap: 8px; white-space: nowrap;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    Live Online Class
+                </div>
+
+                <div class="offer-bubble"
+                    style="background: var(--school-secondary); border: 4px solid white; width: 110px; height: 110px; box-shadow: 0 10px 30px rgba(255, 0, 127, 0.4); z-index: 16;">
+                    <span style="font-size: 0.65rem; color: white;">Only</span>
+                    <strong style="color: white; font-size: 1.4rem;">1-on-1</strong>
+                </div>
+            </div>
+
+            <!-- Bold Professional Features Block -->
+            <div class="features-block"
+                style="grid-column: span 1; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding-left: 20px; margin-top: 35px;">
+
+
+                <div
+                    style="background: white; border: 1px solid #f1f3f5; border-radius: 12px; padding: 12px 15px; display: flex; align-items: center; gap: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);">
+                    <div
+                        style="background: #eef2ff; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #4f46e5; flex-shrink: 0;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="color: #111827; font-weight: 900; font-size: 1.05rem; line-height: 1.2;">1-on-1
+                            Mentorship</h4>
+                        <p
+                            style="color: #4b5563; font-weight: 600; font-size: 0.85rem; margin-top: 4px; line-height: 1.3;">
+                            No batches. Pure personal focus on your speed.</p>
+                    </div>
+                </div>
+
+                <div
+                    style="background: white; border: 1px solid #f1f3f5; border-radius: 12px; padding: 12px 15px; display: flex; align-items: center; gap: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);">
+                    <div
+                        style="background: #fdf4ff; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #ec4899; flex-shrink: 0;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="2" y1="20" x2="22" y2="20" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="color: #111827; font-weight: 900; font-size: 1.05rem; line-height: 1.2;">Theory? No.
+                            Code? Yes.</h4>
+                        <p
+                            style="color: #4b5563; font-weight: 600; font-size: 0.85rem; margin-top: 4px; line-height: 1.3;">
+                            100% Practical hacking from day one.</p>
+                    </div>
+                </div>
+
+                <div
+                    style="background: white; border: 1px solid #f1f3f5; border-radius: 12px; padding: 12px 15px; display: flex; align-items: center; gap: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);">
+                    <div
+                        style="background: #fffbf0; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fcc419; flex-shrink: 0;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                            <path
+                                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="color: #111827; font-weight: 900; font-size: 1.05rem; line-height: 1.2;">Global
+                            Deployment</h4>
+                        <p
+                            style="color: #4b5563; font-weight: 600; font-size: 0.85rem; margin-top: 4px; line-height: 1.3;">
+                            Launch 3 real projects live on the web.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="curriculum-list"
+                style="grid-column: span 2; margin-top: 5px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+
+                <!-- Premium Card 1 -->
+                <div
+                    style="background: linear-gradient(160deg, #f0f7ff, #ffffff); border-radius: 20px; padding: 14px 15px; position: relative; border: 1px solid rgba(51, 154, 240, 0.15);">
+                    <div
+                        style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #339af0, #1c7ed6); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 16px rgba(51, 154, 240, 0.3); margin-bottom: 15px; color: white;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <h3
+                        style="font-size: 1.15rem; font-weight: 900; margin-bottom: 6px; line-height: 1.2; color: #0b2447;">
+                        HTML & UI Skills</h3>
+                    <p style="color: #495057; font-size: 0.9rem; line-height: 1.4; font-weight: 600;">
+                        Master modern UI with <span style="color: #1c7ed6; font-weight: 800;">HTML/CSS</span> and
+                        building custom <span style="color: #1c7ed6; font-weight: 800;">Low-Code apps.</span>
+                    </p>
+                </div>
+
+                <!-- Premium Card 2 -->
+                <div
+                    style="background: linear-gradient(160deg, #fdf0ff, #ffffff); border-radius: 20px; padding: 14px 15px; position: relative; border: 1px solid rgba(236, 72, 153, 0.15);">
+                    <div
+                        style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #ec4899, #d946ef); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 16px rgba(236, 72, 153, 0.3); margin-bottom: 15px; color: white;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="10" rx="2" />
+                            <circle cx="12" cy="5" r="2" />
+                            <path d="M12 7v4" />
+                            <line x1="8" y1="16" x2="8" y2="16" />
+                            <line x1="16" y1="16" x2="16" y2="16" />
+                        </svg>
+                    </div>
+                    <h3
+                        style="font-size: 1.15rem; font-weight: 900; margin-bottom: 6px; line-height: 1.2; color: #4a044e;">
+                        AI Engineering</h3>
+                    <p style="color: #495057; font-size: 0.9rem; line-height: 1.4; font-weight: 600;">
+                        Generate professional apps via <span style="color: #d946ef; font-weight: 800;">Prompt
+                            Engineering</span> using AI tools.
+                    </p>
+                </div>
+
+                <!-- Premium Card 3 -->
+                <div
+                    style="background: linear-gradient(160deg, #fffbf0, #ffffff); border-radius: 20px; padding: 14px 15px; position: relative; border: 1px solid rgba(252, 196, 25, 0.2);">
+                    <div
+                        style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #fcc419, #f08c00); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 16px rgba(252, 196, 25, 0.3); margin-bottom: 15px; color: white;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h3
+                        style="font-size: 1.15rem; font-weight: 900; margin-bottom: 6px; line-height: 1.2; color: #5c3200;">
+                        Global Launch</h3>
+                    <p style="color: #495057; font-size: 0.9rem; line-height: 1.4; font-weight: 600;">
+                        Stop local coding. <span style="color: #f08c00; font-weight: 800;">Ship live websites</span>
+                        directly to the production internet.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="assurance-bar">
+                <div class="assurance-chip">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Escape Tutorial Hell Once and for all
+                </div>
+                <div class="assurance-chip">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    100% Personal Focus — No Crowd
+                </div>
+                <div class="assurance-chip">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Launch your first Live App in 7 Days
+                </div>
+            </div>
+        </div>
+
+        <div class="poster-footer">
+            <div class="footer-strip">
+                <!-- Price Tag Card -->
+                <div class="price-tag">
+                    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                        <span class="price-hook">Invest in your career</span>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="price-old">
+                                <span class="was">Standard</span>
+                                <span class="amount">₹2,499</span>
+                            </div>
+                            <div class="price-arrow">→</div>
+                            <div class="price-new">
+                                <span class="now">Early Bird</span>
+                                <span class="amount">₹1,999</span>
+                            </div>
+                        </div>
+                        <span class="price-urgency">🔥 Only 5 Seats Left!</span>
+                    </div>
+                    <div class="price-label">Grab it Now</div>
+                </div>
+
+                <!-- Contact & QR -->
+                <div class="footer-contact">
+                    <div class="footer-phone">
+                        <div class="phone-num">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.83.36 1.82.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.99.34 1.98.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            9080558130
+                        </div>
+                        <span class="avail-tag">Weekend Slots Available</span>
+                    </div>
+                    <img class="footer-qr" src="images/QR.png" alt="WhatsApp QR Code">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

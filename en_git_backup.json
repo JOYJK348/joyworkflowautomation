@@ -1,4 +1,4 @@
-{
+﻿{
   "nav": {
     "home": "Home",
     "about": "About",
@@ -20,7 +20,7 @@
     },
     "cta": {
       "primary": "Free Audit",
-      "secondary": "// SYSTEM_DEPLOYMENT: ACTIVE ⚡"
+      "secondary": "// SYSTEM_DEPLOYMENT: ACTIVE âš¡"
     },
     "niches": {
       "title": "We Automate Processes For",
@@ -59,7 +59,7 @@
     "visual": {
       "botTitle": "Automated Growth Engine",
       "chatIn": "Jay, scale my operations.",
-      "chatOut": "Analyzing... Proposal sent to 50+ clients. ✅",
+      "chatOut": "Analyzing... Proposal sent to 50+ clients. âœ…",
       "leadTitle": "Smart Lead Manager",
       "leadJay": "Lead: Jay",
       "leadPriya": "Booking: Priya",
@@ -99,8 +99,8 @@
           "after": "Automatic Payment Reminders & Receipts"
         }
       ],
-      "footer": "Custom Coded — Zero Monthly Subscriptions",
-      "footer_sub": "One-Time Investment · Lifetime Ownership"
+      "footer": "Custom Coded â€” Zero Monthly Subscriptions",
+      "footer_sub": "One-Time Investment Â· Lifetime Ownership"
     },
     "services": {
       "title": "What We Build for You?",
@@ -119,7 +119,7 @@
           ],
           "logic": "DATA_INTELLIGENCE",
           "priceLabel": "One-Time Settlement",
-          "price": "Starting from ₹5,999",
+          "price": "Starting from â‚¹5,999",
           "cta": "Build My Identity",
           "link": "/services/websites"
         },
@@ -135,7 +135,7 @@
             "Integrated Payment Gateways"
           ],
           "priceLabel": "Setup + Small Monthly API Fee",
-          "price": "Starting from ₹9,999",
+          "price": "Starting from â‚¹9,999",
           "cta": "Start My AI Agent",
           "link": "/services/automation",
           "logic": "AI_RUNTIME"
@@ -173,7 +173,7 @@
       "inputs": {
         "appointments": "Daily Appointments",
         "noShow": "No-Show Rate",
-        "revenue": "Avg. Revenue Per Booking (₹)",
+        "revenue": "Avg. Revenue Per Booking (â‚¹)",
         "adminTime": "Daily Admin Time (mins)"
       },
       "results": {
@@ -184,7 +184,7 @@
         "timeWastedYearly": "Hours Wasted on Admin (Yearly)",
         "timeWastedMonthly": "Hours Wasted on Admin (Monthly)",
         "fixIt": "This isn't inevitable. Every rupee and hour lost can be reclaimed with the right automation.",
-        "cta": "Fix This For Me →"
+        "cta": "Fix This For Me â†’"
       }
     }
   },
@@ -217,7 +217,7 @@
     "questions": [
       {
         "q": "Why should I choose JoyAutomations over generic tools?",
-        "a": "Unlike generic tools like Zapier that charge monthly fees (often ₹2,000+ extra), we write custom code for your business. You get 100% asset ownership with zero hidden subscription costs."
+        "a": "Unlike generic tools like Zapier that charge monthly fees (often â‚¹2,000+ extra), we write custom code for your business. You get 100% asset ownership with zero hidden subscription costs."
       },
       {
         "q": "Will my business data be secure?",
@@ -241,94 +241,49 @@
       }
     ]
   },
-  "contact": {
-    "hero": {
-      "badge": "START AUTOMATION",
-      "title": "Let's Automate Your Academy",
-      "subtitle": "Book a free demo and see how our system can increase your student admissions.",
-      "primaryCta": "Book Free Demo",
-      "waCta": "Chat on WhatsApp"
-    },
-    "form": {
-      "title": "Registration Details",
-      "subtitle": "We usually respond within 24 hours.",
-      "fields": {
-        "name": "Full Name",
-        "phone": "Phone Number (WhatsApp Preferred)",
-        "business": "Academy / Business Name",
-        "message": "Enquiry Message (Optional)",
-        "submit": "Request Free Demo →"
-      }
-    },
-    "direct": {
-      "title": "Direct Connect",
-      "email": "joyautomations.system@gmail.com",
-      "phone": "+91 90805 58130"
-    },
-    "whatsapp": {
-      "title": "Prefer WhatsApp?",
-      "desc": "Get instant answers via our fastest conversion channel.",
-      "cta": "Chat on WhatsApp"
-    },
-    "process": {
-      "title": "What happens after you contact us?",
-      "steps": [
-        "We understand your requirement",
-        "We show a personalized demo",
-        "We set up your custom system",
-        "You start getting results"
-      ]
-    },
-    "filter": {
-      "title": "Who is this for?",
-      "items": [
-        "Coaching Centers",
-        "Training Institutes",
-        "Skill Development Centers",
-        "Businesses looking to automate"
-      ]
-    }
-  },
   "footer": {
-    "tagline": "Engineering high-performance systems for business growth.",
+    "agencyName": "JoyAutomations",
+    "tagline": "Building the future of local business with custom code and direct API integrations.",
     "sections": {
-      "links": "Navigation",
-      "solutions": "Our Solutions",
-      "stack": "Automation Stack",
-      "contact": "Get in Touch",
-      "connect": "Social Connect",
-      "innovation": "Tech Vision"
+      "links": "Quick Links",
+      "services": "What we do",
+      "contact": "Get in touch"
     },
-    "quickLinks": [
-      { "label": "Services", "href": "/services" },
-      { "label": "LMS Portal", "href": "/services" },
-      { "label": "About Us", "href": "/about" },
-      { "label": "Contact", "href": "/contact" }
-    ],
-    "solutions": [
-      { "label": "Academy ERP", "href": "/services" },
-      { "label": "WhatsApp CRM", "href": "/services" },
-      { "label": "AI Admission Bot", "href": "/services" },
-      { "label": "Custom SaaS", "href": "/services" }
-    ],
-    "stack": ["Next.js 15", "TypeScript", "Node.js", "AI/LLMs"],
     "contact": {
       "email": "joyautomations.system@gmail.com",
-      "phone": "+91 90805 58130",
+      "phone": "+91 9080558130",
       "phone_href": "tel:+919080558130"
     },
-    "copyright": "© 2026 JoyAutomations. All rights reserved.",
-    "credit": "Designed & Engineered by Jay"
+    "quickLinks": [
+      {
+        "label": "About Us",
+        "href": "/about"
+      },
+      {
+        "label": "Reality Check",
+        "href": "/#problem-solution"
+      },
+      {
+        "label": "Services",
+        "href": "/#services"
+      },
+      {
+        "label": "ROI Calculator",
+        "href": "/#calculator"
+      }
+    ],
+    "copyright": "Â© 2026 JoyAutomations. All rights reserved.",
+    "credit": "Crafted for high-performance businesses."
   },
   "servicesPage": {
     "hero": {
-      "tag": "⚡ Trusted by Growing Businesses",
+      "tag": "âš¡ Trusted by Growing Businesses",
       "title": "What's the Biggest Problem in Your Business?",
-      "subtitle": "Tell us your problem — we have the solution ready. Let technology work for you, while you focus on growth.",
+      "subtitle": "Tell us your problem â€” we have the solution ready. Let technology work for you, while you focus on growth.",
       "pills": [
-        "📅 Appointments are hard to manage",
-        "💬 No time to reply to customers",
-        "📊 Can't track my business numbers"
+        "ðŸ“… Appointments are hard to manage",
+        "ðŸ’¬ No time to reply to customers",
+        "ðŸ“Š Can't track my business numbers"
       ],
       "ui": {
         "expertTag": "Expert Strategy",
@@ -362,7 +317,7 @@
           "strategy": "The fear of 'where did the money go?' ends here. We bring absolute clarity to your pocket, so you can grow with confidence.",
           "steps": [
             "Real-time profit tracking on your mobile screen",
-            "Instant alerts when stock is low—never say 'Out of stock' again",
+            "Instant alerts when stock is lowâ€”never say 'Out of stock' again",
             "Daily business summary reports sent directly to your WhatsApp",
             "See which service makes the most money without any math"
           ],
@@ -378,7 +333,7 @@
         "problemsTitle": "Common Issues",
         "solutionTitle": "JoyAutomations Solution",
         "cta": "Get This Solution",
-        "suffix": "— Your Problems Fixed"
+        "suffix": "â€” Your Problems Fixed"
       },
       "solutions": {
         "Cafes & Restaurants": {
@@ -499,7 +454,7 @@
         "Dental Clinics": {
           "label": "Dental Clinics",
           "problems": [
-            "Last Minute Cancellations: Empty dental chairs cost ₹2,000+ per hour in lost overhead and staff time.",
+            "Last Minute Cancellations: Empty dental chairs cost â‚¹2,000+ per hour in lost overhead and staff time.",
             "Post-Treatment Neglect: Patients forget their 6-month check-ups, which is your most profitable recurring revenue.",
             "Manual Lead Entry: Front desk missing inquiries from Facebook/Instagram because they are busy with patients."
           ],
@@ -723,7 +678,7 @@
               "License Manager",
               "Warehouse IoT Sync"
             ],
-            "result": "A fireworks manufacturer avoided a ₹5L fine by timely renewals and eliminated seasonal stock shortages."
+            "result": "A fireworks manufacturer avoided a â‚¹5L fine by timely renewals and eliminated seasonal stock shortages."
           }
         },
         "Hardware Store": {
@@ -798,7 +753,7 @@
       "comparisons": [
         {
           "others_title": "They Use Zapier",
-          "others_desc": "Costs you ₹2000+ extra monthly",
+          "others_desc": "Costs you â‚¹2000+ extra monthly",
           "volt_title": "We Write Custom Code",
           "volt_desc": "Zero hidden tool subscriptions"
         },
@@ -852,7 +807,7 @@
         {
           "id": "automation-crm",
           "title": "Zero-Leakage Revenue CRM",
-          "desc": "Most leads die because of human delay. Our CRMs are built with 'Reply-First' logic. When a lead arrives, the system instantly qualifies them, updates your pipeline, and starts a nurturing cycle—all before you even pick up your phone.",
+          "desc": "Most leads die because of human delay. Our CRMs are built with 'Reply-First' logic. When a lead arrives, the system instantly qualifies them, updates your pipeline, and starts a nurturing cycleâ€”all before you even pick up your phone.",
           "features": [
             "AI-Lead Scoring Logic",
             "Automated Nurture Flows",
@@ -863,7 +818,7 @@
         {
           "id": "ai-lms",
           "title": "Autonomous Education Engines",
-          "desc": "Scale your academy without hiring more staff. We automate the entire student lifecycle—from instant enrollment upon payment to AI-driven grading and automated WhatsApp certificate delivery. Let the system teach while you grow.",
+          "desc": "Scale your academy without hiring more staff. We automate the entire student lifecycleâ€”from instant enrollment upon payment to AI-driven grading and automated WhatsApp certificate delivery. Let the system teach while you grow.",
           "features": [
             "Automated Student Onboarding",
             "AI-Driven Grading Bots",
@@ -944,7 +899,7 @@
         "Inventory Tracking Stress",
         "Customer Follow-up Failure"
       ],
-      "cta": "Get My Free Audit →",
+      "cta": "Get My Free Audit â†’",
       "success": "Audit Request Sent! We'll analyze your niche and reach out via WhatsApp within 24 hours."
     },
     "direct": {
@@ -965,7 +920,7 @@
   },
   "aboutPage": {
     "hero": {
-      "badge": "🚀 Premium Automation Partner",
+      "badge": "ðŸš€ Premium Automation Partner",
       "headline": {
         "top": "We don't just 'Code' for living.",
         "main": "We are your Strategic",
@@ -981,7 +936,7 @@
     "story": {
       "tag": "",
       "title": "In the Age of AI, Why Are You Still Working Manually?",
-      "subtitle": "Every day you spend on manual tasks is a day your competitors get ahead. The real cost isn't just time — it's quality leads slipping away and profit you never see.",
+      "subtitle": "Every day you spend on manual tasks is a day your competitors get ahead. The real cost isn't just time â€” it's quality leads slipping away and profit you never see.",
       "pains": [
         {
           "icon": "time",
@@ -995,19 +950,19 @@
         },
         {
           "icon": "money",
-          "stat": "₹40k",
+          "stat": "â‚¹40k",
           "text": "In monthly revenue lost on average to manual errors, no-shows, and missed follow-ups by local businesses."
         }
       ],
       "visual": {
-        "before": "Notebook, Phone Calls & Spreadsheets — doing everything manually, losing time and money every single day",
-        "after": "Smart System — auto-books, auto-follows-up, auto-bills. You just check your dashboard and grow."
+        "before": "Notebook, Phone Calls & Spreadsheets â€” doing everything manually, losing time and money every single day",
+        "after": "Smart System â€” auto-books, auto-follows-up, auto-bills. You just check your dashboard and grow."
       },
-      "quote": "She was a brilliant makeup artist. But every evening, she was exhausted — not from doing bridal makeup — but from manual phone calls, missed trial bookings, and chasing advance payments.",
+      "quote": "She was a brilliant makeup artist. But every evening, she was exhausted â€” not from doing bridal makeup â€” but from manual phone calls, missed trial bookings, and chasing advance payments.",
       "paragraphs": [
         "We met a dedicated makeup artist who was waking up at 4 AM for early bridal bookings and falling asleep at midnight worrying about which Instagram inquiry she'd missed. She wasn't failing because she was bad at her art. She was failing because no one had given her the right digital tools.",
-        "This wasn't just her story. We heard the same thing from clinic owners, tuition center managers, hardware store owners, event planners — everyone was drowning in manual tasks while their attention should have been on growth.",
-        "The tools existed. AI was everywhere in the news. But for a local business owner in Tamil Nadu, the solutions were either too expensive, too complex, or built for Fortune 500 companies — not for the person running a business they've built with their own hands.",
+        "This wasn't just her story. We heard the same thing from clinic owners, tuition center managers, hardware store owners, event planners â€” everyone was drowning in manual tasks while their attention should have been on growth.",
+        "The tools existed. AI was everywhere in the news. But for a local business owner in Tamil Nadu, the solutions were either too expensive, too complex, or built for Fortune 500 companies â€” not for the person running a business they've built with their own hands.",
         "That gap is exactly why JoyAutomations exists."
       ],
       "mission": "JoyAutomations was built to bridge the gap between cutting-edge AI automation and the real business owners who need it most. You built your business with your hands. We'll make sure technology helps it grow."
@@ -1030,7 +985,7 @@
         },
         {
           "id": "partnership",
-          "title": "We don’t 'Build & Bolt'",
+          "title": "We donâ€™t 'Build & Bolt'",
           "text": "We aren't a 'deliver and disappear' agency. If your system breaks or your business grows, we are here to adapt and fix it.",
           "icon": "handshake"
         }
@@ -1060,7 +1015,7 @@
     "founder": {
       "tag": "// SYSTEM_ARCHITECT",
       "title": "The Person <span class='accent'>Behind</span> the Systems",
-      "subtitle": "Every automation you see is engineered by one person — with precision, purpose, and a deep obsession for clean systems.",
+      "subtitle": "Every automation you see is engineered by one person â€” with precision, purpose, and a deep obsession for clean systems.",
       "role": "Lead System Architect",
       "status": "Systems Deployment: ACTIVE",
       "stats": [
@@ -1078,7 +1033,7 @@
         }
       ],
       "linkedin": {
-        "count": "🔗 1,000+ connections on LinkedIn",
+        "count": "ðŸ”— 1,000+ connections on LinkedIn",
         "btn": "Connect on LinkedIn"
       },
       "bio": [
@@ -1125,115 +1080,6 @@
     "chat": {
       "loginWithGoogle": "Continue with Google",
       "loginHint": "Login required to start automation strategy"
-    }
-  },
-  "aiLabsPage": {
-    "hero": {
-      "badge": "JOYAI LABS · ERA OF PROMPTS",
-      "title1": "Stop Coding.",
-      "title2": "Start Building.",
-      "subtitle": "Build real-world websites, SaaS tools, and AI apps using modern AI agents. No coding experience needed.",
-      "cta": "Start Your Builder Journey",
-      "waCta": "Talk to Us",
-      "stats": [
-        { "value": "50+", "label": "Apps Built" },
-        { "value": "3", "label": "Skill Levels" },
-        { "value": "100%", "label": "Project-Based" }
-      ]
-    },
-    "why": {
-      "tag": "THE AI SHIFT",
-      "title": "Why This Program Exists",
-      "subtitle": "The world changed. Traditional coding bootcamps teach you syntax. We teach you to ship products.",
-      "points": [
-        { "icon": "⚡", "title": "AI Writes Code Now", "desc": "Modern AI tools generate production-grade code. Your job is to architect, prompt, and ship." },
-        { "icon": "🎯", "title": "Outcomes Over Theory", "desc": "Every lesson ends with something you built — not just something you learned." },
-        { "icon": "🔗", "title": "Real Business Problems", "desc": "Projects come directly from our automation clients actual business challenges." },
-        { "icon": "🚀", "title": "Build to Earn", "desc": "Students leave with a portfolio, freelance-ready skills, and real deployed products." }
-      ]
-    },
-    "levels": {
-      "tag": "YOUR JOURNEY",
-      "title": "Three Stages. One Transformation.",
-      "subtitle": "From complete beginner to production-ready AI builder.",
-      "items": [
-        {
-          "tag": "LEVEL 1",
-          "color": "green",
-          "title": "AI Builder Foundation",
-          "subtitle": "Build websites and simple apps using AI — even if you've never written a line of code.",
-          "duration": "4 Weeks",
-          "learn": ["HTML & CSS with AI assistance", "Prompt-to-code workflows", "Landing page creation", "Live deployment basics"],
-          "outcome": "\"I built and deployed my own website.\"",
-          "projects": "3+ Live Projects"
-        },
-        {
-          "tag": "LEVEL 2",
-          "color": "purple",
-          "title": "AI Full-Stack Development",
-          "subtitle": "Build real-world applications that solve actual business problems using modern tools.",
-          "duration": "8 Weeks",
-          "learn": ["Full-stack app architecture", "Database & authentication", "Admin dashboards & CRMs", "WhatsApp automation tools"],
-          "outcome": "\"I build and ship real-world applications.\"",
-          "projects": "5+ Production Apps",
-          "tech": "Next.js · Firebase · Supabase"
-        },
-        {
-          "tag": "LEVEL 3",
-          "color": "red",
-          "title": "AI Systems Engineer",
-          "subtitle": "Architect intelligent AI systems that think, reason, and automate complex workflows.",
-          "duration": "6 Weeks",
-          "learn": ["Python for AI development", "LLM integration & fine-tuning", "RAG pipelines & Vector DBs", "Autonomous AI agent systems"],
-          "outcome": "\"I architect and deploy AI-powered systems.\"",
-          "projects": "3+ AI Systems"
-        }
-      ]
-    },
-    "builds": {
-      "tag": "WHAT YOU WILL BUILD",
-      "title": "Real Projects. Not Tutorials.",
-      "subtitle": "Every student ships real products — not toy apps.",
-      "items": [
-        { "title": "Portfolio Website", "desc": "A professional personal brand site deployed live.", "level": "Level 1" },
-        { "title": "Business Landing Page", "desc": "Client-ready marketing pages with lead capture forms.", "level": "Level 1" },
-        { "title": "Student Dashboard", "desc": "Full-stack dashboard with auth, data, and analytics.", "level": "Level 2" },
-        { "title": "WhatsApp Bot", "desc": "Automated messaging system for real businesses.", "level": "Level 2" },
-        { "title": "AI Chatbot", "desc": "Intelligent assistant powered by LLMs and RAG.", "level": "Level 3" },
-        { "title": "SaaS Micro-Tool", "desc": "A deployable product with user management and billing.", "level": "Level 2" }
-      ]
-    },
-    "audience": {
-      "tag": "IS THIS FOR YOU?",
-      "title": "Who Should Join",
-      "items": [
-        { "icon": "🎓", "title": "Students", "desc": "Build a tech career by learning to ship products, not just pass exams." },
-        { "icon": "💼", "title": "Professionals", "desc": "Upskill with AI-powered development to stay ahead in your career." },
-        { "icon": "🏗️", "title": "Entrepreneurs", "desc": "Build your own MVP and launch your startup idea without hiring developers." },
-        { "icon": "🎨", "title": "Creators", "desc": "Turn your content and ideas into functional web applications." }
-      ]
-    },
-    "outcomes": {
-      "tag": "AFTER THE PROGRAM",
-      "title": "Your Path Forward",
-      "subtitle": "Every graduate walks away with real, tangible superpowers.",
-      "paths": [
-        { "icon": "💻", "title": "Freelance Developer", "desc": "Start earning by building websites and apps for clients worldwide." },
-        { "icon": "🚀", "title": "Startup Founder", "desc": "Launch your own product with the skills to build, deploy, and iterate fast." },
-        { "icon": "🏢", "title": "Tech Professional", "desc": "Get hired with a portfolio of real-world shipped projects that prove your ability." }
-      ]
-    },
-    "extra": {
-      "tag": "THE JOYAI PROMISE",
-      "title": "Build → Deploy → Earn",
-      "desc": "We don't just teach — we help you build and launch real products that generate real value.",
-      "items": ["Production-ready portfolio", "Freelancing launchpad", "Real client projects", "Lifetime community access"]
-    },
-    "finalCta": {
-      "title": "Ready to Become a Builder?",
-      "subtitle": "Join the next batch of AI Labs and start shipping real products in weeks, not years.",
-      "cta": "Start Your Journey",
-      "waCta": "Chat with Us"
     }
   }
 }

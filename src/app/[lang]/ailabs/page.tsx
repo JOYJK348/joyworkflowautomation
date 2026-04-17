@@ -1,8 +1,8 @@
-import ServicesContent from "@/components/sections/services/ServicesContent";
-import Footer from "@/components/layout/Footer";
 import { getDictionary } from "@/lib/get-dictionary";
+import Footer from "@/components/layout/Footer";
+import AiLabsContent from "@/components/sections/ailabs/AiLabsContent";
 
-export default async function ServicesPage(props: {
+export default async function AiLabsPage(props: {
   params: Promise<{ lang: string }>;
 }) {
   const params = await props.params;
@@ -11,7 +11,7 @@ export default async function ServicesPage(props: {
 
   return (
     <main>
-      <ServicesContent dict={dict} lang={lang} />
+      <AiLabsContent dict={dict} lang={lang} />
       <Footer dict={dict} lang={lang} />
     </main>
   );

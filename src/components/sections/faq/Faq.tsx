@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import styles from './Faq.module.css';
 
-export default function Faq({ dict }: { dict: any }) {
+export default function Faq({ dict, lang }: { dict: any; lang?: string }) {
   const { faq } = dict;
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -16,7 +16,7 @@ export default function Faq({ dict }: { dict: any }) {
       <div className={`container ${styles.faq__inner}`}>
         
         <div className={styles.header}>
-          <h2 className="section-title">{faq.title}</h2>
+          <h2 className="section-title" style={{ fontSize: lang === 'ta' ? 'clamp(1.5rem, 3.5vw, 2.2rem)' : undefined }}>{faq.title}</h2>
           <p className="section-sub">{faq.subtitle}</p>
         </div>
 

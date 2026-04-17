@@ -42,7 +42,7 @@ export default function NicheScroll({ dict }: { dict: any }) {
             return (
               <Link 
                 key={`${niche}-${i}`} 
-                href={`/${lang}/services?niche=${encodeURIComponent(niche)}`}
+                href={`/${lang}/contact#audit-form`}
                 className={styles.item}
               >
                 <div className={styles.image__wrap}>

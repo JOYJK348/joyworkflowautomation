@@ -1,6 +1,6 @@
 .roi {
   width: 100%;
-  padding: 0rem 1rem 2rem; 
+  padding: 0rem 1rem 1.5rem; 
   background: var(--bg-page);
   position: relative;
   overflow: hidden;
@@ -271,7 +271,7 @@
   color: var(--ink-soft);
   padding: 0.5rem 1.25rem;
   border-radius: var(--r-pill);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -299,7 +299,7 @@
 }
 
 .loss__label {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #f87171;
@@ -309,7 +309,7 @@
 
 .loss__amount {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
   font-weight: 800;
   color: #fff;
   line-height: 1;
@@ -343,7 +343,7 @@
 }
 
 .time__label {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--ink-soft);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -351,7 +351,7 @@
 }
 
 .time__amount {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #fff;
   font-variant-numeric: tabular-nums;
@@ -365,7 +365,7 @@
 }
 
 .cta__text {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--emerald);
   font-weight: 600;
   text-align: center;
