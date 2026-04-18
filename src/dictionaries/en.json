@@ -294,119 +294,43 @@
         "Coaching Centers",
         "Training Institutes",
         "Skill Development Centers",
-        "Businesses look to automate"
+        "Businesses follow us for updates"
       ]
     }
   },
   "common": {
     "bookDemo": "Book Free Demo"
   },
-    "footer": {
-      "tagline": "Engineering high-performance systems for business growth.",
-      "sections": {
-        "links": "Navigation",
-        "solutions": "Our Solutions",
-        "stack": "Automation Stack",
-        "contact": "Get in Touch",
-        "connect": "Social Connect",
-        "innovation": "Tech Vision"
-      },
-      "quickLinks": [
-        { "label": "Services", "href": "/services" },
-        { "label": "LMS Portal", "href": "/services" },
-        { "label": "About Us", "href": "/about" },
-        { "label": "Contact", "href": "/contact" }
-      ],
-      "solutions": [
-        { "label": "Academy ERP", "href": "/services" },
-        { "label": "WhatsApp CRM", "href": "/services" },
-        { "label": "AI Admission Bot", "href": "/services" },
-        { "label": "Custom SaaS", "href": "/services" }
-      ],
-      "stack": ["Next.js 15", "TypeScript", "Node.js", "AI/LLMs"],
-      "contact": {
-        "email": "joyautomations.system@gmail.com",
-        "phone": "+91 90805 58130",
-        "phone_href": "tel:+919080558130"
-      },
-      "copyright": "© 2026 JoyAutomations. All rights reserved.",
-      "credit": "Designed & Engineered by Jay"
+  "footer": {
+    "tagline": "Engineering high-performance systems for business growth.",
+    "sections": {
+      "links": "Navigation",
+      "solutions": "Our Solutions",
+      "stack": "Automation Stack",
+      "contact": "Get in Touch",
+      "connect": "Social Connect",
+      "innovation": "Tech Vision"
     },
-  "dualMission": {
-    "tag": "OUR ECOSYSTEM",
-    "title": {
-      "main": "One Vision.",
-      "accent": "Two Missions."
+    "quickLinks": [
+      { "label": "Services", "href": "/services" },
+      { "label": "LMS Portal", "href": "/services" },
+      { "label": "About Us", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "solutions": [
+      { "label": "Academy ERP", "href": "/services" },
+      { "label": "WhatsApp CRM", "href": "/services" },
+      { "label": "AI Admission Bot", "href": "/services" },
+      { "label": "Custom SaaS", "href": "/services" }
+    ],
+    "stack": ["Next.js 15", "TypeScript", "Node.js", "AI/LLMs"],
+    "contact": {
+      "email": "joyautomations.system@gmail.com",
+      "phone": "+91 90805 58130",
+      "phone_href": "tel:+919080558130"
     },
-    "subtitle": "We don't just build AI — we teach it. Our real-world product experience fuels the curriculum, and our students become the next generation of builders.",
-    "automation": {
-      "badge": "FOR BUSINESSES",
-      "title": {
-        "main": "Joy",
-        "accent": "Automations"
-      },
-      "tagline": "\"We engineer the high-performance digital infrastructure your business needs to scale autonomously.\"",
-      "features": [
-        "AI-LMS Platforms for Institutions",
-        "Custom ERP & CRM Applications",
-        "Scalable SaaS & E-commerce Architectures",
-        "24/7 AI Agents & Chatbots"
-      ],
-      "stat": {
-        "number": "50+",
-        "label": "High-Performance Systems Built"
-      }
-    },
-    "labs": {
-      "badge": "ERA OF PROMPTS",
-      "title": {
-        "main": "JoyAI",
-        "accent": "Labs"
-      },
-      "tagline": "\"Coding is no longer a barrier; we teach the art of building anything via simple prompts.\"",
-      "features": [
-        "Rapid App Building via AI Tools",
-        "AI-Powered Modern Content Creation",
-        "Prompt Engineering Mastery",
-        "Build 50+ Apps in Record Time"
-      ],
-      "stat": {
-        "number": "Grades",
-        "label": "6 to Professional Level"
-      },
-      "cta": "Explore AI Labs →"
-    },
-    "connector": "Real-World Business is the Best Classroom",
-    "philosophy": "Our classroom projects are born from our automation clients' real business problems. The solutions our students build actually serve real businesses. This is the <strong>JoyAI Success Cycle.</strong>"
-  },
-  "hybridEcosystem": {
-    "tag": "CONNECTED STACK",
-    "title": "One Ecosystem. <span class='accent_red'>Double</span> <span class='accent_purple'>Impact.</span>",
-    "subtitle": "We have created a bridge between high-end business engineering and elite AI mentorship. This isn't just a service or a school — it's a loop of continuous innovation.",
-    "business": {
-      "id": "B2B",
-      "name": "Joy<span class='accent_red'>Automations</span>",
-      "headline": "High-Performance Engineering",
-      "desc": "We don't just build websites; we engineer deep-tech infrastructures that solve complex business struggles. 1. <span class='accent_red'>AI-LMS (Learning Management System)</span> — Comprehensive digital campuses for Schools, Colleges, and Institutes to manage students, courses, and automated results. 2. <span class='accent_red'>ERP (Enterprise Resource Planning)</span> — High-performance systems to unify your inventory, staff operations, and finance into one autonomous dashboard. 3. <span class='accent_red'>CRM (Customer Relationship Management)</span> — Intelligent platforms to track leads, automate sales follow-ups, and never let a customer inquiry go unanswered. 4. <span class='accent_red'>SaaS & E-commerce</span> — Multi-tenant architectures and AI-driven online stores designed for global scale. 5. <span class='accent_red'>AI Agents & Chatbots</span> — 24/7 autonomous assistants providing instant customer support.",
-      "metrics": [
-        { "value": "AI-LMS", "label": "Ecosystem" },
-        { "value": "CRM/ERP", "label": "Business Logic" },
-        { "value": "AI AGENTS", "label": "Auto-Bot" },
-        { "value": "SaaS", "label": "Scalable" }
-      ]
-    },
-    "education": {
-      "id": "B2C",
-      "name": "Joy<span class='accent_purple'>AI Labs</span>",
-      "headline": "Prompt-to-Product",
-      "desc": "Traditional coding is slow. We teach the speed of elite prompting. Our students leverage modern AI tools to rapidly build professional apps and high-quality digital content. From automating social media to deploying complex micro-tools, you learn to orchestrate AI into a production machine.",
-      "metrics": [
-        { "value": "PROMPTING", "label": "Engineering" },
-        { "value": "CONTENT", "label": "Mastery" }
-      ]
-    },
-    "link": "Real-World Connection",
-    "linkDesc": "Every student project is born from a real business problem we solved today."
+    "copyright": "© 2026 JoyAutomations. All rights reserved.",
+    "credit": "Designed & Engineered by Jay"
   },
   "about": {
     "hero": {

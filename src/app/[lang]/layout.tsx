@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
 import Script from 'next/script';
 import "./globals.css";
+import NextTopLoader from 'nextjs-toploader';
 import Navbar from "@/components/layout/Navbar";
-import Chatbot from "@/components/chat/Chatbot";
 import { getDictionary } from "@/lib/get-dictionary";
 
 const spaceGrotesk = Space_Grotesk({
@@ -43,6 +43,10 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'ta' }];
+}
+
 export default async function RootLayout(props: {
   children: React.ReactNode;
   params: Promise<{ lang: string }>;
@@ -78,9 +82,9 @@ export default async function RootLayout(props: {
         />
       </head>
       <body className={`${spaceGrotesk.variable} ${dmSans.variable}`} suppressHydrationWarning>
+        <NextTopLoader color="#ff4d4d" showSpinner={false} height={3} />
         <Navbar dict={dict} lang={lang} />
         {props.children}
-        <Chatbot dict={dict} lang={lang} />
       </body>
     </html>
   );

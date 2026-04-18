@@ -2,7 +2,7 @@
   padding: var(--section-padding);
   background: #000;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; Removed to prevent vertical clipping of the phone mockup */
 }
 
 .layout {
@@ -78,6 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2rem;
 }
 
 .phoneFrame {
@@ -222,7 +223,8 @@
 }
 
 .chatArea {
-  flex: 1;
+  flex: 1 1 0;
+  min-height: 0;
   padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
@@ -318,11 +320,6 @@
   z-index: 1;
 }
 
-/* RESPONSIVE */
-[data-lang="ta"] .description {
-  font-size: 1rem;
-}
-
 @media (max-width: 1024px) {
   .layout {
     grid-template-columns: 1fr;
@@ -338,22 +335,34 @@
 
   .description {
     text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .features {
-    justify-items: center;
-    max-width: 400px;
+    justify-items: start;
+    max-width: 440px;
     margin: 0 auto;
+    text-align: left;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .phoneFrame {
     width: 280px;
     height: 480px;
   }
-  
+
   .features {
     grid-template-columns: 1fr;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 380px) {
+  .phoneFrame {
+    width: 250px;
+    height: 440px;
   }
 }
