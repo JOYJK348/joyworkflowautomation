@@ -23,7 +23,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     async function fetchDashboardStats() {
       try {
-        const res = await fetch('/api/leads');
+        const res = await fetch('/api/leads', { cache: 'no-store' });
         if (res.ok) {
           const leads = await res.json();
           const total = leads.length;
@@ -41,8 +41,10 @@ export default function AdminDashboard() {
             directPct: total > 0 ? Math.round((directCount / total) * 100) : 0
           });
         }
-      } catch (err) {
-        console.error("DASHBOARD_FETCH_ERROR:", err);
+      } catch (err: any) {
+        if (err.name !== 'AbortError' && !err.message?.includes('Lock broken')) {
+          console.error("DASHBOARD_FETCH_ERROR:", err);
+        }
       } finally {
         setLoading(false);
       }

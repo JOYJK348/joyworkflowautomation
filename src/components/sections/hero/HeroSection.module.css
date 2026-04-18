@@ -144,6 +144,7 @@
   color: #000;
   font-weight: 800;
   font-size: 0.85rem;
+  white-space: nowrap;
   border-radius: 12px;
   display: inline-flex;
   align-items: center;
@@ -176,6 +177,7 @@
   color: #000;
   font-size: 0.8rem;
   font-weight: 800;
+  white-space: nowrap;
   text-decoration: none;
   letter-spacing: 0.05em;
   position: relative;
@@ -245,16 +247,6 @@
   }
 }
 
-.hero__trust {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  width: 100%;
-}
-
 .painPoint {
   display: flex;
   align-items: center;
@@ -288,54 +280,59 @@
   margin-top: 2px;
 }
 
-.avatars {
+.hero__trust {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  margin-top: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
 }
 
-.avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 3px solid #050505;
-  background-size: cover;
-  background-position: center;
-  background-color: #333;
-  margin-left: -14px;
-  transition: transform var(--fast);
+.trust__badge {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
 }
 
-.avatar:first-child {
-  margin-left: 0;
+.trust__divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.avatar:hover {
-  transform: translateY(-3px) scale(1.1);
-  z-index: 10;
-}
-
-.trust__text {
+.trust__content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .stars {
   color: #fbbf24;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
   line-height: 1;
 }
 
-.trust__text p {
-  font-size: 0.9rem;
-  color: var(--ink-soft);
+.trust__content p {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
   margin: 0;
+  letter-spacing: 0.01em;
 }
 
-.trust__text strong {
-  color: #fff;
+.trust__content span {
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
 }
 
 /* ─── RIGHT SIDE — PERFORMANCE-FIRST BENTO GRID ─── */

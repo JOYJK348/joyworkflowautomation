@@ -22,15 +22,17 @@ export default function AdminLeads() {
   useEffect(() => {
     async function fetchLeads() {
       try {
-        const res = await fetch('/api/leads');
+        const res = await fetch('/api/leads', { cache: 'no-store' });
         if (res.ok) {
           const data = await res.json();
           if (data && data.length > 0) {
             setLeads(data);
           }
         }
-      } catch (err) {
-        console.error("FETCH_ERROR:", err);
+      } catch (err: any) {
+        if (err.name !== 'AbortError' && !err.message?.includes('Lock broken')) {
+          console.error("FETCH_ERROR:", err);
+        }
       } finally {
         setIsLoading(false);
       }
@@ -48,8 +50,10 @@ export default function AdminLeads() {
       if (res.ok) {
         setLeads(leads.map(l => l.id === id ? { ...l, status: newStatus } : l));
       }
-    } catch (err) {
-      console.error("STATUS_UPDATE_ERROR:", err);
+    } catch (err: any) {
+      if (err.name !== 'AbortError' && !err.message?.includes('Lock broken')) {
+        console.error("STATUS_UPDATE_ERROR:", err);
+      }
     }
   };
 

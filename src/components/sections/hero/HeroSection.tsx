@@ -123,15 +123,13 @@ export default function HeroSection({ dict, lang }: { dict: any; lang: string })
           </div>
 
           <div className={styles.hero__trust}>
-            <div className={styles.avatars}>
-              <div className={styles.avatar} style={{ backgroundImage: "url('https://i.pravatar.cc/100?img=11')" }} />
-              <div className={styles.avatar} style={{ backgroundImage: "url('https://i.pravatar.cc/100?img=12')" }} />
-              <div className={styles.avatar} style={{ backgroundImage: "url('https://i.pravatar.cc/100?img=33')" }} />
-              <div className={styles.avatar} style={{ backgroundImage: "url('https://i.pravatar.cc/100?img=44')" }} />
-            </div>
-            <div className={styles.trust__text}>
+            <div className={styles.trust__badge}>
               <div className={styles.stars}>★★★★★</div>
-              <p>{hero.trustTitle}</p>
+              <div className={styles.trust__divider}></div>
+              <div className={styles.trust__content}>
+                <p>{hero.trustTitle}</p>
+                <span>{lang === 'ta' ? 'உயர்நிலை தரச்சான்றிதழ் பெற்றது' : 'Global Industry Standard'}</span>
+              </div>
             </div>
           </div>
         </div>

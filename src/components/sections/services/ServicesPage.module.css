@@ -74,6 +74,7 @@
   font-weight: 800;
   font-size: 1.05rem;
   text-decoration: none;
+  white-space: nowrap;
   border: none;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -785,6 +786,7 @@
   font-weight: 800;
   font-size: 0.95rem;
   text-decoration: none;
+  white-space: nowrap;
   transition: all 0.4s ease;
   box-shadow: 0 10px 30px -5px rgba(var(--accent-rgb), 0.4);
 }
@@ -800,6 +802,7 @@
   font-weight: 800;
   font-size: 0.95rem;
   text-decoration: none;
+  white-space: nowrap;
   transition: all 0.3s ease;
 }
 

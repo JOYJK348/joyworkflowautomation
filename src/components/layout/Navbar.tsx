@@ -39,7 +39,7 @@ function NavbarComponent({ dict, lang }: { dict: any; lang: 'en' | 'ta' }) {
     { label: nav.home, href: `/${lang}` },
     { label: nav.about, href: `/${lang}/about` },
     { label: nav.services, href: `/${lang}/services` },
-    { label: "AILabs 🎓", href: `/${lang}/ailabs`, isHighlight: true },
+    { label: "AILabs 🎓", href: `/${lang}#dual-mission`, isHighlight: true },
     { label: nav.contact, href: `/${lang}/contact` },
   ];
 

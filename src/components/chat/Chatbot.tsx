@@ -64,12 +64,16 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
   const [messages, setMessages] = useState<Message[]>([initialMessage]);
   const [isLoading, setIsLoading] = useState(false);
 
+  const isSyncingRef = useRef(false);
+
   useEffect(() => {
     let isMounted = true;
 
     const syncUserProfile = async (sessionUser: any) => {
-      if (!sessionUser || !supabase) return;
+      if (!sessionUser || !supabase || isSyncingRef.current) return;
+      
       try {
+        isSyncingRef.current = true;
         const { error } = await supabase.from('profiles').upsert({
           id: sessionUser.id,
           email: sessionUser.email,
@@ -85,11 +89,13 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
         if (err.name !== 'AbortError' && !err.message?.includes('Lock broken')) {
           console.error('Error syncing profile:', err.message || err);
         }
+      } finally {
+        isSyncingRef.current = false;
       }
     };
 
     if (supabase) {
-      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event: any, session: any) => {
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
         if (!isMounted) return;
         const authUser = session?.user ?? null;
         setUser(authUser);
@@ -126,12 +132,18 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
       alert("Please configure Supabase in your environment variables.");
       return;
     }
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: window.location.origin,
-      },
-    });
+    try {
+      await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: window.location.origin,
+        },
+      });
+    } catch (err: any) {
+      if (err.name !== 'AbortError' && !err.message?.includes('Lock broken')) {
+        console.error('Google Login Error:', err);
+      }
+    }
   };
 
   const [logs, setLogs] = useState<string[]>([]);
@@ -202,8 +214,10 @@ export default function Chatbot({ dict, lang }: { dict: any; lang: string }) {
           aiText += chunk;
           setMessages(prev => prev.map(m => m.id === aiId ? { ...m, content: aiText } : m));
         }
-      } catch (err) {
-        console.error('[JoyAI] Fetch error:', err);
+      } catch (err: any) {
+        if (err.name !== 'AbortError' && !err.message?.includes('Lock broken')) {
+          console.error('[JoyAI] Fetch error:', err);
+        }
         setLogs([]);
         setMessages(prev => [...prev, {
           id: Date.now().toString(),
