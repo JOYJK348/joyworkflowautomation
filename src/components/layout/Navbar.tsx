@@ -11,7 +11,6 @@ function NavbarComponent({ dict, lang }: { dict: any; lang: 'en' | 'ta' }) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [tickerVisible, setTickerVisible] = useState(true);
 
   useEffect(() => {
     const onScroll = () => {
@@ -53,30 +52,6 @@ function NavbarComponent({ dict, lang }: { dict: any; lang: 'en' | 'ta' }) {
   return (
     <>
       <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
-        {tickerVisible && (
-          <div className={styles.tickerWrapper}>
-            <div className={styles.tickerTrack}>
-              {[...Array(6)].map((_, i) => (
-                <div key={i} className={styles.tickerItem}>
-                  <span className={styles.tickerBadge}>NEW</span>
-                  <span className={styles.tickerText}>
-                    Launching JoyAI Labs: Master AI-First Web Development & Launch Apps in 7 Days.
-                  </span>
-                  <Link href={`/${lang}/labs`} className={styles.tickerLink}>Explore Labs &rarr;</Link>
-                  <span className={styles.tickerDot}></span>
-                </div>
-              ))}
-            </div>
-            <button 
-              className={styles.tickerClose} 
-              onClick={() => setTickerVisible(false)}
-              aria-label="Close Announcement"
-              suppressHydrationWarning
-            >
-              &times;
-            </button>
-          </div>
-        )}
 
         <div className={`container ${styles.navbar__inner}`}>
           <Link href={`/${lang}`} className={styles.navbar__logo}>
@@ -107,7 +82,7 @@ function NavbarComponent({ dict, lang }: { dict: any; lang: 'en' | 'ta' }) {
                   key={link.href}
                   href={link.href}
                   prefetch={true}
-                  className={`${styles.navbar__link} ${isActive ? styles.navbar__link_active : ''} ${link.isHighlight ? styles.navbar__link_highlight : ''}`}
+                  className={`${styles.navbar__link} ${isActive ? styles.navbar__link_active : ''}`}
                 >
                   {link.label}
                 </Link>
@@ -148,7 +123,7 @@ function NavbarComponent({ dict, lang }: { dict: any; lang: 'en' | 'ta' }) {
                   key={link.href}
                   href={link.href}
                   prefetch={true}
-                  className={`${styles.navbar__link} ${isActive ? styles.navbar__link_active : ''} ${link.isHighlight ? styles.navbar__link_highlight : ''}`}
+                  className={`${styles.navbar__link} ${isActive ? styles.navbar__link_active : ''}`}
                   onClick={closeMenu}
                 >
                   {link.label}
