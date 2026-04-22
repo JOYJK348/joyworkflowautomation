@@ -189,4 +189,14 @@
   .grid { grid-template-columns: 1fr; }
   .card { padding: 3rem 2rem; border-radius: 32px; }
   .card__title { font-size: 1.8rem; }
+  .card_active::before {
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.6rem;
+    padding: 0.4rem 1rem;
+  }
+  .card__badge {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
 }
