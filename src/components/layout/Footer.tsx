@@ -1,3 +1,4 @@
+'use client';
 import { memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -50,7 +51,16 @@ function FooterComponent({ dict, lang }: { dict: any, lang: string }) {
               <a href="#" aria-label="X">X</a>
               <a href="#" aria-label="Instagram">IG</a>
             </div>
-            <Link href={`/${lang}/contact`} className={styles.footer__mini_cta}>
+            <Link 
+              href={`/${lang}/contact#audit-form`} 
+              className={styles.footer__mini_cta}
+              onClick={(e) => {
+                if (window.location.pathname.includes('/contact')) {
+                  e.preventDefault();
+                  document.getElementById('audit-form')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               {nav.cta}
             </Link>
           </div>

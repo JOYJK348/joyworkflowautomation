@@ -178,19 +178,30 @@
       "plans": [
         {
           "name": "Automation Startup",
-          "price": "₹9,999",
+          "price": "From ₹9,999",
           "period": "Full Setup",
           "desc": "WhatsApp AI Bot + Follow-up System",
-          "features": ["WhatsApp AI Admission Bot", "Automatic Follow-ups", "Lead Tracking Dashboard", "Payment Link Integration"],
+          "features": [
+            "WhatsApp AI Admission Bot",
+            "Automatic Follow-ups",
+            "Lead Tracking Dashboard",
+            "Payment Link Integration"
+          ],
           "cta": "Get Started",
           "popular": false
         },
         {
           "name": "Full Academy System",
-          "price": "₹19,999",
+          "price": "From ₹19,999",
           "period": "Full Setup",
           "desc": "Automation + LMS Portal",
-          "features": ["Includes Everything in Startup", "LMS Portal in Your Brand", "Student Dashboard & Analytics", "AI Tutor & Auto-Grading", "Certificate Generation"],
+          "features": [
+            "Includes Everything in Startup",
+            "LMS Portal in Your Brand",
+            "Student Dashboard & Analytics",
+            "AI Tutor & Auto-Grading",
+            "Certificate Generation"
+          ],
           "cta": "Book Free Demo",
           "popular": true
         }
@@ -423,5 +434,178 @@
         "a": "Yes! Everything from the admin portal to the student dashboard will feature your academy's name and logo."
       }
     ]
+  },
+  "ailabs": {
+    "hero": {
+      "badge": "No-Code AI Generation",
+      "title": "Imagine. Build. AI.",
+      "subline": "Stop wasting years on complex coding rules. We show you how to master the art of AI orchestration to build professional websites, smart automation systems, and full software applications from scratch. You will learn the exact workflows used by pros to turn any idea into a live, working product in record time — even if you are not a programmer.",
+      "cta": "JOIN AI LABS"
+    },
+    "philosophy": {
+      "tag": "CORE MISSION",
+      "title": "Don't Just Learn Coding.\nBuild Products.",
+      "items": [
+        {
+          "title": "Architect",
+          "desc": "Don't just code. Architect professional web products with modern UI and UX that people actually want to use."
+        },
+        {
+          "title": "Orchestrate",
+          "desc": "Don't just prompt. Master multi-agent orchestration and neural databases to build autonomous, intelligent systems."
+        },
+        {
+          "title": "Launch",
+          "desc": "Don't just prototype. Integrate payments and deploy globally to turn your software into a high-revenue business."
+        }
+      ]
+    },
+    "levels": {
+      "tag": "THE JOURNEY",
+      "title": "3 Stages of Growth",
+      "viewMore": "View More Details",
+      "items": [
+        {
+          "title": "Level 1: AI Frontend Architect",
+          "badge": "BUILD & LAUNCH",
+          "desc": "WHAT: Build and deploy a high-conversion, professional landing page. \nHOW: Use Cursor and Claude for AI-first coding to ship live products in days.",
+          "outcomes": [
+            "AI-Accelerated UI Architecture",
+            "Modern Responsive Components",
+            "Functional Product Prototyping",
+            "Instant Production Deployment"
+          ],
+          "tools": ["Cursor AI", "Claude 3.5", "Tailwind CSS", "Vercel", "Git"],
+          "toolstack": [
+            { "name": "Cursor", "logo": "https://cdn.simpleicons.org/cursor/ffffff" },
+            { "name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic/D97757" },
+            { "name": "Tailwind", "logo": "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+            { "name": "Git", "logo": "https://cdn.simpleicons.org/git/F05032" },
+            { "name": "Vercel", "logo": "https://cdn.simpleicons.org/vercel/ffffff" }
+          ],
+          "result": "I launched my first live AI application."
+        },
+        {
+          "title": "Level 2: Full-Stack Product Engineer",
+          "badge": "COMPLETE SYSTEMS",
+          "desc": "WHAT: Engineer a data-driven SaaS product with user systems and secure payments. \nHOW: Leverage Next.js and Supabase for a robust backend managed by AI orchestration.",
+          "outcomes": [
+            "Full-Stack System Orchestration",
+            "Secure Auth & Database Logic",
+            "Payment Gateway Integration",
+            "High-Performance API Pipelines"
+          ],
+          "tools": ["Next.js", "Supabase", "PostgreSQL", "Stripe API", "Auth.js"],
+          "toolstack": [
+            { "name": "Next.js", "logo": "https://cdn.simpleicons.org/nextdotjs/ffffff" },
+            { "name": "Supabase", "logo": "https://cdn.simpleicons.org/supabase/3ECF8E" },
+            { "name": "Stripe", "logo": "https://cdn.simpleicons.org/stripe/008CDD" },
+            { "name": "PostgreSQL", "logo": "https://cdn.simpleicons.org/postgresql/4169E1" }
+          ],
+          "result": "I build production-ready full-stack apps."
+        },
+        {
+          "title": "Level 3: Agentic AI Systems Lead",
+          "badge": "AUTONOMOUS FUTURE",
+          "desc": "WHAT: Build autonomous AI agents that handle enterprise business workflows independently. \nHOW: Use Python and n8n to architect self-executing systems using RAG and MCP protocols.",
+          "outcomes": [
+            "Python-Based Agentic Logic",
+            "Deep Knowledge Retrieval (RAG)",
+            "MCP & LLM Integration Patterns",
+            "Self-Executing Business Engines"
+          ],
+          "tools": ["Python", "LangGraph", "n8n Agents", "Pinecone DB", "CrewAI", "MCP Protocol"],
+          "toolstack": [
+            { "name": "Python", "logo": "https://www.vectorlogo.zone/logos/python/python-icon.svg" },
+            { "name": "n8n", "logo": "https://cdn.simpleicons.org/n8n/FF6D5A" },
+            { "name": "OpenAI", "logo": "https://api.iconify.design/simple-icons:openai.svg?color=white" },
+            { "name": "Pinecone", "logo": "https://avatars.githubusercontent.com/u/74640108?s=200&v=4" },
+            { "name": "RAG", "logo": "https://api.iconify.design/tabler:database-search.svg?color=white" },
+            { "name": "MCP", "logo": "https://api.iconify.design/tabler:link-plus.svg?color=white" },
+            { "name": "LLMs", "logo": "https://api.iconify.design/tabler:brain.svg?color=white" }
+          ],
+          "result": "I deploy intelligent AI agent systems."
+        }
+      ]
+    },
+    "outcome": {
+      "tag": "THE GOAL",
+      "title": "BUILD → DEPLOY → EARN",
+      "subtitle": "We don't just teach — we help you build and launch real products.",
+      "points": [
+        { "title": "Portfolio Mastery", "desc": "Apps you build are your new resume." },
+        { "title": "Freelancing Path", "desc": "How to sell your AI automation skills." },
+        { "title": "Launch your MVP", "desc": "Turn your idea into a working product." }
+      ]
+    },
+    "cta": {
+      "title": "Ready to become an AI Builder?",
+      "subtitle": "Limited seats for the upcoming cohort. Build the future with us.",
+      "button": "Request Admission"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "24/7 SUPPORT AVAILABLE",
+      "title": "Let's Scale Your Business with AI",
+      "subtitle": "Questions about automation, AI labs, or custom software? Our team is ready to audit your business and build your solution.",
+      "primaryCta": "Free Strategy Call",
+      "waCta": "Chat on WhatsApp"
+    },
+    "form": {
+      "title": "Free Automation Audit",
+      "subtitle": "Tell us about your manual bottlenecks.",
+      "fields": {
+        "name": "Full Name",
+        "phone": "WhatsApp Number",
+        "business": "Academy / Business Name",
+        "message": "Project Details (Optional)",
+        "submit": "Get Free Audit →"
+      }
+    },
+    "educationForm": {
+      "title": "JoyAI Labs Admission",
+      "subtitle": "Secure your seat for the upcoming cohort.",
+      "fields": {
+        "name": "Student Full Name",
+        "phone": "WhatsApp Number",
+        "course": "Select Mastery Level",
+        "options": [
+          "Level 1: AI Frontend Architect",
+          "Level 2: Full-Stack Product Engineer",
+          "Level 3: Agentic AI Systems Lead"
+        ],
+        "message": "Why do you want to join? (Optional)",
+        "submit": "Request Admission →"
+      }
+    },
+    "whatsapp": {
+      "title": "Instant Support",
+      "desc": "Prefer a quick chat? Message us on WhatsApp for an immediate response.",
+      "cta": "Message Now"
+    },
+    "direct": {
+      "title": "Direct Channels",
+      "email": "joyautomations.system@gmail.com",
+      "phone": "+91 90805 58130"
+    },
+    "process": {
+      "title": "Our Working Process",
+      "steps": [
+        "Business Audit & Discovery",
+        "Technical Architecture Planning",
+        "Custom Engineering & Build",
+        "Integration & Growth Training"
+      ]
+    },
+    "filter": {
+      "title": "Why Academic Leaders Trust Us?",
+      "items": [
+        "100% Manual Task Elimination",
+        "Integrated AI Sales Support",
+        "Scalable Data Architecture",
+        "Zero-Complexity Logic Design"
+      ]
+    }
   }
 }

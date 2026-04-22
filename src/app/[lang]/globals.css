@@ -1,9 +1,3 @@
-/* ═══════════════════════════════════════
-   WORKFLOW CRAFT — DESIGN SYSTEM
-   Theme: Warm Cream + Slate + Coral Accents
-   Inspired by: Linear, Stripe, Raycast
-   ═══════════════════════════════════════ */
-
 :root {
   /* ─── Palette ─── */
   --accent: #ff4d4d;
@@ -41,7 +35,7 @@
   --line-hover: rgba(255, 255, 255, 0.12);
 
   /* ─── Layout ─── */
-  --max-w: 1280px;
+  --max-w: 1400px;
   --nav-h: 80px;
   --section-padding: 40px 0;
   --r-sm: 4px;
@@ -145,7 +139,7 @@ select {
 
 @media (min-width: 768px) {
   .container {
-    padding: 0 2.5rem;
+    padding: 0 1.5rem;
   }
 }
 

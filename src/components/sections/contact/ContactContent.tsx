@@ -11,6 +11,7 @@ interface ContactContentProps {
 
 export default function ContactContent({ dict, lang }: ContactContentProps) {
   const { contact } = dict;
+  const ta = lang === 'ta';
 
   return (
     <div className={styles.page}>
@@ -36,6 +37,7 @@ export default function ContactContent({ dict, lang }: ContactContentProps) {
               <button
                 className={styles.cta_primary}
                 onClick={() => document.getElementById('audit-form')?.scrollIntoView({ behavior: 'smooth' })}
+                suppressHydrationWarning
               >
                 {contact.hero.primaryCta}
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -58,37 +60,81 @@ export default function ContactContent({ dict, lang }: ContactContentProps) {
       <section className={styles.content}>
         <div className={`container ${styles.content__grid}`}>
 
-          {/* LEFT: Form + WhatsApp */}
+          {/* LEFT: Dual Forms + WhatsApp */}
           <div className={styles.col_left}>
-            <div id="audit-form" className={styles.form_card}>
-              <div className={styles.form_card__header}>
-                <h2>{contact.form.title}</h2>
-                <p>{contact.form.subtitle}</p>
+            <div className={styles.dual_forms}>
+              
+              {/* FORM 1: BUSINESS AUDIT */}
+              <div id="audit-form" className={styles.form_card}>
+                <div className={styles.form_card__header}>
+                  <div className={styles.form_icon}>🏢</div>
+                  <h2>{contact.form.title}</h2>
+                  <p>{contact.form.subtitle}</p>
+                </div>
+
+                <form className={styles.form}>
+                  <div className={styles.form_row}>
+                    <div className={styles.field}>
+                      <label>{contact.form.fields.name}</label>
+                      <input type="text" placeholder="Your name" required suppressHydrationWarning />
+                    </div>
+                    <div className={styles.field}>
+                      <label>{contact.form.fields.phone}</label>
+                      <input type="tel" placeholder="WhatsApp number" required suppressHydrationWarning />
+                    </div>
+                  </div>
+                  <div className={styles.field}>
+                    <label>{contact.form.fields.business}</label>
+                    <input type="text" placeholder="Academy/Company name" required suppressHydrationWarning />
+                  </div>
+                  <div className={styles.field}>
+                    <label>{contact.form.fields.message}</label>
+                    <textarea placeholder="Tell us about your manual bottlenecks..." rows={3}></textarea>
+                  </div>
+                  <button type="submit" className={styles.submit} suppressHydrationWarning>
+                    {contact.form.fields.submit}
+                  </button>
+                </form>
               </div>
 
-              <form className={styles.form}>
-                <div className={styles.form_row}>
-                  <div className={styles.field}>
-                    <label>{contact.form.fields.name}</label>
-                    <input type="text" required />
+              {/* FORM 2: ACADEMY ADMISSION */}
+              <div id="admission-form" className={`${styles.form_card} ${styles.academy_card}`}>
+                <div className={styles.form_card__header}>
+                  <div className={styles.form_icon}>🎓</div>
+                  <h2>{contact.educationForm.title}</h2>
+                  <p>{contact.educationForm.subtitle}</p>
+                </div>
+
+                <form className={styles.form}>
+                  <div className={styles.form_row}>
+                    <div className={styles.field}>
+                      <label>{contact.educationForm.fields.name}</label>
+                      <input type="text" placeholder="Student name" required suppressHydrationWarning />
+                    </div>
+                    <div className={styles.field}>
+                      <label>{contact.educationForm.fields.phone}</label>
+                      <input type="tel" placeholder="WhatsApp number" required suppressHydrationWarning />
+                    </div>
                   </div>
                   <div className={styles.field}>
-                    <label>{contact.form.fields.phone}</label>
-                    <input type="tel" required />
+                    <label>{contact.educationForm.fields.course}</label>
+                    <select required className={styles.select} defaultValue="" suppressHydrationWarning>
+                      <option value="" disabled>-- {ta ? 'தேர்வு செய்க' : 'Choose Level'} --</option>
+                      {contact.educationForm.fields.options.map((opt: string) => (
+                        <option key={opt} value={opt}>{opt}</option>
+                      ))}
+                    </select>
                   </div>
-                </div>
-                <div className={styles.field}>
-                  <label>{contact.form.fields.business}</label>
-                  <input type="text" required />
-                </div>
-                <div className={styles.field}>
-                  <label>{contact.form.fields.message}</label>
-                  <textarea rows={3}></textarea>
-                </div>
-                <button type="submit" className={styles.submit}>
-                  {contact.form.fields.submit}
-                </button>
-              </form>
+                  <div className={styles.field}>
+                    <label>{contact.educationForm.fields.message}</label>
+                    <textarea placeholder="Mastery goals or questions..." rows={3}></textarea>
+                  </div>
+                  <button type="submit" className={`${styles.submit} ${styles.academy_submit}`} suppressHydrationWarning>
+                    {contact.educationForm.fields.submit}
+                  </button>
+                </form>
+              </div>
+
             </div>
 
             {/* WhatsApp Strip */}

@@ -114,7 +114,13 @@ export default function HeroSection({ dict, lang }: { dict: any; lang: string })
               {Icons.arrowRight}
             </Link>
             <div className={styles.painPoint}>
-              <span className={styles.painPoint__emoji}>🔥</span>
+              <div className={styles.painPoint__icon}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff4d4d" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                  <line x1="12" y1="9" x2="12" y2="13" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+              </div>
               <div className={styles.painPoint__text}>
                 <span className={styles.painPoint__title}>{hero.painPoint.title}</span>
                 <span className={styles.painPoint__subtitle}>{hero.painPoint.subtitle}</span>

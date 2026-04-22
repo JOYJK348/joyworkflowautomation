@@ -37,6 +37,7 @@ function NavbarComponent({ dict, lang }: { dict: any; lang: 'en' | 'ta' }) {
   const NAV_LINKS = [
     { label: nav.home, href: `/${lang}` },
     { label: nav.about, href: `/${lang}/about` },
+    { label: "AI Labs", href: `/${lang}/labs` },
     { label: nav.services, href: `/${lang}/services` },
     { label: nav.contact, href: `/${lang}/contact` },
   ];
@@ -52,7 +53,6 @@ function NavbarComponent({ dict, lang }: { dict: any; lang: 'en' | 'ta' }) {
   return (
     <>
       <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
-
         <div className={`container ${styles.navbar__inner}`}>
           <Link href={`/${lang}`} className={styles.navbar__logo}>
             <div className={styles.navbar__logo__icon}>

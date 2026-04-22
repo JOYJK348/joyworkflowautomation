@@ -1,0 +1,240 @@
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: #020006;
+  padding: calc(var(--nav-h) + 1rem) 0 2rem;
+  overflow: hidden;
+}
+
+@media (max-width: 968px) {
+  .hero {
+    height: auto;
+    padding-top: calc(var(--nav-h) + 2rem);
+  }
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 70% 30%, rgba(124, 58, 237, 0.1), transparent 50%),
+    radial-gradient(circle at 30% 70%, rgba(52, 211, 153, 0.05), transparent 40%);
+  background-size: 100% 100%;
+}
+
+@media (max-width: 1024px) {
+  .background {
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.15), transparent 70%);
+  }
+}
+
+
+
+.hero__inner {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* ─── LEFT ─── */
+.hero__left { display: flex; flex-direction: column; gap: 2.2rem; }
+
+.badge {
+  padding: 0.5rem 1.2rem;
+  background: rgba(124, 58, 237, 0.1);
+  border-radius: 100px;
+  color: #7c3aed;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 950;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.subline {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 650px;
+  text-align: justify;
+}
+
+.cta__wrap { display: flex; align-items: center; gap: 1.5rem; }
+.btn__primary { padding: 1.1rem 3rem; background: #7c3aed; color: #fff; font-weight: 850; border-radius: 16px; box-shadow: 0 15px 30px rgba(124, 58, 237, 0.3); transition: all 0.3s ease; text-decoration: none; }
+.btn__primary:hover { transform: translateY(-3px); box-shadow: 0 20px 45px rgba(124, 58, 237, 0.4); }
+.btn__secondary { color: #64748b; font-weight: 700; text-decoration: none; font-size: 1.05rem; }
+
+/* ════════════════════════════════════════════
+   VISUAL: THE WHEEL (AS PER IMAGE)
+   ════════════════════════════════════════════ */
+.visual {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.wheel {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+/* Central Logo */
+.hub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 50%;
+  padding: 10px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 50px rgba(124, 58, 237, 0.2);
+  z-index: 50;
+}
+
+.hub__inner {
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(124, 58, 237, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hub__brand { font-size: 1.4rem; font-weight: 950; color: #a78bfa; letter-spacing: 0.1em; }
+.hub__sub { font-size: 0.7rem; font-weight: 800; color: rgba(255, 255, 255, 0.4); letter-spacing: 0.3em; }
+
+/* Rotation Group */
+.orbitGroup {
+  position: absolute;
+  inset: 0;
+  animation: rotateWheel 40s linear infinite;
+}
+
+@keyframes rotateWheel {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.toolSlot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: rotate(var(--angle)) translateX(220px);
+}
+
+/* Orbiting Card */
+.card {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(calc(-1 * var(--angle)));
+  padding: 0.5rem;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: counterRotateWheel 40s linear infinite;
+  pointer-events: auto;
+}
+
+@keyframes counterRotateWheel {
+  from { transform: translate(-50%, -50%) rotate(calc(-1 * var(--angle))) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(calc(-1 * var(--angle))) rotate(-360deg); }
+}
+
+.card__icon {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 0.8rem;
+}
+
+.card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card__cat {
+  font-size: 0.55rem;
+  font-weight: 900;
+  color: #a78bfa;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2rem;
+}
+
+.card__title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .hero__inner { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+  .hero__left { align-items: center; }
+  .subline { margin: 0 auto; }
+  .cta__wrap { justify-content: center; flex-direction: row; flex-wrap: nowrap; gap: 1rem; width: 100%; }
+  .btn__primary { padding: 0.8rem 1.5rem; font-size: 0.9rem; white-space: nowrap; }
+  .btn__secondary { font-size: 0.9rem; white-space: nowrap; }
+  .visual { height: 500px; justify-content: center; }
+  .wheel { width: 450px; height: 450px; }
+  .toolSlot { transform: rotate(var(--angle)) translateX(190px); }
+  .card { width: 110px; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding-top: calc(var(--nav-h) + 2rem); padding-bottom: 4rem; }
+  .hero__inner { gap: 4.5rem; }
+  .title { font-size: 2.2rem; }
+  .subline { font-size: 1.05rem; }
+  .visual { height: 360px; margin-top: 1rem; }
+  .wheel { width: 280px; height: 280px; }
+  .toolSlot { transform: rotate(var(--angle)) translateX(115px); }
+  .card { width: 75px; padding: 0.6rem; }
+  .card__icon { width: 22px; height: 22px; margin-bottom: 0.3rem; }
+  .card__cat { display: none; }
+  .card__title { font-size: 0.65rem; }
+  .hub { width: 95px; height: 95px; padding: 6px; box-shadow: 0 0 30px rgba(124, 58, 237, 0.3); }
+  .hub__inner { border-width: 1px; }
+  .hub__brand { font-size: 0.9rem; letter-spacing: 0.15em; color: #a78bfa; }
+  .hub__sub { font-size: 0.5rem; letter-spacing: 0.25em; margin-top: 2px; color: #7c3aed; }
+}
+
+@media (max-width: 400px) {
+  .visual { height: 320px; transform: scale(0.95); }
+  .wheel { width: 280px; height: 280px; }
+  .toolSlot { transform: rotate(var(--angle)) translateX(110px); }
+  .card { width: 80px; }
+  .btn__primary { padding: 0.6rem 1rem; font-size: 0.8rem; }
+  .btn__secondary { font-size: 0.8rem; }
+  .card__cat { display: none; }
+  .hub { width: 90px; height: 90px; gap: 0; }
+}

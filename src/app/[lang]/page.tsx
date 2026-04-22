@@ -2,7 +2,6 @@ import HeroSection from "@/components/sections/hero/HeroSection";
 import ResultSection from "@/components/sections/results/ResultsSection";
 import BotDemo from "@/components/sections/bot-demo/BotDemo";
 import LmsPortal from "@/components/sections/lms-portal/LmsPortal";
-import BannerCTA from "@/components/sections/common/BannerCTA";
 import Faq from "@/components/sections/faq/Faq";
 import Footer from "@/components/layout/Footer";
 import { getDictionary } from "@/lib/get-dictionary";
@@ -23,9 +22,6 @@ export default async function Home(props: {
       <LmsPortal dict={dict} lang={lang} />
       
       <BotDemo dict={dict} lang={lang} />
-      
-      
-      <BannerCTA dict={dict} lang={lang} />
       
       <Faq dict={dict} lang={lang} />
       <Footer dict={dict} lang={lang} />

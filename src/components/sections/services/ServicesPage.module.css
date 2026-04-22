@@ -184,7 +184,7 @@
 .hero__container {
   position: relative;
   z-index: 10;
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
   display: grid;
@@ -390,7 +390,7 @@
 ═══════════════════════════════════════ */
 
 .journey {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
@@ -476,7 +476,7 @@
 ═══════════════════════════════════════ */
 
 .features {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -568,7 +568,7 @@
 .results {
   padding: 0 40px;
   margin: 60px auto;
-  max-width: 1280px;
+  max-width: 1400px;
 }
 
 .results__inner {
@@ -655,7 +655,7 @@
 }
 
 .pricing__inner {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -664,7 +664,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   margin-top: 60px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .plan {
@@ -672,12 +672,15 @@
   text-align: left;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .plan__base {
   padding: 48px 40px;
   background: rgba(255,255,255,0.02);
   border: 1px solid var(--border);
+  height: 100%;
 }
 
 .plan__featured {
@@ -687,6 +690,7 @@
   box-shadow: 
     0 0 80px -20px rgba(var(--accent-rgb), 0.25),
     0 40px 80px -20px rgba(0,0,0,0.5);
+  height: 100%;
 }
 
 .plan__ribbon {
@@ -705,6 +709,7 @@
   margin-bottom: 24px;
   position: relative;
   box-shadow: 0 0 15px rgba(var(--accent-rgb), 0.1);
+  align-self: flex-start;
 }
 
 .plan__head {
@@ -789,6 +794,7 @@
   white-space: nowrap;
   transition: all 0.4s ease;
   box-shadow: 0 10px 30px -5px rgba(var(--accent-rgb), 0.4);
+  margin-top: auto;
 }
 
 .plan__btn_ghost {
@@ -804,6 +810,7 @@
   text-decoration: none;
   white-space: nowrap;
   transition: all 0.3s ease;
+  margin-top: auto;
 }
 
 .pricing__note {
@@ -824,7 +831,7 @@
 }
 
 .process__inner {
-  max-width: 800px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -923,7 +930,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -1017,7 +1024,7 @@
 .cta__inner {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
