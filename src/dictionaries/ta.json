@@ -489,44 +489,47 @@
     "levels": {
       "tag": "உங்கள் பயணம்",
       "title": "வளர்ச்சியின் 3 நிலைகள்",
-      "viewMore": "மேலும் விவரங்கள்",
+      "viewMore": "முழு பாடத்திட்டத்தைப் பெறுங்கள்",
       "items": [
         {
           "title": "நிலை 1: AI Frontend Architect",
           "badge": "BUILD & LAUNCH",
-          "desc": "இலக்கு: ஒரு தொழில்முறை லேண்டிங் பேஜை உருவாக்கி நேரலையில் வெளியிடுவார். \nமுறை: Cursor மற்றும் Claude போன்ற AI கருவிகளை பயன்படுத்தி சில நாட்களில் தயாரிப்பை உருவாக்குங்கள்.",
+          "desc": "இலக்கு: ஒரு தொழில்முறை லேண்டிங் பேஜை உருவாக்கி நேரலையில் வெளியிடுவார். \nமுறை: நவீன UI கட்டமைப்பு மற்றும் ரெஸ்பான்சிவ் டிசைன் முறைகளை AI உதவியுடன் மாஸ்டர் செய்யுங்கள்.",
           "outcomes": [
             "AI-ஆல் துரிதப்படுத்தப்பட்ட UI அமைப்பு",
             "நவீன ரெஸ்பான்சிவ் கூறுகள்",
             "Functional தயாரிப்பு மேக்கிங்",
             "உடனடி லைவ் (v1) வெளியீடு"
           ],
-          "tools": ["Cursor AI", "Claude 3.5", "Tailwind CSS", "Vercel", "Git"],
+          "tools": ["HTML5", "Next.js", "JavaScript", "TypeScript", "Tailwind", "Git"],
           "toolstack": [
-            { "name": "Cursor", "logo": "https://cdn.simpleicons.org/cursor/ffffff" },
-            { "name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic/D97757" },
+            { "name": "HTML5", "logo": "https://cdn.simpleicons.org/html5/E34F26" },
+            { "name": "Next.js", "logo": "https://cdn.simpleicons.org/nextdotjs/ffffff" },
+            { "name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript/F7DF1E" },
+            { "name": "TypeScript", "logo": "https://cdn.simpleicons.org/typescript/3178C6" },
             { "name": "Tailwind", "logo": "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
-            { "name": "Git", "logo": "https://cdn.simpleicons.org/git/F05032" },
-            { "name": "Vercel", "logo": "https://cdn.simpleicons.org/vercel/ffffff" }
+            { "name": "Git", "logo": "https://cdn.simpleicons.org/git/F05032" }
           ],
           "result": "நான் எனது முதல் நேரடி AI செயலியை வெளியிட்டேன்."
         },
         {
-          "title": "நிலை 2: Full-Stack Product Engineer",
+          "title": "நிலை 2: Full-Stack & Backend Systems",
           "badge": "COMPLETE SYSTEMS",
-          "desc": "இலக்கு: பயனர்கள் மற்றும் பேமெண்ட் வசதி கொண்ட ஒரு முழுமையான சாஸ் (SaaS) தயாரிப்பை உருவாக்குங்கள். \nமுறை: Next.js மற்றும் Supabase போன்ற வலுவான சிஸ்டங்களை AI உதவியுடன் ஒருங்கமைக்கவும்.",
+          "desc": "இலக்கு: பயனர்கள் மற்றும் பேமெண்ட் வசதி கொண்ட ஒரு முழுமையான சாஸ் (SaaS) தயாரிப்பை உருவாக்குங்கள். \nமுறை: Next.js மற்றும் Python (FastAPI/Django) போன்ற வலுவான சிஸ்டங்களைப் பயன்படுத்தி உயர்-திறன் கொண்ட REST API-களை வடிவமைக்கவும்.",
           "outcomes": [
             "முழு-நேர சிஸ்டம் ஒருங்கமைத்தல்",
             "பாதுகாப்பான டேட்டாபேஸ் லாஜிக்",
-            "பேமெண்ட் மற்றும் பேங்க் இணைப்புகள்",
+            "REST API வடிவமைப்பு (FastAPI/Django)",
             "உயர்-திறன் கொண்ட API பைப்பலைன்கள்"
           ],
-          "tools": ["Next.js", "Supabase", "PostgreSQL", "Stripe API", "Auth.js"],
+          "tools": ["Next.js", "Python", "FastAPI", "Django", "PostgreSQL", "Supabase", "Razorpay", "Railway"],
           "toolstack": [
             { "name": "Next.js", "logo": "https://cdn.simpleicons.org/nextdotjs/ffffff" },
+            { "name": "Python", "logo": "https://cdn.simpleicons.org/python/3776AB" },
             { "name": "Supabase", "logo": "https://cdn.simpleicons.org/supabase/3ECF8E" },
-            { "name": "Stripe", "logo": "https://cdn.simpleicons.org/stripe/008CDD" },
-            { "name": "PostgreSQL", "logo": "https://cdn.simpleicons.org/postgresql/4169E1" }
+            { "name": "Razorpay", "logo": "https://cdn.simpleicons.org/razorpay/3395FF" },
+            { "name": "PostgreSQL", "logo": "https://cdn.simpleicons.org/postgresql/4169E1" },
+            { "name": "Railway", "logo": "https://cdn.simpleicons.org/railway/ffffff" }
           ],
           "result": "நான் முழுமையான தயாரிப்புகளை உருவாக்குகிறேன்."
         },

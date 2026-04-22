@@ -463,44 +463,47 @@
     "levels": {
       "tag": "THE JOURNEY",
       "title": "3 Stages of Growth",
-      "viewMore": "View More Details",
+      "viewMore": "Get Full Curriculum",
       "items": [
         {
           "title": "Level 1: AI Frontend Architect",
           "badge": "BUILD & LAUNCH",
-          "desc": "WHAT: Build and deploy a high-conversion, professional landing page. \nHOW: Use Cursor and Claude for AI-first coding to ship live products in days.",
+          "desc": "WHAT: Build and deploy high-conversion, professional landing pages. \nHOW: Master modern UI architecture and responsive design using AI-accelerated workflows.",
           "outcomes": [
             "AI-Accelerated UI Architecture",
             "Modern Responsive Components",
             "Functional Product Prototyping",
             "Instant Production Deployment"
           ],
-          "tools": ["Cursor AI", "Claude 3.5", "Tailwind CSS", "Vercel", "Git"],
+          "tools": ["HTML5", "Next.js", "JavaScript", "TypeScript", "Tailwind", "Git"],
           "toolstack": [
-            { "name": "Cursor", "logo": "https://cdn.simpleicons.org/cursor/ffffff" },
-            { "name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic/D97757" },
+            { "name": "HTML5", "logo": "https://cdn.simpleicons.org/html5/E34F26" },
+            { "name": "Next.js", "logo": "https://cdn.simpleicons.org/nextdotjs/ffffff" },
+            { "name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript/F7DF1E" },
+            { "name": "TypeScript", "logo": "https://cdn.simpleicons.org/typescript/3178C6" },
             { "name": "Tailwind", "logo": "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
-            { "name": "Git", "logo": "https://cdn.simpleicons.org/git/F05032" },
-            { "name": "Vercel", "logo": "https://cdn.simpleicons.org/vercel/ffffff" }
+            { "name": "Git", "logo": "https://cdn.simpleicons.org/git/F05032" }
           ],
           "result": "I launched my first live AI application."
         },
         {
-          "title": "Level 2: Full-Stack Product Engineer",
+          "title": "Level 2: Full-Stack & Backend Systems",
           "badge": "COMPLETE SYSTEMS",
-          "desc": "WHAT: Engineer a data-driven SaaS product with user systems and secure payments. \nHOW: Leverage Next.js and Supabase for a robust backend managed by AI orchestration.",
+          "desc": "WHAT: Engineer data-driven SaaS products and robust backend APIs. \nHOW: Master Next.js for frontend and Python (FastAPI/Django) for high-performance REST APIs.",
           "outcomes": [
             "Full-Stack System Orchestration",
             "Secure Auth & Database Logic",
-            "Payment Gateway Integration",
+            "REST API Design (FastAPI/Django)",
             "High-Performance API Pipelines"
           ],
-          "tools": ["Next.js", "Supabase", "PostgreSQL", "Stripe API", "Auth.js"],
+          "tools": ["Next.js", "Python", "FastAPI", "Django", "PostgreSQL", "Supabase", "Razorpay", "Railway"],
           "toolstack": [
             { "name": "Next.js", "logo": "https://cdn.simpleicons.org/nextdotjs/ffffff" },
+            { "name": "Python", "logo": "https://cdn.simpleicons.org/python/3776AB" },
             { "name": "Supabase", "logo": "https://cdn.simpleicons.org/supabase/3ECF8E" },
-            { "name": "Stripe", "logo": "https://cdn.simpleicons.org/stripe/008CDD" },
-            { "name": "PostgreSQL", "logo": "https://cdn.simpleicons.org/postgresql/4169E1" }
+            { "name": "Razorpay", "logo": "https://cdn.simpleicons.org/razorpay/3395FF" },
+            { "name": "PostgreSQL", "logo": "https://cdn.simpleicons.org/postgresql/4169E1" },
+            { "name": "Railway", "logo": "https://cdn.simpleicons.org/railway/ffffff" }
           ],
           "result": "I build production-ready full-stack apps."
         },

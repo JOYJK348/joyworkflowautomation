@@ -87,8 +87,8 @@ export default function LabsModal({ isOpen, onClose, level, lang }: LabsModalPro
                 </div>
               ) : (
                 <form className={styles.form} onSubmit={handleSubmit}>
-                  <h3>{ta ? 'இலவச டெமோவைப் பெறுங்கள்' : 'Request Free Demo'}</h3>
-                  <p>{ta ? 'உங்கள் விவரங்களைப் பதிவு செய்யவும். 24 மணி நேரத்திற்குள் உங்களைத் தொடர்பு கொள்வோம்.' : 'We usually respond within 24 hours. Fill the details to start your journey.'}</p>
+                  <h3>{ta ? 'முழு பாடத்திட்டத்தைப் பெறுங்கள்' : 'Get Full Curriculum'}</h3>
+                  <p>{ta ? 'உங்கள் விவரங்களைப் பதிவு செய்யவும். நாங்கள் பாடத்திட்டத்தை வாட்ஸ்அப்பில் அனுப்புவோம்.' : 'Enter your details below and we will send the complete curriculum to your WhatsApp.'}</p>
                   
                   <div className={styles.formGrid}>
                     <div className={styles.inputBox}>
@@ -99,10 +99,7 @@ export default function LabsModal({ isOpen, onClose, level, lang }: LabsModalPro
                       <label className={styles.inputLabel}>{ta ? 'வாட்ஸ்அப் எண்' : 'WhatsApp Number'}</label>
                       <input type="tel" placeholder={ta ? "எண் (வாட்ஸ்அப்)" : "WhatsApp number"} required className={styles.inputField} />
                     </div>
-                    <div className={styles.inputBox}>
-                      <label className={styles.inputLabel}>{ta ? 'அகாடமி / பிசினஸ் பெயர்' : 'Academy / Business Name'}</label>
-                      <input type="text" placeholder={ta ? "அகாடமி பெயர்" : "Organization name"} required className={styles.inputField} />
-                    </div>
+
                     <div className={`${styles.inputBox} ${styles.fullWidth}`}>
                       <label className={styles.inputLabel}>{ta ? 'விசாரணை செய்தி' : 'Enquiry Message (Optional)'}</label>
                       <textarea placeholder={ta ? "உங்கள் கேள்வி..." : "How can we help you?"} className={styles.textArea} />
@@ -110,7 +107,7 @@ export default function LabsModal({ isOpen, onClose, level, lang }: LabsModalPro
                   </div>
 
                   <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
-                    {isSubmitting ? (ta ? 'அனுப்பப்படுகிறது...' : 'Sending...') : (ta ? 'Request Free Demo →' : 'Request Free Demo →')}
+                    {isSubmitting ? (ta ? 'அனுப்பப்படுகிறது...' : 'Sending...') : (ta ? 'Get Full Curriculum →' : 'Get Full Curriculum →')}
                   </button>
                 </form>
               )}
